@@ -1,13 +1,9 @@
 ﻿// Import necessary libraries
+using BlossomBot.config;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using BlossomBot.config;
 
 // Define the namespace for your bot
 namespace BlossomBot
@@ -42,6 +38,9 @@ namespace BlossomBot
 
             // Register the Ready event handler
             Client.Ready += Client_Ready;
+
+            await Client.ConnectAsync();
+            await Task.Delay(-1);
         }
 
         // Event handler for the Ready event of the Discord client
