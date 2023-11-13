@@ -22,9 +22,13 @@ namespace BlossomBot
         // Main method, the entry point for your bot
         static async void Main(string[] args)
         {
+            // Create an instance of JSONReader to read configuration from JSON
             var jsonReader = new JSONReader();
+
+            // Read the JSON configuration
             await jsonReader.ReadJSON();
 
+            // Configure Discord client with the obtained token
             var discordConfig = new DiscordConfiguration()
             {
                 Intents = DiscordIntents.All,
@@ -33,13 +37,17 @@ namespace BlossomBot
                 AutoReconnect = true
             };
 
+            // Initialize the Discord client
             Client = new DiscordClient(discordConfig);
 
+            // Register the Ready event handler
             Client.Ready += Client_Ready;
         }
+
+        // Event handler for the Ready event of the Discord client
         private static Task Client_Ready(DiscordClient sender, DSharpPlus.EventArgs.ReadyEventArgs args)
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }
