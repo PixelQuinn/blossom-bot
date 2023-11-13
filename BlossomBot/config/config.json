@@ -2,3 +2,8 @@
   "token": "InsertTokenHere",
   "prefix": "!"
 }
+
+// This is a sample JSON configuration for a bot or application.
+// Replace the "InserTokenHere" placeholder with your actual token.
+// Paste this file in the output folder after build to safely store your token.
+// Prefix can be changed to any comfortable prefix.
