@@ -10,6 +10,7 @@ namespace BlossomBot
     {
         static void Main(string[] args)
         {
+            private static DiscordClient Client( get;)
         }
     }
 }
