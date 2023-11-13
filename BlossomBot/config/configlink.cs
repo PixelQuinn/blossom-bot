@@ -28,6 +28,9 @@ namespace BlossomBot.config
                 // JSONStructure should be a class or type representing the expected structure of the JSON data
                 // JsonConvert.DeserializeObject<> is a method from the Newtonsoft.Json library (Json.NET)
                 JSONStructure data = JsonConvert.DeserializeObject<JSONStructure>(json);
+                
+                this.token = data.token;
+                this.prefix = data.prefix;
             }
         }
     }
