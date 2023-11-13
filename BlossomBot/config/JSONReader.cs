@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 // Config file to read from output so your token is not exposed
 namespace BlossomBot.config
 {
-    internal class configlink
+    internal class JSONReader
     {
         // Properties to store token and prefix
         public string token {  get; set; }

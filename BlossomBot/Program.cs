@@ -1,12 +1,13 @@
 ﻿// Import necessary libraries
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BlossomBot.config;
 
 // Define the namespace for your bot
 namespace BlossomBot
@@ -21,7 +22,7 @@ namespace BlossomBot
         // Main method, the entry point for your bot
         static void Main(string[] args)
         {
-
+            var jsonReader = new JSONReader();
         }
     }
 }
