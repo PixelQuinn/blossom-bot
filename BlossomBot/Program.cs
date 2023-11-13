@@ -20,9 +20,15 @@ namespace BlossomBot
         private static CommandsNextExtension Commands {  get; set; }
 
         // Main method, the entry point for your bot
-        static void Main(string[] args)
+        static async void Main(string[] args)
         {
             var jsonReader = new JSONReader();
+            await jsonReader.ReadJSON();
+
+            var discordConfig = new DiscordConfiguration()
+            {
+                Intents = DiscordIntents.All
+            };
         }
     }
 }
