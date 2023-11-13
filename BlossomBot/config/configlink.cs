@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +21,13 @@ namespace BlossomBot.config
             // Using statement to automatically close the StreamReader when done
             using (StreamReader sr = new StreamReader("config.json"))
             {
+                // Read the entire content asynchronously from the StreamReader and store it as a string
                 string json = await sr.ReadToEndAsync();
+
+                // Deserialize the JSON string into an object of type JSONStructure
+                // JSONStructure should be a class or type representing the expected structure of the JSON data
+                // JsonConvert.DeserializeObject<> is a method from the Newtonsoft.Json library (Json.NET)
+                JSONStructure data = JsonConvert.DeserializeObject<JSONStructure>(json);
             }
         }
     }
