@@ -16,7 +16,7 @@ namespace BlossomBot
         private static CommandsNextExtension Commands {  get; set; }
 
         // Main method, the entry point for your bot
-        static async void Main(string[] args)
+        static async Task Main(string[] args)
         {
             // Create an instance of JSONReader to read configuration from JSON
             var jsonReader = new JSONReader();
