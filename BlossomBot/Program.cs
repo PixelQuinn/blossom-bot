@@ -27,8 +27,19 @@ namespace BlossomBot
 
             var discordConfig = new DiscordConfiguration()
             {
-                Intents = DiscordIntents.All
+                Intents = DiscordIntents.All,
+                Token = jsonReader.token,
+                TokenType = TokenType.Bot,
+                AutoReconnect = true
             };
+
+            Client = new DiscordClient(discordConfig);
+
+            Client.Ready += Client_Ready;
+        }
+        private static Task Client_Ready(DiscordClient sender, DSharpPlus.EventArgs.ReadyEventArgs args)
+        {
+            throw new NotImplementedException();
         }
     }
 }
