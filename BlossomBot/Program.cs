@@ -39,6 +39,16 @@ namespace BlossomBot
             // Register the Ready event handler
             Client.Ready += Client_Ready;
 
+            var commandsConfig = new CommandsNextConfiguration()
+            {
+                StringPrefixes = new[] { jsonReader.prefix },
+                EnableMentionPrefix = true,
+                EnableDms = true,
+                EnableDefaultHelp = false
+            };
+
+            Commands = Client.UseCommandsNext(commandsConfig);
+
             await Client.ConnectAsync();
             await Task.Delay(-1);
         }
