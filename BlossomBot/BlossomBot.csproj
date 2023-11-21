@@ -157,7 +157,7 @@
     <Compile Include="config\JSONReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCommands.cs" />
+    <Compile Include="commands\TestCommands.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
