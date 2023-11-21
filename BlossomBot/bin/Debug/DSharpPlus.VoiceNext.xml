@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DSharpPlus.VoiceNext</name>
+    </assembly>
+    <members>
+        <member name="T:DSharpPlus.VoiceNext.AudioFormat">
+            <summary>
+            Defines the format of PCM data consumed or produced by Opus.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.AllowedSampleRates">
+            <summary>
+            Gets the collection of sampling rates (in Hz) the Opus encoder can use.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.AllowedChannelCounts">
+            <summary>
+            Gets the collection of channel counts the Opus encoder can use.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.AllowedSampleDurations">
+            <summary>
+            Gets the collection of sample durations (in ms) the Opus encoder can use.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.Default">
+            <summary>
+            Gets the default audio format. This is a format configured for 48kHz sampling rate, 2 channels, with music quality preset.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.SampleRate">
+            <summary>
+            Gets the audio sampling rate in Hz.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.ChannelCount">
+            <summary>
+            Gets the audio channel count.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.AudioFormat.VoiceApplication">
+            <summary>
+            Gets the voice application, which dictates the quality preset.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.AudioFormat.#ctor(System.Int32,System.Int32,DSharpPlus.VoiceNext.VoiceApplication)">
+            <summary>
+            Creates a new audio format for use with Opus encoder.
+            </summary>
+            <param name="sampleRate">Audio sampling rate in Hz.</param>
+            <param name="channelCount">Number of audio channels in the data.</param>
+            <param name="voiceApplication">Encoder preset to use.</param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.AudioFormat.CalculateSampleSize(System.Int32)">
+            <summary>
+            Calculates a sample size in bytes.
+            </summary>
+            <param name="sampleDuration">Millisecond duration of a sample.</param>
+            <returns>Calculated sample size in bytes.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.AudioFormat.GetMaximumBufferSize">
+            <summary>
+            Gets the maximum buffer size for decoding. This method should be called when decoding Opus data to PCM, to ensure sufficient buffer size.
+            </summary>
+            <returns>Buffer size required to decode data.</returns>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.Codec.Interop">
+            <summary>
+            This is an interop class. It contains wrapper methods for Opus and Sodium.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.Codec.Interop.SodiumKeySize">
+            <summary>
+            Gets the Sodium key size for xsalsa20_poly1305 algorithm.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.Codec.Interop.SodiumNonceSize">
+            <summary>
+            Gets the Sodium nonce size for xsalsa20_poly1305 algorithm.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.Codec.Interop.SodiumMacSize">
+            <summary>
+            Gets the Sodium MAC size for xsalsa20_poly1305 algorithm.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.Codec.Interop.Encrypt(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Encrypts supplied buffer using xsalsa20_poly1305 algorithm, using supplied key and nonce to perform encryption.
+            </summary>
+            <param name="source">Contents to encrypt.</param>
+            <param name="target">Buffer to encrypt to.</param>
+            <param name="key">Key to use for encryption.</param>
+            <param name="nonce">Nonce to use for encryption.</param>
+            <returns>Encryption status.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.Codec.Interop.Decrypt(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Decrypts supplied buffer using xsalsa20_poly1305 algorithm, using supplied key and nonce to perform decryption.
+            </summary>
+            <param name="source">Buffer to decrypt from.</param>
+            <param name="target">Decrypted message buffer.</param>
+            <param name="key">Key to use for decryption.</param>
+            <param name="nonce">Nonce to use for decryption.</param>
+            <returns>Decryption status.</returns>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.Codec.OpusDecoder">
+            <summary>
+            Represents an Opus decoder.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.Codec.OpusDecoder.AudioFormat">
+            <summary>
+            Gets the audio format produced by this decoder.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.Codec.OpusDecoder.Initialize(DSharpPlus.VoiceNext.AudioFormat)">
+            <summary>
+            Used to lazily initialize the decoder to make sure we're
+            using the correct output format, this way we don't end up
+            creating more decoders than we need.
+            </summary>
+            <param name="outputFormat"></param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.Codec.OpusDecoder.Dispose">
+            <summary>
+            Disposes of this Opus decoder.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.Codec.EncryptionMode">
+            <summary>
+            Specifies an encryption mode to use with Sodium.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.VoiceNext.Codec.EncryptionMode.XSalsa20_Poly1305_Lite">
+            <summary>
+            The nonce is an incrementing uint32 value. It is encoded as big endian value at the beginning of the nonce buffer. The 4 bytes are also appended at the end of the packet.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.VoiceNext.Codec.EncryptionMode.XSalsa20_Poly1305_Suffix">
+            <summary>
+            The nonce consists of random bytes. It is appended at the end of a packet.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.VoiceNext.Codec.EncryptionMode.XSalsa20_Poly1305">
+            <summary>
+            The nonce consists of the RTP header. Nothing is appended to the packet.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.DiscordClientExtensions.UseVoiceNext(DSharpPlus.DiscordClient)">
+            <summary>
+            Creates a new VoiceNext client with default settings.
+            </summary>
+            <param name="client">Discord client to create VoiceNext instance for.</param>
+            <returns>VoiceNext client instance.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.DiscordClientExtensions.UseVoiceNext(DSharpPlus.DiscordClient,DSharpPlus.VoiceNext.VoiceNextConfiguration)">
+            <summary>
+            Creates a new VoiceNext client with specified settings.
+            </summary>
+            <param name="client">Discord client to create VoiceNext instance for.</param>
+            <param name="config">Configuration for the VoiceNext client.</param>
+            <returns>VoiceNext client instance.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.DiscordClientExtensions.UseVoiceNextAsync(DSharpPlus.DiscordShardedClient,DSharpPlus.VoiceNext.VoiceNextConfiguration)">
+            <summary>
+            Creates new VoiceNext clients on all shards in a given sharded client.
+            </summary>
+            <param name="client">Discord sharded client to create VoiceNext instances for.</param>
+            <param name="config">Configuration for the VoiceNext clients.</param>
+            <returns>A dictionary of created VoiceNext clients.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.DiscordClientExtensions.GetVoiceNext(DSharpPlus.DiscordClient)">
+            <summary>
+            Gets the active instance of VoiceNext client for the DiscordClient.
+            </summary>
+            <param name="client">Discord client to get VoiceNext instance for.</param>
+            <returns>VoiceNext client instance.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.DiscordClientExtensions.GetVoiceNextAsync(DSharpPlus.DiscordShardedClient)">
+            <summary>
+            Retrieves a <see cref="T:DSharpPlus.VoiceNext.VoiceNextExtension"/> instance for each shard.
+            </summary>
+            <param name="client">The shard client to retrieve <see cref="T:DSharpPlus.VoiceNext.VoiceNextExtension"/> instances from.</param>
+            <returns>A dictionary containing <see cref="T:DSharpPlus.VoiceNext.VoiceNextExtension"/> instances for each shard.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.DiscordClientExtensions.ConnectAsync(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Connects to this voice channel using VoiceNext.
+            </summary>
+            <param name="channel">Channel to connect to.</param>
+            <returns>If successful, the VoiceNext connection.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.Entities.AudioSender.GetTrueSequenceAfterWrapping(System.UInt16)">
+            <summary>
+            Accepts the 16-bit sequence number from the next RTP header in the associated stream and
+            uses heuristics to (attempt to) convert it into a 64-bit counter that takes into account
+            overflow wrapping around to zero.
+            <para/>
+            This method only works properly if it is called for <b>every</b> sequence number that we
+            see in the stream.
+            </summary>
+            <param name="originalSequence">
+            The 16-bit sequence number from the next RTP header.
+            </param>
+            <returns>
+            Our best-effort guess of the value that <paramref name="originalSequence"/> <b>would</b>
+            have been, if the server had given us a 64-bit integer instead of a 16-bit one.
+            </returns>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs">
+            <summary>
+            Represents arguments for VoiceReceived events.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs.SSRC">
+            <summary>
+            Gets the SSRC of the audio source.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs.User">
+            <summary>
+            Gets the user that sent the audio data.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs.PcmData">
+            <summary>
+            Gets the received voice data, decoded to PCM format.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs.OpusData">
+            <summary>
+            Gets the received voice data, in Opus format. Note that for packets that were lost and/or compensated for, this will be empty.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs.AudioFormat">
+            <summary>
+            Gets the format of the received PCM data.
+            <para>
+            Important: This isn't always the format set in <see cref="P:DSharpPlus.VoiceNext.VoiceNextConfiguration.AudioFormat"/>, and depends on the audio data received.
+            </para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceReceiveEventArgs.AudioDuration">
+            <summary>
+            Gets the millisecond duration of the PCM audio sample.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.EventArgs.VoiceUserJoinEventArgs">
+            <summary>
+            Arguments for <see cref="E:DSharpPlus.VoiceNext.VoiceNextConnection.UserJoined"/>.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceUserJoinEventArgs.User">
+            <summary>
+            Gets the user who left.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceUserJoinEventArgs.SSRC">
+            <summary>
+            Gets the SSRC of the user who joined.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.EventArgs.VoiceUserLeaveEventArgs">
+            <summary>
+            Arguments for <see cref="E:DSharpPlus.VoiceNext.VoiceNextConnection.UserLeft"/>.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceUserLeaveEventArgs.User">
+            <summary>
+            Gets the user who left.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.EventArgs.VoiceUserLeaveEventArgs.SSRC">
+            <summary>
+            Gets the SSRC of the user who left.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.IVoiceFilter">
+            <summary>
+            Represents a filter for PCM data. PCM data submitted through a <see cref="T:DSharpPlus.VoiceNext.VoiceTransmitSink"/> will be sent through all installed instances of <see cref="T:DSharpPlus.VoiceNext.IVoiceFilter"/> first.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.IVoiceFilter.Transform(System.Span{System.Int16},DSharpPlus.VoiceNext.AudioFormat,System.Int32)">
+            <summary>
+            Transforms the supplied PCM data using this filter.
+            </summary>
+            <param name="pcmData">PCM data to transform. The transformation happens in-place.</param>
+            <param name="pcmFormat">Format of the supplied PCM data.</param>
+            <param name="duration">Millisecond duration of the supplied PCM data.</param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.StreamExtensions.CopyToAsync(System.IO.Stream,DSharpPlus.VoiceNext.VoiceTransmitSink,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads the bytes from the current stream and writes them to the specified <see cref="T:DSharpPlus.VoiceNext.VoiceTransmitSink"/>.
+            </summary>
+            <param name="source">The source <see cref="T:System.IO.Stream"/></param>
+            <param name="destination">The target <see cref="T:DSharpPlus.VoiceNext.VoiceTransmitSink"/></param>
+            <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. If <see langword="null"/>, defaults to the packet size specified by <paramref name="destination"/>.</param>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.VoiceApplication">
+            <summary>
+            Represents encoder settings preset for Opus.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.VoiceNext.VoiceApplication.Voice">
+            <summary>
+            Defines that the encoder must optimize settings for voice data.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.VoiceNext.VoiceApplication.Music">
+            <summary>
+            Defines that the encoder must optimize settings for music data.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.VoiceNext.VoiceApplication.LowLatency">
+            <summary>
+            Defines that the encoder must optimize settings for low latency applications.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.VoiceNextConfiguration">
+            <summary>
+            VoiceNext client configuration.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConfiguration.AudioFormat">
+            <summary>
+            <para>Sets the audio format for Opus. This will determine the quality of the audio output.</para>
+            <para>Defaults to <see cref="P:DSharpPlus.VoiceNext.AudioFormat.Default"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConfiguration.EnableIncoming">
+            <summary>
+            <para>Sets whether incoming voice receiver should be enabled.</para>
+            <para>Defaults to false.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConfiguration.PacketQueueSize">
+            <summary>
+            <para>Sets the size of the packet queue.</para>
+            <para>Defaults to 25 or ~500ms.</para>
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConfiguration.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:DSharpPlus.VoiceNext.VoiceNextConfiguration"/>.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConfiguration.#ctor(DSharpPlus.VoiceNext.VoiceNextConfiguration)">
+            <summary>
+            Creates a new instance of <see cref="T:DSharpPlus.VoiceNext.VoiceNextConfiguration"/>, copying the properties of another configuration.
+            </summary>
+            <param name="other">Configuration the properties of which are to be copied.</param>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.VoiceNextConnection">
+            <summary>
+            VoiceNext connection to a voice channel.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.VoiceNext.VoiceNextConnection.UserSpeaking">
+            <summary>
+            Triggered whenever a user speaks in the connected voice channel.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.VoiceNext.VoiceNextConnection.UserJoined">
+            <summary>
+            Triggered whenever a user joins voice in the connected guild.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.VoiceNext.VoiceNextConnection.UserLeft">
+            <summary>
+            Triggered whenever a user leaves voice in the connected guild.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.VoiceNext.VoiceNextConnection.VoiceReceived">
+            <summary>
+            Triggered whenever voice data is received from the connected voice channel.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.VoiceNext.VoiceNextConnection.VoiceSocketErrored">
+            <summary>
+            Triggered whenever voice WebSocket throws an exception.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConnection.AudioFormat">
+            <summary>
+            Gets the audio format used by the Opus encoder.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConnection.IsPlaying">
+            <summary>
+            Gets whether this connection is still playing audio.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConnection.WebSocketPing">
+            <summary>
+            Gets the websocket round-trip time in ms.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConnection.UdpPing">
+            <summary>
+            Gets the UDP round-trip time in ms.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextConnection.TargetChannel">
+            <summary>
+            Gets the channel this voice client is connected to.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.ConnectAsync">
+            <summary>
+            Connects to the specified voice channel.
+            </summary>
+            <returns>A task representing the connection operation.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.SendSpeakingAsync(System.Boolean)">
+            <summary>
+            Sends a speaking status to the connected voice channel.
+            </summary>
+            <param name="speaking">Whether the current user is speaking or not.</param>
+            <returns>A task representing the sending operation.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.GetTransmitSink(System.Int32)">
+            <summary>
+            Gets a transmit stream for this connection, optionally specifying a packet size to use with the stream. If a stream is already configured, it will return the existing one.
+            </summary>
+            <param name="sampleDuration">Duration, in ms, to use for audio packets.</param>
+            <returns>Transmit stream.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.WaitForPlaybackFinishAsync">
+            <summary>
+            Asynchronously waits for playback to be finished. Playback is finished when speaking = false is signalled.
+            </summary>
+            <returns>A task representing the waiting operation.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.Pause">
+            <summary>
+            Pauses playback.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.ResumeAsync">
+            <summary>
+            Asynchronously resumes playback.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.Disconnect">
+            <summary>
+            Disconnects and disposes this voice connection.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextConnection.Dispose">
+            <summary>
+            Disconnects and disposes this voice connection.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.VoiceNextEvents">
+            <summary>
+            Contains well-defined event IDs used by the VoiceNext extension.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.Misc">
+            <summary>
+            Miscellaneous events, that do not fit in any other category.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceHeartbeat">
+            <summary>
+            Events pertaining to Voice Gateway connection lifespan, specifically, heartbeats.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceHandshake">
+            <summary>
+            Events pertaining to Voice Gateway connection early lifespan, specifically, the establishing thereof as well as negotiating various modes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceReceiveFailure">
+            <summary>
+            Events emitted when incoming voice data is corrupted, or packets are being dropped.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceKeepalive">
+            <summary>
+            Events pertaining to UDP connection lifespan, specifically the keepalive (or heartbeats).
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceDispatch">
+            <summary>
+            Events emitted for high-level dispatch receive events.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceConnectionClose">
+            <summary>
+            Events emitted for Voice Gateway connection closes, clean or otherwise.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceGatewayError">
+            <summary>
+            Events emitted when decoding data received via Voice Gateway fails for any reason.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceWsRx">
+            <summary>
+            Events containing raw (but decompressed) payloads, received from Discord Voice Gateway.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextEvents.VoiceWsTx">
+            <summary>
+            Events containing raw payloads, as they're being sent to Discord Voice Gateway.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.VoiceNextExtension">
+            <summary>
+            Represents VoiceNext extension, which acts as Discord voice client.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceNextExtension.IsIncomingEnabled">
+            <summary>
+            Gets whether this connection has incoming voice enabled.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextExtension.Setup(DSharpPlus.DiscordClient)">
+            <summary>
+            DO NOT USE THIS MANUALLY.
+            </summary>
+            <param name="client">DO NOT USE THIS MANUALLY.</param>
+            <exception cref="T:System.InvalidOperationException"/>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextExtension.ConnectAsync(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Create a VoiceNext connection for the specified channel.
+            </summary>
+            <param name="channel">Channel to connect to.</param>
+            <returns>VoiceNext connection for this channel.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceNextExtension.GetConnection(DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Gets a VoiceNext connection for specified guild.
+            </summary>
+            <param name="guild">Guild to get VoiceNext connection for.</param>
+            <returns>VoiceNext connection for the specified guild.</returns>
+        </member>
+        <member name="T:DSharpPlus.VoiceNext.VoiceTransmitSink">
+            <summary>
+            Sink used to transmit audio data via <see cref="T:DSharpPlus.VoiceNext.VoiceNextConnection"/>.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceTransmitSink.SampleDuration">
+            <summary>
+            Gets the PCM sample duration for this sink.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceTransmitSink.SampleLength">
+            <summary>
+            Gets the length of the PCM buffer for this sink.
+            Written packets should adhere to this size, but the sink will adapt to fit.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.VoiceNext.VoiceTransmitSink.VolumeModifier">
+            <summary>
+            Gets or sets the volume modifier for this sink. Changing this will alter the volume of the output. 1.0 is 100%.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Writes PCM data to the sink. The data is prepared for transmission, and enqueued.
+            </summary>
+            <param name="buffer">PCM data buffer to send.</param>
+            <param name="offset">Start of the data in the buffer.</param>
+            <param name="count">Number of bytes from the buffer.</param>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
+            <summary>
+            Writes PCM data to the sink. The data is prepared for transmission, and enqueued.
+            </summary>
+            <param name="buffer">PCM data buffer to send.</param>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Flushes the rest of the PCM data in this buffer to VoiceNext packet queue.
+            </summary>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.Pause">
+            <summary>
+            Pauses playback.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.ResumeAsync">
+            <summary>
+            Resumes playback.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.GetInstalledFilters">
+            <summary>
+            Gets the collection of installed PCM filters, in order of their execution.
+            </summary>
+            <returns>Installed PCM filters, in order of execution.</returns>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.InstallFilter(DSharpPlus.VoiceNext.IVoiceFilter,System.Int32)">
+            <summary>
+            Installs a new PCM filter, with specified execution order.
+            </summary>
+            <param name="filter">Filter to install.</param>
+            <param name="order">Order of the new filter. This determines where the filter will be inserted in the filter pipeline.</param>
+        </member>
+        <member name="M:DSharpPlus.VoiceNext.VoiceTransmitSink.UninstallFilter(DSharpPlus.VoiceNext.IVoiceFilter)">
+            <summary>
+            Uninstalls an installed PCM filter.
+            </summary>
+            <param name="filter">Filter to uninstall.</param>
+            <returns>Whether the filter was uninstalled.</returns>
+        </member>
+    </members>
+</doc>

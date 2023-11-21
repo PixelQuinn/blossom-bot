@@ -49,6 +49,8 @@ namespace BlossomBot
 
             Commands = Client.UseCommandsNext(commandsConfig);
 
+            Commands.RegisterCommands<TestCommands>();
+
             await Client.ConnectAsync();
             await Task.Delay(-1);
         }

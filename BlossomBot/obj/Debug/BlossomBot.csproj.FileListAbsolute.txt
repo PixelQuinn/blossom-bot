@@ -1,3 +1,5 @@
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.csproj.AssemblyReference.cache
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.csproj.CoreCompileInputs.cache
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\BlossomBot.exe.config
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\BlossomBot.exe
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\BlossomBot.pdb
@@ -5,6 +7,10 @@ C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\ConcurrentColle
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.CommandsNext.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.Interactivity.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.Lavalink.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.Rest.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.SlashCommands.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.VoiceNext.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
@@ -21,6 +27,10 @@ C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\ConcurrentColle
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.CommandsNext.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.Interactivity.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.Lavalink.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.Rest.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.SlashCommands.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\DSharpPlus.VoiceNext.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
@@ -33,8 +43,6 @@ C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\System.Numerics
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\System.Threading.Channels.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.csproj.AssemblyReference.cache
-C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.csproj.CoreCompileInputs.cache
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.csproj.CopyComplete
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.exe
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.pdb

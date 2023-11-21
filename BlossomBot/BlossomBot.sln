@@ -5,11 +5,6 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlossomBot", "BlossomBot.csproj", "{2D413856-4344-4769-A581-4EEC66372724}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "commands", "commands", "{437171A6-86AA-4C41-8041-6D7C399CF2CF}"
-	ProjectSection(SolutionItems) = preProject
-		TestCommands.cs = TestCommands.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

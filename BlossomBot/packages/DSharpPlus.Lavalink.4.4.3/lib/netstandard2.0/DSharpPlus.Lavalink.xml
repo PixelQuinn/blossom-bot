@@ -1,0 +1,1135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DSharpPlus.Lavalink</name>
+    </assembly>
+    <members>
+        <member name="M:DSharpPlus.Lavalink.DiscordClientExtensions.UseLavalink(DSharpPlus.DiscordClient)">
+            <summary>
+            Creates a new Lavalink client with specified settings.
+            </summary>
+            <param name="client">Discord client to create Lavalink instance for.</param>
+            <returns>Lavalink client instance.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.DiscordClientExtensions.UseLavalinkAsync(DSharpPlus.DiscordShardedClient)">
+            <summary>
+            Creates new Lavalink clients on all shards in a given sharded client.
+            </summary>
+            <param name="client">Discord sharded client to create Lavalink instances for.</param>
+            <returns>A dictionary of created Lavalink clients.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.DiscordClientExtensions.GetLavalink(DSharpPlus.DiscordClient)">
+            <summary>
+            Gets the active instance of the Lavalink client for the DiscordClient.
+            </summary>
+            <param name="client">Discord client to get Lavalink instance for.</param>
+            <returns>Lavalink client instance.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.DiscordClientExtensions.GetLavalinkAsync(DSharpPlus.DiscordShardedClient)">
+            <summary>
+            Retrieves a <see cref="T:DSharpPlus.Lavalink.LavalinkExtension"/> instance for each shard.
+            </summary>
+            <param name="client">The shard client to retrieve <see cref="T:DSharpPlus.Lavalink.LavalinkExtension"/> instances from.</param>
+            <returns>A dictionary containing <see cref="T:DSharpPlus.Lavalink.LavalinkExtension"/> instances for each shard.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.DiscordClientExtensions.ConnectAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Lavalink.LavalinkNodeConnection)">
+            <summary>
+            Connects to this voice channel using Lavalink.
+            </summary>
+            <param name="channel">Channel to connect to.</param>
+            <param name="node">Lavalink node to connect through.</param>
+            <returns>If successful, the Lavalink client.</returns>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatus.Class">
+            <summary>
+            Gets the route planner type.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatus.Details">
+            <summary>
+            Gets the details of the route planner.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.IpBlock">
+            <summary>
+            Gets the details for the current IP block.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.FailedAddresses">
+            <summary>
+            Gets the collection of failed addresses.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.RotateIndex">
+            <summary>
+            Gets the number of rotations since the restart of Lavalink.
+            <para>Only present in the <see cref="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingIpRoutePlanner"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.IpIndex">
+            <summary>
+            Gets the current offset of the IP block.
+            <para>Only present in the <see cref="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingIpRoutePlanner"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.CurrentAddress">
+            <summary>
+            Gets the current IP Address used by the planner.
+            <para>Only present in the <see cref="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingIpRoutePlanner"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.CurrentAddressIndex">
+            <summary>
+            Gets the current offset of the IP block.
+            <para>Only present in the <see cref="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.NanoIpRoutePlanner"/> and the <see cref="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingNanoIpRoutePlanner"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkRouteStatusDetails.BlockIndex">
+            <summary>
+            Gets the information in which /64 block ips are chosen. This number increases on each ban.
+            <para>Only present in the <see cref="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingNanoIpRoutePlanner"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkIpBlock.Type">
+            <summary>
+            Gets the type of the IP block.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkIpBlock.Size">
+            <summary>
+            Gets the size of the IP block.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkFailedAddress.Address">
+            <summary>
+            Gets the failed address IP.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkFailedAddress.FailingTimestamp">
+            <summary>
+            Gets the failing timestamp in miliseconds.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkFailedAddress.FailingTime">
+            <summary>
+            Gets the DateTime format of the failing address.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.Entities.LavalinkPlayerState">
+            <summary>
+            Represents current state of given player.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkPlayerState.LastUpdate">
+            <summary>
+            Gets the timestamp at which this state was last updated.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkPlayerState.PlaybackPosition">
+            <summary>
+            Gets the current playback position.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkPlayerState.CurrentTrack">
+            <summary>
+            Gets the currently-played track.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.Entities.LavalinkStatistics">
+            <summary>
+            Represents statistics of Lavalink resource usage.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.ActivePlayers">
+            <summary>
+            Gets the number of currently-playing players.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.TotalPlayers">
+            <summary>
+            Gets the total number of players.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.Uptime">
+            <summary>
+            Gets the node uptime.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.CpuCoreCount">
+            <summary>
+            Gets the number of CPU cores available.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.CpuSystemLoad">
+            <summary>
+            Gets the total % of CPU resources in use on the system.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.CpuLavalinkLoad">
+            <summary>
+            Gets the total % of CPU resources used by lavalink.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.RamReservable">
+            <summary>
+            Gets the amount of reservable RAM, in bytes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.RamUsed">
+            <summary>
+            Gets the amount of used RAM, in bytes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.RamFree">
+            <summary>
+            Gets the amount of free RAM, in bytes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.RamAllocated">
+            <summary>
+            Gets the amount of allocated RAM, in bytes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.AverageSentFramesPerMinute">
+            <summary>
+            Gets the average number of sent frames per minute.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.AverageNulledFramesPerMinute">
+            <summary>
+            Gets the average number of frames that were sent as null per minute.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.Entities.LavalinkStatistics.AverageDeficitFramesPerMinute">
+            <summary>
+            Gets the average frame deficit per minute.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkBandAdjustment">
+            <summary>
+            Represents Lavalink equalizer band adjustment. This is used to alter the sound output by using Lavalink's equalizer.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkBandAdjustment.BandId">
+            <summary>
+            Gets the ID of the band to adjust.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkBandAdjustment.Gain">
+            <summary>
+            Gets the gain of the specified band.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkBandAdjustment.#ctor(System.Int32,System.Single)">
+            <summary>
+            Creates a new band adjustment with specified parameters.
+            </summary>
+            <param name="bandId">Which band to adjust. Must be in 0-14 range.</param>
+            <param name="gain">By how much to adjust the band. Must be greater than or equal to -0.25 (muted), and less than or equal to +1.0. +0.25 means the band is doubled.</param>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingIpRoutePlanner">
+            <summary>
+            Route planner that switches the IP on ban.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.BalancingIpRoutePlanner">
+            <summary>
+            Route planner that selects random IP addresses from the given block.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.NanoIpRoutePlanner">
+            <summary>
+            Route planner that switches the IP on every clock update.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkRoutePlannerType.RotatingNanoIpRoutePlanner">
+            <summary>
+            Route planner that switches the IP on every clock update and rotates to next IP block on a ban as a fallback.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkSearchType.SoundCloud">
+            <summary>
+            Search SoundCloud through LavaLink.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkSearchType.Youtube">
+            <summary>
+            Search Youtube through Lavalink.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkSearchType.Plain">
+            <summary>
+            Provide Lavalink with a plain URL.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.GuildConnectionCreatedEventArgs">
+            <summary>
+            Represents arguments for guild connection created event.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.GuildConnectionRemovedEventArgs">
+            <summary>
+            Represents arguments for guild connection created event.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.NodeDisconnectedEventArgs">
+            <summary>
+            Represents event arguments for Lavalink node disconnection.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.NodeDisconnectedEventArgs.LavalinkNode">
+            <summary>
+            Gets the node that was disconnected.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.NodeDisconnectedEventArgs.IsCleanClose">
+            <summary>
+            Gets whether disconnect was clean.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.PlayerUpdateEventArgs">
+            <summary>
+            Represents arguments for player update event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.PlayerUpdateEventArgs.Timestamp">
+            <summary>
+            Gets the timestamp at which this event was emitted.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.PlayerUpdateEventArgs.Position">
+            <summary>
+            Gets the position in the playback stream.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.PlayerUpdateEventArgs.Player">
+            <summary>
+            Gets the player that emitted this event.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.StatisticsReceivedEventArgs">
+            <summary>
+            Represents arguments for Lavalink statistics received.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.StatisticsReceivedEventArgs.Statistics">
+            <summary>
+            Gets the Lavalink statistics received.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.TrackStartEventArgs">
+            <summary>
+            Represents arguments for a track playback start event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackStartEventArgs.Track">
+            <summary>
+            Gets the track that started playing.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackStartEventArgs.Player">
+            <summary>
+            Gets the player that started playback.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.TrackFinishEventArgs">
+            <summary>
+            Represents arguments for a track playback finish event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackFinishEventArgs.Track">
+            <summary>
+            Gets the track that finished playing.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackFinishEventArgs.Reason">
+            <summary>
+            Gets the reason why the track stopped playing.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackFinishEventArgs.Player">
+            <summary>
+            Gets the player that finished playback.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.TrackEndReason">
+            <summary>
+            Represents a reason why a track finished playing.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.EventArgs.TrackEndReason.Finished">
+            <summary>
+            This means that the track itself emitted a terminator. This is usually caused by the track reaching the end,
+            however it will also be used when it ends due to an exception.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.EventArgs.TrackEndReason.LoadFailed">
+            <summary>
+            This means that the track failed to start, throwing an exception before providing any audio.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.EventArgs.TrackEndReason.Stopped">
+            <summary>
+            The track was stopped due to the player being stopped by either calling stop() or playTrack(null).
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.EventArgs.TrackEndReason.Replaced">
+            <summary>
+            The track stopped playing because a new track started playing. Note that with this reason, the old track will still
+            play until either its buffer runs out or audio from the new track is available.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.EventArgs.TrackEndReason.Cleanup">
+            <summary>
+            The track was stopped because the cleanup threshold for the audio player was reached. This triggers when the amount
+            of time passed since the last call to AudioPlayer#provide() has reached the threshold specified in player manager
+            configuration. This may also indicate either a leaked audio player which was discarded, but not stopped.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.TrackStuckEventArgs">
+            <summary>
+            Represents event arguments for a track stuck event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackStuckEventArgs.ThresholdMilliseconds">
+            <summary>
+            Gets the millisecond threshold for the stuck event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackStuckEventArgs.Track">
+            <summary>
+            Gets the track that got stuck.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackStuckEventArgs.Player">
+            <summary>
+            Gets the player that got stuck.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.TrackExceptionEventArgs">
+            <summary>
+            Represents event arguments for a track exception event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackExceptionEventArgs.Error">
+            <summary>
+            Gets the error that occurred during playback.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackExceptionEventArgs.Track">
+            <summary>
+            Gets the track that got stuck.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.TrackExceptionEventArgs.Player">
+            <summary>
+            Gets the player that got stuck.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.EventArgs.WebSocketCloseEventArgs">
+            <summary>
+            Represents arguments for <see cref="E:DSharpPlus.Lavalink.LavalinkGuildConnection.DiscordWebSocketClosed"/> event.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.WebSocketCloseEventArgs.Code">
+            <summary>
+            Gets the WebSocket close code.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.WebSocketCloseEventArgs.Reason">
+            <summary>
+            Gets the WebSocket close reason.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.EventArgs.WebSocketCloseEventArgs.Remote">
+            <summary>
+            Gets whether the termination was initiated by the remote party (i.e. Discord).
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkConfiguration">
+            <summary>
+            Lavalink connection configuration.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.RestEndpoint">
+            <summary>
+            Sets the endpoint for Lavalink REST.
+            <para>Defaults to 127.0.0.1 on port 2333.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.SocketEndpoint">
+            <summary>
+            Sets the endpoint for the Lavalink Websocket connection.
+            <para>Defaults to 127.0.0.1 on port 2333.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.SocketAutoReconnect">
+            <summary>
+            Sets whether the connection wrapper should attempt automatic reconnects should the connection drop.
+            <para>Defaults to true.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.Password">
+            <summary>
+            Sets the password for the Lavalink connection.
+            <para>Defaults to "youshallnotpass".</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.ResumeKey">
+            <summary>
+            Sets the resume key for the Lavalink connection.
+            <para>This will allow existing voice sessions to continue for a certain time after the client is disconnected.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.ResumeTimeout">
+            <summary>
+            Sets the time in seconds when all voice sessions are closed after the client disconnects.
+            <para>Defaults to 60 seconds.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.WebSocketCloseTimeout">
+            <summary>
+            Sets the time in milliseconds to wait for Lavalink's voice WebSocket to close after leaving a voice channel.
+            <para>This will be the delay before the guild connection is removed.</para>
+            <para>Defaults to 3000 milliseconds.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkConfiguration.Region">
+            <summary>
+            Sets the voice region ID for the Lavalink connection.
+            <para>This should be used if nodes should be filtered by region with <see cref="M:DSharpPlus.Lavalink.LavalinkExtension.GetIdealNodeConnection(DSharpPlus.Entities.DiscordVoiceRegion)"/>.</para>
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkConfiguration.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:DSharpPlus.Lavalink.LavalinkConfiguration"/>.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkConfiguration.#ctor(DSharpPlus.Lavalink.LavalinkConfiguration)">
+            <summary>
+            Creates a new instance of <see cref="T:DSharpPlus.Lavalink.LavalinkConfiguration"/>, copying the properties of another configuration.
+            </summary>
+            <param name="other">Configuration the properties of which are to be copied.</param>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkEvents">
+            <summary>
+            Contains well-defined event IDs used by the Lavalink extension.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.Misc">
+            <summary>
+            Miscellaneous events, that do not fit in any other category.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkConnectionError">
+            <summary>
+            Events pertaining to Lavalink node connection errors.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkConnectionClosed">
+            <summary>
+            Events emitted for clean disconnects from Lavalink.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkConnected">
+            <summary>
+            Events emitted for successful connections made to Lavalink.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkDecodeError">
+            <summary>
+            Events pertaining to errors that occur when decoding payloads received from Lavalink nodes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkRestError">
+            <summary>
+            Events emitted when Lavalink's REST API responds with an error.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkWsRx">
+            <summary>
+            Events containing raw payloads, received from Lavalink nodes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.LavalinkWsTx">
+            <summary>
+            Events containing raw payloads, as they're being sent to Lavalink nodes.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkEvents.Intents">
+            <summary>
+            Events pertaining to Gateway Intents. Typically diagnostic information.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkExtension.NodeDisconnected">
+            <summary>
+            Triggered whenever a node disconnects.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkExtension.ConnectedNodes">
+            <summary>
+            Gets a dictionary of connected Lavalink nodes for the extension.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkExtension.#ctor">
+            <summary>
+            Creates a new instance of this Lavalink extension.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkExtension.Setup(DSharpPlus.DiscordClient)">
+            <summary>
+            DO NOT USE THIS MANUALLY.
+            </summary>
+            <param name="client">DO NOT USE THIS MANUALLY.</param>
+            <exception cref="T:System.InvalidOperationException"/>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkExtension.ConnectAsync(DSharpPlus.Lavalink.LavalinkConfiguration)">
+            <summary>
+            Connect to a Lavalink node.
+            </summary>
+            <param name="config">Lavalink client configuration.</param>
+            <returns>The established Lavalink connection.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkExtension.GetNodeConnection(DSharpPlus.Net.ConnectionEndpoint)">
+            <summary>
+            Gets the Lavalink node connection for the specified endpoint.
+            </summary>
+            <param name="endpoint">Endpoint at which the node resides.</param>
+            <returns>Lavalink node connection.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkExtension.GetIdealNodeConnection(DSharpPlus.Entities.DiscordVoiceRegion)">
+            <summary>
+            Gets a Lavalink node connection based on load balancing and an optional voice region.
+            </summary>
+            <param name="region">The region to compare with the node's <see cref="P:DSharpPlus.Lavalink.LavalinkConfiguration.Region"/>, if any.</param>
+            <returns>The least load affected node connection, or null if no nodes are present.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkExtension.GetGuildConnection(DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Gets a Lavalink guild connection from a <see cref="T:DSharpPlus.Entities.DiscordGuild"/>.
+            </summary>
+            <param name="guild">The guild the connection is on.</param>
+            <returns>The found guild connection, or null if one could not be found.</returns>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkGuildConnection">
+            <summary>
+            Represents a Lavalink connection to a channel.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkGuildConnection.PlayerUpdated">
+            <summary>
+            Triggered whenever Lavalink updates player status.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkGuildConnection.PlaybackStarted">
+            <summary>
+            Triggered whenever playback of a track starts.
+            <para>This is only available for version 3.3.1 and greater.</para>
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkGuildConnection.PlaybackFinished">
+            <summary>
+            Triggered whenever playback of a track finishes.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkGuildConnection.TrackStuck">
+            <summary>
+            Triggered whenever playback of a track gets stuck.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkGuildConnection.TrackException">
+            <summary>
+            Triggered whenever playback of a track encounters an error.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkGuildConnection.DiscordWebSocketClosed">
+            <summary>
+            Triggered whenever Discord Voice WebSocket connection is terminated.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkGuildConnection.IsConnected">
+            <summary>
+            Gets whether this channel is still connected.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkGuildConnection.CurrentState">
+            <summary>
+            Gets the current player state.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkGuildConnection.Channel">
+            <summary>
+            Gets the voice channel associated with this connection.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkGuildConnection.Guild">
+            <summary>
+            Gets the guild associated with this connection.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkGuildConnection.Node">
+            <summary>
+            Gets the Lavalink node associated with this connection.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.DisconnectAsync(System.Boolean)">
+            <summary>
+            Disconnects the connection from the voice channel.
+            </summary>
+            <param name="shouldDestroy">Whether the connection should be destroyed on the Lavalink server when leaving.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.GetTracksAsync(System.String,DSharpPlus.Lavalink.LavalinkSearchType)">
+            <summary>
+            Searches for specified terms.
+            </summary>
+            <param name="searchQuery">What to search for.</param>
+            <param name="type">What platform will search for.</param>
+            <returns>A collection of tracks matching the criteria.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.GetTracksAsync(System.Uri)">
+            <summary>
+            Loads tracks from specified URL.
+            </summary>
+            <param name="uri">URL to load tracks from.</param>
+            <returns>A collection of tracks from the URL.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.GetTracksAsync(System.IO.FileInfo)">
+            <summary>
+            Loads tracks from a local file.
+            </summary>
+            <param name="file">File to load tracks from.</param>
+            <returns>A collection of tracks from the file.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.PlayAsync(DSharpPlus.Lavalink.LavalinkTrack)">
+            <summary>
+            Queues the specified track for playback.
+            </summary>
+            <param name="track">Track to play.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.PlayPartialAsync(DSharpPlus.Lavalink.LavalinkTrack,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Queues the specified track for playback. The track will be played from specified start timestamp to specified end timestamp.
+            </summary>
+            <param name="track">Track to play.</param>
+            <param name="start">Timestamp to start playback at.</param>
+            <param name="end">Timestamp to stop playback at.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.StopAsync">
+            <summary>
+            Stops the player completely.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.PauseAsync">
+            <summary>
+            Pauses the player.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.ResumeAsync">
+            <summary>
+            Resumes playback.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.SeekAsync(System.TimeSpan)">
+            <summary>
+            Seeks the current track to specified position.
+            </summary>
+            <param name="position">Position to seek to.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.SetVolumeAsync(System.Int32)">
+            <summary>
+            Sets the playback volume. This might incur a lot of CPU usage.
+            </summary>
+            <param name="volume">Volume to set. Needs to be greater or equal to 0, and less than or equal to 100. 100 means 100% and is the default value.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.AdjustEqualizerAsync(DSharpPlus.Lavalink.LavalinkBandAdjustment[])">
+            <summary>
+            Adjusts the specified bands in the audio equalizer. This will alter the sound output, and might incur a lot of CPU usage.
+            </summary>
+            <param name="bands">Bands adjustments to make. You must specify one adjustment per band at most.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkGuildConnection.ResetEqualizerAsync">
+            <summary>
+            Resets the audio equalizer to default values.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkNodeConnection">
+            <summary>
+            Represents a connection to a Lavalink node.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.LavalinkSocketErrored">
+            <summary>
+            Triggered whenever Lavalink WebSocket throws an exception.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.Disconnected">
+            <summary>
+            Triggered when this node disconnects.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.StatisticsReceived">
+            <summary>
+            Triggered when this node receives a statistics update.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.PlayerUpdated">
+            <summary>
+            Triggered whenever any of the players on this node is updated.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.PlaybackStarted">
+            <summary>
+            Triggered whenever playback of a track starts.
+            <para>This is only available for version 3.3.1 and greater.</para>
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.PlaybackFinished">
+            <summary>
+            Triggered whenever playback of a track finishes.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.TrackStuck">
+            <summary>
+            Triggered whenever playback of a track gets stuck.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.TrackException">
+            <summary>
+            Triggered whenever playback of a track encounters an error.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.GuildConnectionCreated">
+            <summary>
+            Triggered whenever a new guild connection is created.
+            </summary>
+        </member>
+        <member name="E:DSharpPlus.Lavalink.LavalinkNodeConnection.GuildConnectionRemoved">
+            <summary>
+            Triggered whenever a guild connection is removed.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.NodeEndpoint">
+            <summary>
+            Gets the remote endpoint of this Lavalink node connection.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.IsConnected">
+            <summary>
+            Gets whether the client is connected to Lavalink.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.Statistics">
+            <summary>
+            Gets the current resource usage statistics.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.ConnectedGuilds">
+            <summary>
+            Gets a dictionary of Lavalink guild connections for this node.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.Rest">
+            <summary>
+            Gets the REST client for this Lavalink connection.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.Parent">
+            <summary>
+            Gets the parent extension which this node connection belongs to.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkNodeConnection.Discord">
+            <summary>
+            Gets the Discord client this node connection belongs to.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkNodeConnection.StartAsync">
+            <summary>
+            Establishes a connection to the Lavalink node.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkNodeConnection.StopAsync">
+            <summary>
+            Stops this Lavalink node connection and frees resources.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkNodeConnection.ConnectAsync(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Connects this Lavalink node to specified Discord channel.
+            </summary>
+            <param name="channel">Voice channel to connect to.</param>
+            <returns>Channel connection, which allows for playback control.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkNodeConnection.GetGuildConnection(DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Gets a Lavalink connection to specified Discord channel.
+            </summary>
+            <param name="guild">Guild to get connection for.</param>
+            <returns>Channel connection, which allows for playback control.</returns>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkRestClient">
+            <summary>
+            Represents a class for Lavalink REST calls.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkRestClient.RestEndpoint">
+            <summary>
+            Gets the REST connection endpoint for this client.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.#ctor(DSharpPlus.Net.ConnectionEndpoint,System.String)">
+            <summary>
+            Creates a new Lavalink REST client.
+            </summary>
+            <param name="restEndpoint">The REST server endpoint to connect to.</param>
+            <param name="password">The password for the remote server.</param>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.GetVersionAsync">
+            <summary>
+            Gets the version of the Lavalink server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.GetTracksAsync(System.String,DSharpPlus.Lavalink.LavalinkSearchType)">
+            <summary>
+            Searches for specified terms.
+            </summary>
+            <param name="searchQuery">What to search for.</param>
+            <param name="type">What platform will search for.</param>
+            <returns>A collection of tracks matching the criteria.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.GetTracksAsync(System.Uri)">
+            <summary>
+            Loads tracks from specified URL.
+            </summary>
+            <param name="uri">URL to load tracks from.</param>
+            <returns>A collection of tracks from the URL.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.GetTracksAsync(System.IO.FileInfo)">
+            <summary>
+            Loads tracks from a local file.
+            </summary>
+            <param name="file">File to load tracks from.</param>
+            <returns>A collection of tracks from the file.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.DecodeTrackAsync(System.String)">
+            <summary>
+            Decodes a base64 track string into a Lavalink track object.
+            </summary>
+            <param name="trackString">The base64 track string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.DecodeTracksAsync(System.String[])">
+            <summary>
+            Decodes an array of base64 track strings into Lavalink track objects.
+            </summary>
+            <param name="trackStrings">The array of base64 track strings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.DecodeTracksAsync(System.Collections.Generic.List{System.String})">
+            <summary>
+            Decodes a list of base64 track strings into Lavalink track objects.
+            </summary>
+            <param name="trackStrings">The list of base64 track strings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.GetRoutePlannerStatusAsync">
+            <summary>
+            Retrieves statistics from the route planner.
+            </summary>
+            <returns>The status (<see cref="T:DSharpPlus.Lavalink.Entities.LavalinkRouteStatus"/>) details.</returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.FreeAddressAsync(System.String)">
+            <summary>
+            Unmarks a failed route planner IP Address.
+            </summary>
+            <param name="address">The IP address name to unmark.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkRestClient.FreeAllAddressesAsync">
+            <summary>
+            Unmarks all failed route planner IP Addresses.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.TrackString">
+            <summary>
+            Gets or sets the ID of the track to play.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.Identifier">
+            <summary>
+            Gets the identifier of the track.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.IsSeekable">
+            <summary>
+            Gets whether the track is seekable.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.Author">
+            <summary>
+            Gets the author of the track.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.Length">
+            <summary>
+            Gets the track's duration.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.IsStream">
+            <summary>
+            Gets whether the track is a stream.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.Position">
+            <summary>
+            Gets the starting position of the track.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.Title">
+            <summary>
+            Gets the title of the track.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkTrack.Uri">
+            <summary>
+            Gets the source Uri of this track.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkLoadResultType">
+            <summary>
+            Represents Lavalink track loading results.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkLoadResultType.TrackLoaded">
+            <summary>
+            Specifies that track was loaded successfully.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkLoadResultType.PlaylistLoaded">
+            <summary>
+            Specifies that playlist was loaded successfully.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkLoadResultType.SearchResult">
+            <summary>
+            Specifies that the result set contains search results.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkLoadResultType.NoMatches">
+            <summary>
+            Specifies that the search yielded no results.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LavalinkLoadResultType.LoadFailed">
+            <summary>
+            Specifies that the track failed to load.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkPlaylistInfo">
+            <summary>
+            Represents information about playlist that was loaded by Lavalink.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkPlaylistInfo.Name">
+            <summary>
+            Gets the name of the playlist being loaded.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkPlaylistInfo.SelectedTrack">
+            <summary>
+            Gets the index of the track that was selected in this playlist.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkLoadResult">
+            <summary>
+            Represents information about track loading request.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkLoadResult.LoadResultType">
+            <summary>
+            Gets the loading result type for this request.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkLoadResult.PlaylistInfo">
+            <summary>
+            <para>Gets the information about the playlist loaded as a result of this request.</para>
+            <para>Only applicable if <see cref="P:DSharpPlus.Lavalink.LavalinkLoadResult.LoadResultType"/> is set to <see cref="F:DSharpPlus.Lavalink.LavalinkLoadResultType.PlaylistLoaded"/>.</para>
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkLoadResult.Exception">
+            <summary>
+            Gets the exception details if a track loading failed.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkLoadResult.Tracks">
+            <summary>
+            Gets the tracks that were loaded as a result of this request.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkLoadFailedInfo">
+            <summary>
+            Represents properties sent when a Lavalink track is unable to load.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkLoadFailedInfo.Message">
+            <summary>
+            Gets the message of the sent exception.
+            </summary>
+        </member>
+        <member name="P:DSharpPlus.Lavalink.LavalinkLoadFailedInfo.Severity">
+            <summary>
+            Gets the severity level of the track loading failure.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LoadFailedSeverity">
+            <summary>
+            Represents severity level of the track loading failure.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LoadFailedSeverity.Common">
+            <summary>
+            Indicates a known cause for the failure, and not because of Lavaplayer.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LoadFailedSeverity.Suspicious">
+            <summary>
+            Indicates an unknown cause for the failure, most likely caused by outside sources.
+            </summary>
+        </member>
+        <member name="F:DSharpPlus.Lavalink.LoadFailedSeverity.Fault">
+            <summary>
+            Indicates an issue with Lavaplayer or otherwise no other way to determine the cause.
+            </summary>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.LavalinkUtilities">
+            <summary>
+            Various utilities for Lavalink.
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkUtilities.MayStartNext(DSharpPlus.Lavalink.EventArgs.TrackEndReason)">
+            <summary>
+            Indicates whether a new track should be started after reciving this TrackEndReason. If this is false, either this event is
+            already triggered because another track started (REPLACED) or because the player is stopped (STOPPED, CLEANUP).
+            </summary>
+        </member>
+        <member name="M:DSharpPlus.Lavalink.LavalinkUtilities.DecodeTrack(System.String)">
+            <summary>
+            Decodes a Lavalink track string.
+            </summary>
+            <param name="track">Track string to decode.</param>
+            <returns>Decoded Lavalink track.</returns>
+        </member>
+        <member name="T:DSharpPlus.Lavalink.JavaBinaryReader">
+            <inheritdoc />
+            <summary>
+            Java's DataOutputStream always uses big-endian, while BinaryReader always uses little-endian.
+            This class converts a big-endian stream to little-endian, and includes some helper methods
+            for interacting with Lavaplayer/Lavalink.
+            </summary>
+        </member>
+    </members>
+</doc>

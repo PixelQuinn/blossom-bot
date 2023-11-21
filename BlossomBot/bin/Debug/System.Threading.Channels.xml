@@ -47,6 +47,13 @@
       <typeparam name="T">Specifies the type of data in the channel.</typeparam>
       <returns>The created channel.</returns>
     </member>
+    <member name="M:System.Threading.Channels.Channel.CreateBounded``1(System.Threading.Channels.BoundedChannelOptions,System.Action{``0})">
+      <summary>Creates a channel subject to the provided options.</summary>
+      <param name="options">Options that guide the behavior of the channel.</param>
+      <param name="itemDropped">Delegate that will be called when item is being dropped from channel. See <see cref="T:System.Threading.Channels.BoundedChannelFullMode" />.</param>
+      <typeparam name="T">Specifies the type of data in the channel.</typeparam>
+      <returns>The created channel.</returns>
+    </member>
     <member name="M:System.Threading.Channels.Channel.CreateUnbounded``1">
       <summary>Creates an unbounded channel usable by any number of readers and writers concurrently.</summary>
       <typeparam name="T">The type of data in the channel.</typeparam>
@@ -143,13 +150,19 @@
     </member>
     <member name="M:System.Threading.Channels.ChannelReader`1.ReadAllAsync(System.Threading.CancellationToken)">
       <summary>Creates an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that enables reading all of the data from the channel.</summary>
-      <param name="cancellationToken">The cancellation token to use to cancel the enumeration.</param>
+      <param name="cancellationToken">The cancellation token to use to cancel the enumeration. If data is immediately ready for reading, then that data may be yielded even after cancellation has been requested.</param>
       <returns>The created async enumerable.</returns>
     </member>
     <member name="M:System.Threading.Channels.ChannelReader`1.ReadAsync(System.Threading.CancellationToken)">
       <summary>Asynchronously reads an item from the channel.</summary>
       <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> used to cancel the read operation.</param>
       <returns>A <see cref="T:System.Threading.Tasks.ValueTask`1" /> that represents the asynchronous read operation.</returns>
+    </member>
+    <member name="M:System.Threading.Channels.ChannelReader`1.TryPeek(`0@)">
+      <summary>Attempts to peek at an item from the channel.</summary>
+      <param name="item">The peeked item, or a default value if no item could be peeked.</param>
+      <returns>
+        <see langword="true" /> if an item was read; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Threading.Channels.ChannelReader`1.TryRead(`0@)">
       <summary>Attempts to read an item from the channel.</summary>
@@ -168,6 +181,11 @@
     </member>
     <member name="P:System.Threading.Channels.ChannelReader`1.CanCount">
       <summary>Gets a value that indicates whether <see cref="P:System.Threading.Channels.ChannelReader`1.Count" /> is available for use on this <see cref="T:System.Threading.Channels.ChannelReader`1" /> instance.</summary>
+    </member>
+    <member name="P:System.Threading.Channels.ChannelReader`1.CanPeek">
+      <summary>Gets a value that indicates whether <see cref="M:System.Threading.Channels.ChannelReader`1.TryPeek(`0@)" /> is available for use on this <see cref="T:System.Threading.Channels.ChannelReader`1" /> instance.</summary>
+      <returns>
+        <see langword="true" /> if peeking is supported by this channel instance; <see langword="false" /> otherwise.</returns>
     </member>
     <member name="P:System.Threading.Channels.ChannelReader`1.Completion">
       <summary>Gets a <see cref="T:System.Threading.Tasks.Task" /> that completes when no more data will ever
