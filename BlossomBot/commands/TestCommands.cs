@@ -9,7 +9,13 @@ namespace BlossomBot
         [Command("greet")]
         public async Task GreetCommand(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync($"Hello {ctx.User.Username}");
+            await ctx.Channel.SendMessageAsync($"Hello, {ctx.User.Username}!");
+        }
+
+        [Command("add")]
+        public async Task AddCommand(CommandContext ctx, int numberOne, int numberTwo)
+        {
+            await ctx.Channel.SendMessageAsync($"{numberOne} + {numberTwo} = {numberOne + numberTwo}");
         }
     }
 }
