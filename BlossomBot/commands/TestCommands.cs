@@ -49,5 +49,12 @@ namespace BlossomBot
             await ctx.Channel.SendMessageAsync($"{numberOne} / {numberTwo} = {numberOne / numberTwo}");
         }
 
+        // Define a class for dice-related commands, inheriting from BaseCommandModule
+        [Command("r1d6")]
+        public async Task RollCommand(CommandContext ctx, int sides = 6)
+        {
+            // Send a message to the channel with the result of rolling a die with the specified number of sides
+            await ctx.Channel.SendMessageAsync($"{ctx.User.Username} rolled a {new System.Random().Next(1, sides + 1)}");
+        }
     }
 }
