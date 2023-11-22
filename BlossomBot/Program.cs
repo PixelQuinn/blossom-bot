@@ -39,17 +39,28 @@ namespace BlossomBot
             // Register the Ready event handler
             Client.Ready += Client_Ready;
 
+            // Create a configuration object for CommandsNext with the specified settings
             var commandsConfig = new CommandsNextConfiguration()
             {
+                // Set the command prefix to the value stored in the jsonReader object
                 StringPrefixes = new[] { jsonReader.prefix },
+
+                // Enable the bot to respond to mentions as a command prefix
                 EnableMentionPrefix = true,
+
+                // Enable the bot to respond to commands in direct messages (DMs)
                 EnableDms = true,
+
+                // Disable the default help command provided by CommandsNext
                 EnableDefaultHelp = false
             };
 
+            // Set up CommandsNext with the specified configuration
             Commands = Client.UseCommandsNext(commandsConfig);
 
+            // Register the commands defined in the BasicCommands class
             Commands.RegisterCommands<BasicCommands>();
+
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
