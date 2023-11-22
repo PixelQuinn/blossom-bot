@@ -72,6 +72,21 @@ namespace BlossomBot
             await ctx.Channel.SendMessageAsync($"{ctx.User.Username} rolled {string.Join(", ", results)}");
         }
 
+        [Command("flipcoin")]
+        [Description("Flips a virtual coin and sends the result.")]
+        public async Task FlipCoinCommand(CommandContext ctx)
+        {
+            // Generate a random result: 0 for heads, 1 for tails
+            int result = new Random().Next(2);
+
+            // Interpret the result and send a message
+
+            // Determine the outcome based on the result
+            string outcome = result == 0 ? "Heads" : "Tails";
+
+            // Send a message to the channel indicating the outcome of the coin flip
+            await ctx.Channel.SendMessageAsync($"The coin landed on: {outcome}!");
+        }
 
     }
 }
