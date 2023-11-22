@@ -4,12 +4,12 @@ using DSharpPlus.CommandsNext.Attributes;
 
 namespace BlossomBot
 {
-    public class TestCommands : BaseCommandModule
+    public class BasicCommands : BaseCommandModule
     {
         [Command("greet")]
         public async Task GreetCommand(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync("Meow!");
+            await ctx.Channel.SendMessageAsync($"Hello {ctx.User.Username}");
         }
     }
 }
