@@ -88,5 +88,26 @@ namespace BlossomBot
             await ctx.Channel.SendMessageAsync($"The coin landed on: {outcome}!");
         }
 
+        // Command attribute indicates that this method is a command named "random"
+        // Description attribute provides information about the command for documentation purposes
+        [Command("rng")]
+        [Description("Generates and sends a random number within a specified range.")]
+        public async Task RandomNumberCommand(CommandContext ctx, int minValue = 0, int maxValue = 100)
+        {
+            // Validate input to ensure maxValue is greater than or equal to minValue
+            if (maxValue < minValue)
+            {
+                // If the provided range is invalid, send an error message and exit the method
+                await ctx.Channel.SendMessageAsync("Invalid range. Max value must be greater than or equal to min value.");
+                return;
+            }
+
+            // Generate a random number within the specified range (inclusive)
+            int randomNumber = new Random().Next(minValue, maxValue + 1);
+
+            // Send the random number as a message to the channel
+            await ctx.Channel.SendMessageAsync($"Random number between {minValue} and {maxValue}: {randomNumber}");
+        }
+
     }
 }
