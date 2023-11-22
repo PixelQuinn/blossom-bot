@@ -108,6 +108,5 @@ namespace BlossomBot
             // Send the random number as a message to the channel
             await ctx.Channel.SendMessageAsync($"Random number between {minValue} and {maxValue}: {randomNumber}");
         }
-
     }
 }
