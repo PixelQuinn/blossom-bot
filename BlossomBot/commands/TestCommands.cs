@@ -1,4 +1,6 @@
 ﻿// Import necessary namespaces
+using System.Linq;
+using System;
 using System.Threading.Tasks;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
@@ -50,11 +52,26 @@ namespace BlossomBot
         }
 
         // Define a class for dice-related commands, inheriting from BaseCommandModule
-        [Command("r1d6")]
-        public async Task RollCommand(CommandContext ctx, int sides = 6)
+        [Command("roll")]
+        public async Task RollCommand(CommandContext ctx, int numberOfDice = 1, int sides = 6)
         {
-            // Send a message to the channel with the result of rolling a die with the specified number of sides
-            await ctx.Channel.SendMessageAsync($"{ctx.User.Username} rolled a {new System.Random().Next(1, sides + 1)}");
+            // Validate input values
+            if (numberOfDice <= 0 || sides <= 1)
+            {
+                await ctx.Channel.SendMessageAsync("Please provide valid values for the number of dice and sides.");
+                return;
+            }
+
+            // Roll the dice and generate results
+            var random = new Random();
+            var results = Enumerable.Range(0, numberOfDice)
+                                    .Select(_ => random.Next(1, sides + 1))
+                                    .ToList();
+
+            // Send a message to the channel with the results
+            await ctx.Channel.SendMessageAsync($"{ctx.User.Username} rolled {string.Join(", ", results)}");
         }
+
+
     }
 }
