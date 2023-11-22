@@ -23,5 +23,31 @@ namespace BlossomBot
             // Send a message to the channel with the result of adding the two numbers
             await ctx.Channel.SendMessageAsync($"{numberOne} + {numberTwo} = {numberOne + numberTwo}");
         }
+
+        // Define a command called "subtract" that takes two integer parameters
+        [Command("subtract")]
+        public async Task SubtractCommand(CommandContext ctx, int numberOne, int numberTwo)
+        {
+            // Send a message to the channel with the result of subtracting the second number from the first
+            await ctx.Channel.SendMessageAsync($"{numberOne} - {numberTwo} = {numberOne - numberTwo}");
+        }
+
+        // Define a command called "multiply" that takes two integer parameters
+        [Command("multiply")]
+        public async Task MultiplyCommand(CommandContext ctx, int numberOne, int numberTwo)
+        {
+            // Send a message to the channel with the result of multiplying the two numbers
+            await ctx.Channel.SendMessageAsync($"{numberOne} * {numberTwo} = {numberOne * numberTwo}");
+        }
+
+        // Define a command called "divide" that takes two integer parameters
+        [Command("divide")]
+        public async Task DivideCommand(CommandContext ctx, int numberOne, int numberTwo)
+        {
+            // Send a message to the channel with the result of dividing the first number by the second
+            // Note: This code does not handle division by zero, which could result in an exception
+            await ctx.Channel.SendMessageAsync($"{numberOne} / {numberTwo} = {numberOne / numberTwo}");
+        }
+
     }
 }
