@@ -61,6 +61,7 @@ namespace BlossomBot
             // Register the commands defined in the BasicCommands class
             Commands.RegisterCommands<BasicCommands>();
 
+            Commands.RegisterCommands<ReminderCommands>();  
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

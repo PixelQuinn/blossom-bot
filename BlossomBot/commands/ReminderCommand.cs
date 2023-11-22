@@ -1,0 +1,51 @@
+﻿using System;
+using System.Threading.Tasks;
+using DSharpPlus.CommandsNext;
+using DSharpPlus.CommandsNext.Attributes;
+using System.Timers;
+using System.Collections.Generic;
+
+namespace BlossomBot
+{
+    // Define a class for handling reminder commands
+    public class ReminderCommands : BaseCommandModule
+    {
+        // Dictionary to store timers for each user
+        private static readonly Dictionary<ulong, Timer> Timers = new Dictionary<ulong, Timer>();
+
+        // Command to set a reminder
+        [Command("remind")]
+        [Description("Sets a reminder for a specified time and sends a notification.")]
+        public async Task RemindCommand(CommandContext ctx, string time, [RemainingText] string reminder)
+        {
+            // Parse the time string to a TimeSpan
+            if (!TimeSpan.TryParse(time, out TimeSpan reminderTime))
+            {
+                await ctx.Channel.SendMessageAsync("Invalid time format. Please use HH:mm:ss.");
+                return;
+            }
+
+            // Calculate the total time in milliseconds until the reminder
+            double totalMilliseconds = reminderTime.TotalMilliseconds;
+
+            // Create a timer for the user and start it
+            Timer timer = new Timer(totalMilliseconds);
+            timer.Elapsed += async (sender, e) => await SendReminder(ctx, reminder);
+            timer.AutoReset = false;
+            timer.Start();
+
+            // Store the timer for later reference
+            Timers[ctx.User.Id] = timer;
+
+            await ctx.Channel.SendMessageAsync($"Reminder set for {reminderTime:g}.");
+        }
+
+        // Method to send a reminder
+        private async Task SendReminder(CommandContext ctx, string reminder)
+        {
+            await ctx.Channel.SendMessageAsync($"Reminder for {ctx.User.Mention}: {reminder}");
+            // Remove the timer after it has been triggered
+            Timers.Remove(ctx.User.Id);
+        }
+    }
+}
