@@ -2,6 +2,7 @@
 using BlossomBot.config;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.Interactivity.Extensions;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
@@ -35,6 +36,12 @@ namespace BlossomBot
 
             // Initialize the Discord client
             Client = new DiscordClient(discordConfig);
+
+            // Set default timeout for Commands that use interactivity
+            Client.UseInteractivity(new DSharpPlus.Interactivity.InteractivityConfiguration
+            {
+                Timeout = System.TimeSpan.FromMinutes(2)
+            });
 
             // Register the Ready event handler
             Client.Ready += Client_Ready;
