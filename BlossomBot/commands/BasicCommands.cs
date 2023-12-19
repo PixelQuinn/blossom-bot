@@ -15,7 +15,7 @@ namespace BlossomBot
         {
             var embed = new DiscordEmbedBuilder
             {
-                Title = $"Hello, {ctx.User.Username}!",
+                Title = $"Hello, {ctx.User.Username}!\nI am Blossombot.~",
                 Color = DiscordColor.Green
             };
 
