@@ -35,7 +35,7 @@ Blossom Bot is a Discord bot built using DSharpPlus and CommandsNext in C#. It p
 ### Configuration
 1. Create a `config.json` file in the root directory.
 2. Add your Discord Bot Token to the `token` field.
-```json
+json
 {
   "token": "YOUR_DISCORD_BOT_TOKEN",
   "prefix": "!"
