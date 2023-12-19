@@ -42,10 +42,15 @@ json
 }
 
 ### Command Examples
+
 -Greet users: !greet
+
 -Perform arithmetic operations: !add 5 3 (adds 5+3 and displays result)
+
 -Create a poll: !poll "Favorite Color?" "Red" "Blue" "Green"
+
 -Set a reminder: !remind 10:00:00 "Meeting in 10 hours!"
+
 -Flip a coin: !flipcoin
 
 ### Contributing
