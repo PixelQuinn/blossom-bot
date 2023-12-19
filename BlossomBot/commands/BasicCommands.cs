@@ -163,5 +163,15 @@ namespace BlossomBot
 
             await ctx.Channel.SendMessageAsync(embed: embed);
         }
+
+        [Command("documentation")]
+        [Description("Provides a link to the bot's documentation.")]
+        public async Task DocumentationCommand(CommandContext ctx)
+        {
+            // Replace the placeholder URL with your actual documentation URL
+            string documentationUrl = "https://github.com/PixelQuinn/blossom-bot";
+
+            await ctx.Channel.SendMessageAsync($"Check out the bot's documentation here: {documentationUrl}");
+        }
     }
 }
