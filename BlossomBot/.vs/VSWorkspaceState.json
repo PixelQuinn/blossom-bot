@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\bin",
+    "\\commands",
     "\\config"
   ],
   "SelectedNode": "\\BlossomBot.csproj",

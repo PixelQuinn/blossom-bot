@@ -164,7 +164,7 @@ namespace BlossomBot
             await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        [Command("documentation")]
+        [Command("docs")]
         [Description("Provides a link to the bot's documentation.")]
         public async Task DocumentationCommand(CommandContext ctx)
         {
