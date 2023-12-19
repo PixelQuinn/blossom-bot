@@ -13,7 +13,7 @@ namespace BlossomBot
     internal class Program
     {
         // Properties for Discord client and CommandsNext extension
-        private static DiscordClient Client { get; set; }
+        public static DiscordClient Client { get; set; }
         private static CommandsNextExtension Commands {  get; set; }
 
         // Main method, the entry point for your bot

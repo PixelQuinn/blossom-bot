@@ -149,7 +149,7 @@
             Gets the list of available voice regions. This property is meant as a way to modify <see cref="P:DSharpPlus.BaseDiscordClient.VoiceRegions"/>.
             </summary>
         </member>
-        <member name="M:DSharpPlus.BaseDiscordClient.#ctor(DSharpPlus.DiscordConfiguration)">
+        <member name="M:DSharpPlus.BaseDiscordClient.#ctor(DSharpPlus.DiscordConfiguration,DSharpPlus.Net.RestClient)">
             <summary>
             Initializes this Discord API client.
             </summary>
@@ -249,6 +249,13 @@
             Initializes a new instance of DiscordClient.
             </summary>
             <param name="config">Specifies configuration parameters.</param>
+        </member>
+        <member name="M:DSharpPlus.DiscordClient.#ctor(DSharpPlus.DiscordConfiguration,DSharpPlus.Net.RestClient)">
+            <summary>
+            This constructor is used when constructing a sharded client to use a shared rest client.
+            </summary>
+            <param name="config">Specifies configuration parameters.</param>
+            <param name="restClient">Restclient which will be used for the underlying ApiClients</param>
         </member>
         <member name="M:DSharpPlus.DiscordClient.AddExtension(DSharpPlus.BaseExtension)">
             <summary>

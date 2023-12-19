@@ -5,48 +5,77 @@ using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using DSharpPlus.Interactivity.Extensions;
 
 namespace BlossomBot
 {
     public class PollCommands : BaseCommandModule
     {
         [Command("poll")]
-        [Description("Create a poll with multiple choices.")]
-        public async Task PollCommand(CommandContext ctx, [RemainingText] string pollQuestion)
+        [Description("Creates a poll with the specified title and options.")]
+        public async Task Poll(CommandContext ctx, string pollTitle, params string[] options)
         {
-            // Check if the user provided a question and choices
-            if (string.IsNullOrWhiteSpace(pollQuestion))
+            var interactivity = Program.Client.GetInteractivity();
+            var pollTime = TimeSpan.FromSeconds(10);
+
+            DiscordEmoji[] emojiOptions = { DiscordEmoji.FromName(Program.Client, ":one:"),
+                                            DiscordEmoji.FromName(Program.Client, ":two:"),
+                                            DiscordEmoji.FromName(Program.Client, ":three:"),
+                                            DiscordEmoji.FromName(Program.Client, ":four:") };
+
+            if (options.Length > emojiOptions.Length)
             {
-                await ctx.Channel.SendMessageAsync("Please provide a poll question and choices.");
+                await ctx.Channel.SendMessageAsync("Too many options provided. Maximum allowed: " + emojiOptions.Length);
                 return;
             }
 
-            // Split the input into the question and choices
-            string[] pollOptions = pollQuestion.Split('|').Select(option => option.Trim()).ToArray();
+            string optionsDescription = string.Join("\n", options.Select((option, index) =>
+                $"{emojiOptions[index]} | {option}"));
 
-            // Check if there are at least two choices
-            if (pollOptions.Length < 2)
+            var pollMessage = new DiscordEmbedBuilder
             {
-                await ctx.Channel.SendMessageAsync("Please provide at least two poll choices, separated by '|'.");
-                return;
-            }
-
-            // Build the poll message with an embedded message
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = $"Poll: {pollOptions[0]}",
-                Description = string.Join("\n", pollOptions.Skip(1).Select((choice, index) => $":regional_indicator_{(char)('a' + index)}: {choice}")),
-                Color = DiscordColor.Blue
+                Color = DiscordColor.Red,
+                Title = pollTitle,
+                Description = optionsDescription
             };
 
-            // Send the embedded poll message
-            var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed);
-
-            // Add reactions to the poll message for each choice
-            for (int i = 1; i < pollOptions.Length; i++)
+            var sentPoll = await ctx.Channel.SendMessageAsync(embed: pollMessage);
+            foreach (var emoji in emojiOptions.Take(options.Length))
             {
-                await pollMessage.CreateReactionAsync(DSharpPlus.Entities.DiscordEmoji.FromName(ctx.Client, $":regional_indicator_{(char)('a' + i - 1)}:"));
+                await sentPoll.CreateReactionAsync(emoji);
             }
+
+            var totalReactions = await interactivity.CollectReactionsAsync(sentPoll, pollTime);
+
+            var counts = new int[emojiOptions.Length];
+            foreach (var emoji in totalReactions)
+            {
+                for (int i = 0; i < emojiOptions.Length; i++)
+                {
+                    if (emoji.Emoji == emojiOptions[i])
+                    {
+                        counts[i]++;
+                        break;
+                    }
+                }
+            }
+
+            int totalVotes = counts.Sum();
+
+            // Find the winning option
+            int maxVotes = counts.Max();
+            int winningOptionIndex = Array.IndexOf(counts, maxVotes);
+            string winningOption = options[winningOptionIndex];
+
+            // Display simplified winning message as an embedded message
+            var resultEmbed = new DiscordEmbedBuilder
+            {
+                Color = DiscordColor.Green,
+                Title = "Poll Results",
+                Description = $"The winner is {winningOption} with {maxVotes} votes!",
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: resultEmbed);
         }
     }
 }
