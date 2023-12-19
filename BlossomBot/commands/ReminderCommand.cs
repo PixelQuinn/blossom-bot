@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic; // Added for Dictionary
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using System.Timers;
+using DSharpPlus.Entities;
 
 namespace BlossomBot
 {
@@ -29,6 +30,17 @@ namespace BlossomBot
             // Calculate the total time in milliseconds until the reminder
             double totalMilliseconds = reminderTime.TotalMilliseconds;
 
+            // Build the embedded message for the reminder
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = "Reminder Set",
+                Description = $"**Time:** {reminderTime:g}\n**Message:** {reminder}",
+                Color = DiscordColor.Orange
+            };
+
+            // Send the embedded reminder message
+            await ctx.Channel.SendMessageAsync(embed: embed);
+
             // Create a timer for the user and start it
             Timer timer = new Timer(totalMilliseconds);
             timer.Elapsed += async (sender, e) => await SendReminder(ctx, reminder);
@@ -37,16 +49,21 @@ namespace BlossomBot
 
             // Store the timer for later reference
             Timers[ctx.User.Id] = timer;
-
-            // Send a confirmation message
-            await ctx.Channel.SendMessageAsync($"Reminder set for {reminderTime:g}.");
         }
 
         // Method to send the reminder message
         private async Task SendReminder(CommandContext ctx, string reminder)
         {
-            // Send the reminder message mentioning the user
-            await ctx.Channel.SendMessageAsync($"Reminder for {ctx.User.Mention}: {reminder}");
+            // Build the embedded reminder message
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = "Reminder",
+                Description = $"For {ctx.User.Mention}: {reminder}",
+                Color = DiscordColor.Green
+            };
+
+            // Send the embedded reminder message
+            await ctx.Channel.SendMessageAsync(embed: embed);
 
             // Remove the timer after it has been triggered
             Timers.Remove(ctx.User.Id);
