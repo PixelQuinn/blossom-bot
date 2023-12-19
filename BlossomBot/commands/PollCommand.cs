@@ -1,7 +1,10 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Entities;
 
 namespace BlossomBot
 {
@@ -28,20 +31,21 @@ namespace BlossomBot
                 return;
             }
 
-            // Build the poll message
-            string pollMessage = $"**Poll: {pollOptions[0]}**\n";
-            for (int i = 1; i < pollOptions.Length; i++)
+            // Build the poll message with an embedded message
+            var embed = new DiscordEmbedBuilder
             {
-                pollMessage += $":regional_indicator_{(char)('a' + i - 1)}: {pollOptions[i]}\n";
-            }
+                Title = $"Poll: {pollOptions[0]}",
+                Description = string.Join("\n", pollOptions.Skip(1).Select((choice, index) => $":regional_indicator_{(char)('a' + index)}: {choice}")),
+                Color = DiscordColor.Blue
+            };
 
-            // Send the poll message
-            var poll = await ctx.Channel.SendMessageAsync(pollMessage);
+            // Send the embedded poll message
+            var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed);
 
             // Add reactions to the poll message for each choice
             for (int i = 1; i < pollOptions.Length; i++)
             {
-                await poll.CreateReactionAsync(DSharpPlus.Entities.DiscordEmoji.FromName(ctx.Client, $":regional_indicator_{(char)('a' + i - 1)}:"));
+                await pollMessage.CreateReactionAsync(DSharpPlus.Entities.DiscordEmoji.FromName(ctx.Client, $":regional_indicator_{(char)('a' + i - 1)}:"));
             }
         }
     }

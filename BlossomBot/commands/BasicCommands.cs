@@ -1,57 +1,95 @@
-﻿// Import necessary namespaces
+﻿using System;
 using System.Linq;
-using System;
 using System.Threading.Tasks;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Entities;
 
 namespace BlossomBot
 {
-    // Define a class for basic commands, inheriting from BaseCommandModule
     public class BasicCommands : BaseCommandModule
     {
-        // Define a command called "greet" that takes no additional parameters
         [Command("greet")]
         public async Task GreetCommand(CommandContext ctx)
         {
-            // Send a message to the channel with a greeting mentioning the user's username
-            await ctx.Channel.SendMessageAsync($"Hello, {ctx.User.Username}!");
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"Hello, {ctx.User.Username}!",
+                Color = DiscordColor.Green
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Define a command called "add" that takes two integer parameters
         [Command("add")]
         public async Task AddCommand(CommandContext ctx, int numberOne, int numberTwo)
         {
-            // Send a message to the channel with the result of adding the two numbers
-            await ctx.Channel.SendMessageAsync($"{numberOne} + {numberTwo} = {numberOne + numberTwo}");
+            var result = numberOne + numberTwo;
+
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"Result of {numberOne} + {numberTwo}",
+                Description = result.ToString(),
+                Color = DiscordColor.Orange
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Define a command called "subtract" that takes two integer parameters
         [Command("subtract")]
         public async Task SubtractCommand(CommandContext ctx, int numberOne, int numberTwo)
         {
-            // Send a message to the channel with the result of subtracting the second number from the first
-            await ctx.Channel.SendMessageAsync($"{numberOne} - {numberTwo} = {numberOne - numberTwo}");
+            var result = numberOne - numberTwo;
+
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"Result of {numberOne} - {numberTwo}",
+                Description = result.ToString(),
+                Color = DiscordColor.Orange
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Define a command called "multiply" that takes two integer parameters
         [Command("multiply")]
         public async Task MultiplyCommand(CommandContext ctx, int numberOne, int numberTwo)
         {
-            // Send a message to the channel with the result of multiplying the two numbers
-            await ctx.Channel.SendMessageAsync($"{numberOne} * {numberTwo} = {numberOne * numberTwo}");
+            var result = numberOne * numberTwo;
+
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"Result of {numberOne} * {numberTwo}",
+                Description = result.ToString(),
+                Color = DiscordColor.Orange
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Define a command called "divide" that takes two integer parameters
         [Command("divide")]
         public async Task DivideCommand(CommandContext ctx, int numberOne, int numberTwo)
         {
-            // Send a message to the channel with the result of dividing the first number by the second
-            // Note: This code does not handle division by zero, which could result in an exception
-            await ctx.Channel.SendMessageAsync($"{numberOne} / {numberTwo} = {numberOne / numberTwo}");
+            // Handle division by zero
+            if (numberTwo == 0)
+            {
+                await ctx.Channel.SendMessageAsync("Cannot divide by zero.");
+                return;
+            }
+
+            var result = (float)numberOne / numberTwo;
+
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"Result of {numberOne} / {numberTwo}",
+                Description = result.ToString("F2"), // Format as a floating-point number with 2 decimal places
+                Color = DiscordColor.Orange
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Define a class for dice-related commands, inheriting from BaseCommandModule
+        // Add embedded message to the existing roll command
         [Command("roll")]
         public async Task RollCommand(CommandContext ctx, int numberOfDice = 1, int sides = 6)
         {
@@ -69,7 +107,13 @@ namespace BlossomBot
                                     .ToList();
 
             // Send a message to the channel with the results
-            await ctx.Channel.SendMessageAsync($"{ctx.User.Username} rolled {string.Join(", ", results)}");
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"{ctx.User.Username} rolled {string.Join(", ", results)}",
+                Color = DiscordColor.Teal
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
         [Command("flipcoin")]
@@ -85,11 +129,15 @@ namespace BlossomBot
             string outcome = result == 0 ? "Heads" : "Tails";
 
             // Send a message to the channel indicating the outcome of the coin flip
-            await ctx.Channel.SendMessageAsync($"The coin landed on: {outcome}!");
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"The coin landed on: {outcome}!",
+                Color = DiscordColor.Gold
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Command attribute indicates that this method is a command named "random"
-        // Description attribute provides information about the command for documentation purposes
         [Command("rng")]
         [Description("Generates and sends a random number within a specified range.")]
         public async Task RandomNumberCommand(CommandContext ctx, int minValue = 0, int maxValue = 100)
@@ -106,7 +154,14 @@ namespace BlossomBot
             int randomNumber = new Random().Next(minValue, maxValue + 1);
 
             // Send the random number as a message to the channel
-            await ctx.Channel.SendMessageAsync($"Random number between {minValue} and {maxValue}: {randomNumber}");
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = $"Random number between {minValue} and {maxValue}",
+                Description = randomNumber.ToString(),
+                Color = DiscordColor.Purple
+            };
+
+            await ctx.Channel.SendMessageAsync(embed: embed);
         }
     }
 }
