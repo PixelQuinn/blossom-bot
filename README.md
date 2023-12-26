@@ -57,5 +57,5 @@ json
 Contributions are welcome! Fork the repository, make changes, and submit a pull request.
 
 
-Replace placeholders like `YOUR_DISCORD_BOT_TOKEN`, `your-username`, and `X.X.X` with your actual values. Additionally, consider adding more sections to the documentation based on your bot's features and configuration options.
+Replace placeholders like `YOUR_DISCORD_BOT_TOKEN`, `your-username`, with your actual values.
 
