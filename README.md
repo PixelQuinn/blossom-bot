@@ -43,7 +43,7 @@ json
 
 ### Command Examples
 
-- Greet users: !greet
+- Greet users: !greet, greets targeted user.(placeholder for future on join command)
 
 - Perform arithmetic operations: !add 5 3 (adds 5+3 and displays result)
 
@@ -56,6 +56,8 @@ json
 - Roll Dice: !roll 2 10, this command will roll 2d10. 
 
 - Random Number: !rng 1 10, generates a random number between 1-10. 
+
+- Documentation: !docs, links you to here. 
 
 ### Contributing
 Contributions are welcome! Fork the repository, make changes, and submit a pull request.
