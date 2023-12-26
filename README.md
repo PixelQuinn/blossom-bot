@@ -23,7 +23,7 @@ Blossom Bot is a Discord bot built using DSharpPlus and CommandsNext in C#. It p
 ## Getting Started
 
 ### Prerequisites
-- .NET SDK (version X.X.X)
+- .NET SDK 
 - Discord Bot Token
 
 ### Installation
