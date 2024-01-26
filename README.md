@@ -53,7 +53,8 @@ json
 
 - Flip a coin: !flipcoin
 
-- Roll Dice: !roll 2 10, this command will roll 2d10. 
+- Roll Dice: !roll 2d10, this command will roll 2 ten-sided dice.
+  Can also use modifiers for more table top like rolls; ex: !roll 2d10+4 will roll 2d10 then add 4 and display the total.
 
 - Random Number: !rng 1 10, generates a random number between 1-10. 
 
