@@ -93,12 +93,12 @@ namespace BlossomBot
         [Command("roll")]
         public async Task RollCommand(CommandContext ctx, string input = "1d6")
         {
-            // Parse input string to get number of dice and sides
-            var match = Regex.Match(input, @"^(\d+)d(\d+)$");
+            // Parse input string to get number of dice, sides, and modifiers
+            var match = Regex.Match(input, @"^(\d+)d(\d+)([+-]\d+)?$");
 
             if (!match.Success)
             {
-                await ctx.Channel.SendMessageAsync("Invalid input format. Please use the format !roll 1d6 or !roll 3d10.");
+                await ctx.Channel.SendMessageAsync("Invalid input format. Please use the format !roll 1d6 or !roll 3d10 or !roll 2d6+5.");
                 return;
             }
 
@@ -112,21 +112,35 @@ namespace BlossomBot
                 return;
             }
 
-            // Roll the dice and generate results
+            // Parse the modifier if present
+            int modifier = 0;
+            if (match.Groups[3].Success)
+            {
+                modifier = int.Parse(match.Groups[3].Value);
+            }
+
+            // Roll the dice and apply the modifier
             var random = new Random();
             var results = Enumerable.Range(0, numberOfDice)
                                     .Select(_ => random.Next(1, sides + 1))
                                     .ToList();
 
+            int total = results.Sum() + modifier;
+
+            // Format individual dice rolls
+            string individualRolls = string.Join(", ", results);
+
             // Send a message to the channel with the results
             var embed = new DiscordEmbedBuilder
             {
-                Title = $"{ctx.User.Username} rolled {input} and rolled a total of {results.Sum()}",
+                Title = $"{ctx.User.Username} rolled {input}",
+                Description = $"Individual Rolls: {individualRolls}\nTotal: {total}",
                 Color = DiscordColor.Teal
             };
 
             await ctx.Channel.SendMessageAsync(embed: embed);
         }
+
 
 
         [Command("flipcoin")]
