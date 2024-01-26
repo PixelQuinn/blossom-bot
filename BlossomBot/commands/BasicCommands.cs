@@ -166,5 +166,27 @@ namespace BlossomBot
 
             await ctx.Channel.SendMessageAsync($"Check out the bot's documentation here: {documentationUrl}");
         }
+
+        [Command("purge")]
+        [Description("Deletes a specified number of messages in the channel.")]
+        [RequirePermissions(DSharpPlus.Permissions.ManageMessages)]
+        public async Task PurgeCommand(CommandContext ctx, int numberOfMessagesToDelete)
+        {
+            // Ensure the bot has the necessary permissions to manage messages
+            if (!ctx.Member.PermissionsIn(ctx.Channel).HasPermission(DSharpPlus.Permissions.ManageMessages))
+            {
+                await ctx.RespondAsync("You don't have the required permissions to use this command.");
+                return;
+            }
+
+            // Delete the specified number of messages
+            var messages = await ctx.Channel.GetMessagesAsync(numberOfMessagesToDelete + 1); // +1 to include the command message
+            await ctx.Channel.DeleteMessagesAsync(messages);
+
+            // Notify that the messages have been deleted
+            var confirmationMessage = await ctx.RespondAsync($"Deleted {numberOfMessagesToDelete} messages.");
+            await Task.Delay(5000); // Delay for 5 seconds
+            await confirmationMessage.DeleteAsync(); // Delete the confirmation message after 5 seconds
+        }
     }
 }
