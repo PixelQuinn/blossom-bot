@@ -56,7 +56,9 @@ json
 - Roll Dice: !roll 2d10, this command will roll 2 ten-sided dice.
   Can also use modifiers for more table top like rolls; ex: !roll 2d10+4 will roll 2d10 then add 4 and display the total.
 
-- Random Number: !rng 1 10, generates a random number between 1-10. 
+- Random Number: !rng 1 10, generates a random number between 1-10.
+  
+- Purge: !purge is the first moderation command of blossom-bot. !purge 10 deletes the last 10 messages in the channel, for example.
 
 - Documentation: !docs, links you to here. 
 
