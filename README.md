@@ -45,7 +45,7 @@ json
 
 - Greet users: !greet, greets targeted user.(placeholder for future on join command)
 
-- Perform arithmetic operations: !add 5 3 (adds 5+3 and displays result)
+- Perform arithmetic operations: !calculate 5+3*2 (performs 3 times 2 than adds 5 in accordance to the order of operations)
 
 - Create a poll: !poll "Favorite Color?" "Red" "Blue" "Green"
 
