@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
@@ -89,10 +90,21 @@ namespace BlossomBot
             await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        // Add embedded message to the existing roll command
         [Command("roll")]
-        public async Task RollCommand(CommandContext ctx, int numberOfDice = 1, int sides = 6)
+        public async Task RollCommand(CommandContext ctx, string input = "1d6")
         {
+            // Parse input string to get number of dice and sides
+            var match = Regex.Match(input, @"^(\d+)d(\d+)$");
+
+            if (!match.Success)
+            {
+                await ctx.Channel.SendMessageAsync("Invalid input format. Please use the format !roll 1d6 or !roll 3d10.");
+                return;
+            }
+
+            int numberOfDice = int.Parse(match.Groups[1].Value);
+            int sides = int.Parse(match.Groups[2].Value);
+
             // Validate input values
             if (numberOfDice <= 0 || sides <= 1)
             {
@@ -109,12 +121,13 @@ namespace BlossomBot
             // Send a message to the channel with the results
             var embed = new DiscordEmbedBuilder
             {
-                Title = $"{ctx.User.Username} rolled {string.Join(", ", results)}",
+                Title = $"{ctx.User.Username} rolled {input} and rolled a total of {results.Sum()}",
                 Color = DiscordColor.Teal
             };
 
             await ctx.Channel.SendMessageAsync(embed: embed);
         }
+
 
         [Command("flipcoin")]
         [Description("Flips a virtual coin and sends the result.")]
