@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -23,72 +24,37 @@ namespace BlossomBot
             await ctx.Channel.SendMessageAsync(embed: embed);
         }
 
-        [Command("add")]
-        public async Task AddCommand(CommandContext ctx, int numberOne, int numberTwo)
+        [Command("calculate")]
+        public async Task CalculateCommand(CommandContext ctx, [RemainingText] string expression)
         {
-            var result = numberOne + numberTwo;
-
-            var embed = new DiscordEmbedBuilder
+            try
             {
-                Title = $"Result of {numberOne} + {numberTwo}",
-                Description = result.ToString(),
-                Color = DiscordColor.Orange
-            };
+                var result = EvaluateExpression(expression);
 
-            await ctx.Channel.SendMessageAsync(embed: embed);
-        }
+                var embed = new DiscordEmbedBuilder
+                {
+                    Title = $"Result of {expression}",
+                    Description = result.ToString("F2"),
+                    Color = DiscordColor.Orange
+                };
 
-        [Command("subtract")]
-        public async Task SubtractCommand(CommandContext ctx, int numberOne, int numberTwo)
-        {
-            var result = numberOne - numberTwo;
-
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = $"Result of {numberOne} - {numberTwo}",
-                Description = result.ToString(),
-                Color = DiscordColor.Orange
-            };
-
-            await ctx.Channel.SendMessageAsync(embed: embed);
-        }
-
-        [Command("multiply")]
-        public async Task MultiplyCommand(CommandContext ctx, int numberOne, int numberTwo)
-        {
-            var result = numberOne * numberTwo;
-
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = $"Result of {numberOne} * {numberTwo}",
-                Description = result.ToString(),
-                Color = DiscordColor.Orange
-            };
-
-            await ctx.Channel.SendMessageAsync(embed: embed);
-        }
-
-        [Command("divide")]
-        public async Task DivideCommand(CommandContext ctx, int numberOne, int numberTwo)
-        {
-            // Handle division by zero
-            if (numberTwo == 0)
-            {
-                await ctx.Channel.SendMessageAsync("Cannot divide by zero.");
-                return;
+                await ctx.Channel.SendMessageAsync(embed: embed);
             }
-
-            var result = (float)numberOne / numberTwo;
-
-            var embed = new DiscordEmbedBuilder
+            catch (Exception ex)
             {
-                Title = $"Result of {numberOne} / {numberTwo}",
-                Description = result.ToString("F2"), // Format as a floating-point number with 2 decimal places
-                Color = DiscordColor.Orange
-            };
-
-            await ctx.Channel.SendMessageAsync(embed: embed);
+                await ctx.Channel.SendMessageAsync($"Error: {ex.Message}");
+            }
         }
+
+        private float EvaluateExpression(string expression)
+        {
+            // You can use a library or implement your own expression evaluator here
+            // For simplicity, this example uses DataTable.Compute method
+            DataTable dataTable = new DataTable();
+            var result = dataTable.Compute(expression, "");
+            return Convert.ToSingle(result);
+        }
+
 
         [Command("roll")]
         public async Task RollCommand(CommandContext ctx, string input = "1d6")
