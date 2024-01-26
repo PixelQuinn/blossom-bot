@@ -23,7 +23,7 @@ Blossom Bot is a Discord bot built using DSharpPlus and CommandsNext in C#. It p
 ## Getting Started
 
 ### Prerequisites
-- .NET SDK (version X.X.X)
+- .NET SDK 
 - Discord Bot Token
 
 ### Installation
@@ -43,19 +43,26 @@ json
 
 ### Command Examples
 
--Greet users: !greet
+- Greet users: !greet, greets targeted user.(placeholder for future on join command)
 
--Perform arithmetic operations: !add 5 3 (adds 5+3 and displays result)
+- Perform arithmetic operations: !add 5 3 (adds 5+3 and displays result)
 
--Create a poll: !poll "Favorite Color?" "Red" "Blue" "Green"
+- Create a poll: !poll "Favorite Color?" "Red" "Blue" "Green"
 
--Set a reminder: !remind 10:00:00 "Meeting in 10 hours!"
+- Set a reminder: !remind 10:00:00 "Meeting in 10 hours!"
 
--Flip a coin: !flipcoin
+- Flip a coin: !flipcoin
+
+- Roll Dice: !roll 2d10, this command will roll 2 ten-sided dice.
+  Can also use modifiers for more table top like rolls; ex: !roll 2d10+4 will roll 2d10 then add 4 and display the total.
+
+- Random Number: !rng 1 10, generates a random number between 1-10. 
+
+- Documentation: !docs, links you to here. 
 
 ### Contributing
 Contributions are welcome! Fork the repository, make changes, and submit a pull request.
 
 
-Replace placeholders like `YOUR_DISCORD_BOT_TOKEN`, `your-username`, and `X.X.X` with your actual values. Additionally, consider adding more sections to the documentation based on your bot's features and configuration options.
+Replace placeholders like `YOUR_DISCORD_BOT_TOKEN`, `your-username`, with your actual values.
 
