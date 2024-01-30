@@ -99,6 +99,20 @@ namespace BlossomBot
                 // Respond with a specific message
                 await e.Message.RespondAsync("That sounds like a skill issue...");
             }
+
+            // Check for variations of "how"
+            if (messageContentLower.Contains("how") && !e.Message.Author.IsBot)
+            {
+                // Respond with "git gud"
+                await e.Message.RespondAsync("git gud");
+            }
+
+            // Check for variations of "uwu"
+            if (messageContentLower.Contains("uwu") && !e.Message.Author.IsBot)
+            {
+                // Respond with "UwU"
+                await e.Message.RespondAsync("UwU");
+            }
         }
 
 
