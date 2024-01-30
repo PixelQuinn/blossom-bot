@@ -72,5 +72,43 @@ namespace BlossomBot.commands
             await ctx.RespondAsync($"Banned {member.Username}#{member.Discriminator} for: {reason}");
         }
 
+        [Command("giverole")]
+        [Description("Gives a role to a user.")]
+        [RequirePermissions(DSharpPlus.Permissions.ManageRoles)]
+        public async Task GiveRoleCommand(CommandContext ctx, DiscordMember member, DiscordRole role)
+        {
+            // Ensure the bot has the necessary permissions to manage roles
+            if (!ctx.Member.PermissionsIn(ctx.Channel).HasPermission(DSharpPlus.Permissions.ManageRoles))
+            {
+                await ctx.RespondAsync("You don't have the required permissions to use this command.");
+                return;
+            }
+
+            // Give the specified role to the user
+            await member.GrantRoleAsync(role);
+
+            // Notify that the role has been given
+            await ctx.RespondAsync($"Gave the role {role.Name} to {member.Username}#{member.Discriminator}.");
+        }
+
+        [Command("takerole")]
+        [Description("Removes a role from a user.")]
+        [RequirePermissions(DSharpPlus.Permissions.ManageRoles)]
+        public async Task TakeRoleCommand(CommandContext ctx, DiscordMember member, DiscordRole role)
+        {
+            // Ensure the bot has the necessary permissions to manage roles
+            if (!ctx.Member.PermissionsIn(ctx.Channel).HasPermission(DSharpPlus.Permissions.ManageRoles))
+            {
+                await ctx.RespondAsync("You don't have the required permissions to use this command.");
+                return;
+            }
+
+            // Take the specified role from the user
+            await member.RevokeRoleAsync(role);
+
+            // Notify that the role has been taken
+            await ctx.RespondAsync($"Took the role {role.Name} from {member.Username}#{member.Discriminator}.");
+        }
+
     }
 }
