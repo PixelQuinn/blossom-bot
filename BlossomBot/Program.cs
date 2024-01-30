@@ -83,15 +83,21 @@ namespace BlossomBot
 
         private static async Task MessageCreatedHandler(DiscordClient sender, DSharpPlus.EventArgs.MessageCreateEventArgs e)
         {
-            // Convert both the message content and trigger word to lowercase
+            // Convert the message content to lowercase
             string messageContentLower = e.Message.Content.ToLower();
-            string triggerWordLower = "hello";
 
-            // Check for trigger word in a case-insensitive manner
-            if (messageContentLower.Contains(triggerWordLower) && !e.Message.Author.IsBot)
+            // Check for the "hello" trigger
+            if (messageContentLower.Contains("hello") && !e.Message.Author.IsBot)
             {
                 // Respond with a greeting
                 await e.Message.RespondAsync("Hello there!");
+            }
+
+            // Check for variations of "i cant"
+            if (messageContentLower.Contains("i cant") || messageContentLower.Contains("i can't"))
+            {
+                // Respond with a specific message
+                await e.Message.RespondAsync("That sounds like a skill issue...");
             }
         }
 
