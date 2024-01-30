@@ -104,7 +104,7 @@ namespace BlossomBot
             if (messageContentLower.Contains("how") && !e.Message.Author.IsBot)
             {
                 // Respond with "git gud"
-                await e.Message.RespondAsync("git gud");
+                await e.Message.RespondAsync("Git gud, I guess.");
             }
 
             // Check for variations of "uwu"
