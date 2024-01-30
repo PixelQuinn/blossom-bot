@@ -1,8 +1,10 @@
 ﻿// Import necessary libraries
+using BlossomBot.commands;
 using BlossomBot.config;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Interactivity.Extensions;
+using DSharpPlus.SlashCommands;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
@@ -69,13 +71,16 @@ namespace BlossomBot
             // Register the commands defined in the BasicCommands class
             Commands.RegisterCommands<BasicCommands>();
 
+            // Regist the commands in the ModCommands Class
+            Commands.RegisterCommands<ModCommands>();
+
+
             // Register the commands defined in the ReminderCommands class
             Commands.RegisterCommands<ReminderCommands>();
 
 
             // Register the commands defined in the PollCommands class
             Commands.RegisterCommands<PollCommands>();
-
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
