@@ -45,6 +45,7 @@ namespace BlossomBot
 
             // Register the Ready event handler
             Client.Ready += Client_Ready;
+            Client.MessageCreated += MessageCreatedHandler;
 
             // Create a configuration object for CommandsNext with the specified settings
             var commandsConfig = new CommandsNextConfiguration()
@@ -78,6 +79,11 @@ namespace BlossomBot
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
+        }
+
+        private static Task MessageCreatedHandler(DiscordClient sender, DSharpPlus.EventArgs.MessageCreateEventArgs args)
+        {
+            throw new System.NotImplementedException();
         }
 
         // Event handler for the Ready event of the Discord client
