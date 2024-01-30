@@ -53,5 +53,24 @@ namespace BlossomBot.commands
             await ctx.RespondAsync($"Kicked {member.Username}#{member.Discriminator} for: {reason}");
         }
 
+        [Command("ban")]
+        [Description("Bans a user from the server.")]
+        [RequirePermissions(DSharpPlus.Permissions.BanMembers)]
+        public async Task BanCommand(CommandContext ctx, DiscordMember member, string reason = "No reason provided.")
+        {
+            // Ensure the bot has the necessary permissions to ban members
+            if (!ctx.Member.PermissionsIn(ctx.Channel).HasPermission(DSharpPlus.Permissions.BanMembers))
+            {
+                await ctx.RespondAsync("You don't have the required permissions to use this command.");
+                return;
+            }
+
+            // Ban the specified user
+            await member.BanAsync(0, reason);
+
+            // Notify that the user has been banned
+            await ctx.RespondAsync($"Banned {member.Username}#{member.Discriminator} for: {reason}");
+        }
+
     }
 }
