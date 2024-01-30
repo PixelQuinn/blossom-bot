@@ -81,10 +81,22 @@ namespace BlossomBot
             await Task.Delay(-1);
         }
 
-        private static Task MessageCreatedHandler(DiscordClient sender, DSharpPlus.EventArgs.MessageCreateEventArgs args)
+        private static async Task MessageCreatedHandler(DiscordClient sender, DSharpPlus.EventArgs.MessageCreateEventArgs e)
         {
-            throw new System.NotImplementedException();
+            // Convert both the message content and trigger word to lowercase
+            string messageContentLower = e.Message.Content.ToLower();
+            string triggerWordLower = "hello";
+
+            // Check for trigger word in a case-insensitive manner
+            if (messageContentLower.Contains(triggerWordLower) && !e.Message.Author.IsBot)
+            {
+                // Respond with a greeting
+                await e.Message.RespondAsync("Hello there!");
+            }
         }
+
+
+
 
         // Event handler for the Ready event of the Discord client
         private static Task Client_Ready(DiscordClient sender, DSharpPlus.EventArgs.ReadyEventArgs args)
