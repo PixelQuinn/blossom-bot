@@ -14,10 +14,11 @@ Blossom Bot is a Discord bot built using DSharpPlus and CommandsNext in C#. It p
 - [License](#license)
 
 ## Features
-- Greeting users
-- Basic arithmetic commands
+- Greeting users and auto replies
+- Basic arithmetic commands, can now handle whole equations and more complex math.
 - Poll creation
 - Reminder setting
+- Moderation commands
 - Coin flipping and more!
 
 ## Getting Started
