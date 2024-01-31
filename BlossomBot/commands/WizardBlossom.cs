@@ -98,6 +98,11 @@ public class WizardBlossomCommands : BaseCommandModule
         AddSpellToSpellbook(embed, "Dopplepurr", "Create an illusory duplicate of yourself that appears indistinguishable from you. The duplicate can move and mimic your actions, providing advantage on Dexterity saving throws until it is dispelled or takes damage.", "Level 2");
         // Level 3 spells
         AddSpellToSpellbook(embed, "Whiskerwind Shield", "Summons a protective shield made of magical whiskers that deflects attacks.", "Level 3");
+        AddSpellToSpellbook(embed, "Catnap", "Allows the caster and their allies to take a short rest in the blink of an eye.", "Level 3");
+        AddSpellToSpellbook(embed, "Blinking Catwalk", "Instantly teleport to an unoccupied space you can see within range, leaving behind an illusory image of a cat that confuses and distracts enemies. This teleportation does not provoke opportunity attacks.", "Level 3");
+        AddSpellToSpellbook(embed, "Necro-purr-mancy", "Raise a fallen feline ally as a spectral guardian. The cat companion has its own initiative and can make attacks, providing assistance to its allies. If it is reduced to 0 hit points, it vanishes, returning to the afterlife.", "Level 3");
+        AddSpellToSpellbook(embed, "Purralysis Ray", "Unleash a beam of purr energy at a target within range. On a hit, the target must succeed on a Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.", "Level 3");
+        // Fourth level spells
 
         // Sending the spellbook as an embed
         await ctx.RespondAsync(embed: embed);
