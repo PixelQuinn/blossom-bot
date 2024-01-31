@@ -64,11 +64,9 @@ json
 
 ### Moderation Commands
 
-## ** When Names are specified, they do not need to be @ mentioned. **
+### ** Replace {name} with the username of the person you want to use the action on. **
 
-## ** Replace {name} with the username of the person you want to use the action on. **
-
-## ** Bot must have proper permissions to use some commands. ** 
+### ** Bot must have proper permissions to use some commands. ** 
 
 
 - Ban a user: !ban {name}
