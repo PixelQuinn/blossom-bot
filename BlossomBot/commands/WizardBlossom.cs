@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Entities;
 
 public class WizardBlossomCommands : BaseCommandModule
 {
@@ -64,5 +65,47 @@ public class WizardBlossomCommands : BaseCommandModule
 
         // Announce the appearance of the familiar
         await ctx.RespondAsync("🐱✨ A magical cat familiar appears by your side. Meowgical!");
+    }
+
+    [Command("spellbook")]
+    [Description("Consult the cat wizard's spellbook for arcane knowledge.")]
+    public async Task SpellbookCommand(CommandContext ctx)
+    {
+        // Creating an embed for the spellbook
+        var embed = new DiscordEmbedBuilder
+        {
+            Title = "📜🐾 Cat Wizard's Spellbook",
+            Description = "Explore the arcane knowledge contained within the cat wizard's mystical spellbook.",
+            Color = DiscordColor.Purple, // You can choose a different color for your embed
+            Footer = new DiscordEmbedBuilder.EmbedFooter
+            {
+                Text = "Cat Wizard Bot - All rights reserved"
+            }
+        };
+
+        // Adding cat-themed D&D 5e-inspired spells to the spellbook, Level 1 spells
+        AddSpellToSpellbook(embed, "Purrtection", "Surround yourself with a soothing purr, granting advantage on Charisma saving throws and making you irresistible to feline creatures.", "Level 1");
+        AddSpellToSpellbook(embed, "Catnip Bolt", "Hurl a magical bolt infused with the essence of catnip at a target, dealing 1d8 psychic damage. On a failed Wisdom saving throw, the target is distracted and has disadvantage on its next attack roll.", "Level 1");
+        AddSpellToSpellbook(embed, "Mage Paw", "Transform the touched object into a small, harmless cat statue. While in this form, the object retains its properties but gains an adorable feline appearance.", "Level 1");
+        AddSpellToSpellbook(embed, "Feather Fall (Landing on All Fours)", "When a creature falls, gently guide them to the ground as if they always land on their feet. The fall becomes slow and controlled, preventing fall damage.", "Level 1");
+        AddSpellToSpellbook(embed, "Furry Friends", "Summon a swarm of playful spectral cats to distract and harass enemies in the area. Creatures within the swarm's space must succeed on a Dexterity saving throw or take 1d6 slashing damage.", "Level 1");
+        AddSpellToSpellbook(embed, "Catnap", "Allows the caster and their allies to take a short rest in the blink of an eye.", "Level 3");
+        // Level 2 spells
+        AddSpellToSpellbook(embed, "Telepawtation", "Teleports the caster using kitty magic to a location they can see.", "Level 2");
+        AddSpellToSpellbook(embed, "Hissilient Image", "Creates an illusory image of a hissing cat to distract and confuse enemies.", "Level 2");
+        AddSpellToSpellbook(embed, "Clawmorph", "Transform into a cat for a short duration, gaining increased agility and stealth. You can move through spaces as narrow as 1 inch wide without squeezing, and you have advantage on Dexterity (Stealth) checks.", "Level 2");
+        AddSpellToSpellbook(embed, "Paws of Enfeeblement", "Channel the weakness of a cat's touch to sap the strength of a creature within range. The target must succeed on a Constitution saving throw or have its Strength score reduced by 1d6 for the spell's duration.", "Level 2");
+        AddSpellToSpellbook(embed, "Dopplepurr", "Create an illusory duplicate of yourself that appears indistinguishable from you. The duplicate can move and mimic your actions, providing advantage on Dexterity saving throws until it is dispelled or takes damage.", "Level 2");
+        // Level 3 spells
+        AddSpellToSpellbook(embed, "Whiskerwind Shield", "Summons a protective shield made of magical whiskers that deflects attacks.", "Level 3");
+
+        // Sending the spellbook as an embed
+        await ctx.RespondAsync(embed: embed);
+    }
+
+    private void AddSpellToSpellbook(DiscordEmbedBuilder embed, string spellName, string spellDescription, string spellLevel)
+    {
+        // Adding a field for each spell in the spellbook
+        embed.AddField(spellName, $"**Description:** {spellDescription}\n**Level:** {spellLevel}", inline: false);
     }
 }
