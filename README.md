@@ -57,10 +57,29 @@ json
   Can also use modifiers for more table top like rolls; ex: !roll 2d10+4 will roll 2d10 then add 4 and display the total.
 
 - Random Number: !rng 1 10, generates a random number between 1-10.
-  
-- Purge: !purge is the first moderation command of blossom-bot. !purge 10 deletes the last 10 messages in the channel, for example.
 
 - Documentation: !docs, links you to here. 
+
+- Some fun auto replies: If you say "hello" for example, the bot will reply to you saying "Hello there!".
+
+### Moderation Commands
+
+## ** When Names are specified, they do not need to be @ mentioned. **
+
+## ** Replace {name} with the username of the person you want to use the action on. **
+
+## ** Bot must have proper permissions to use some commands. ** 
+
+
+- Ban a user: !ban {name}
+
+- Kick a user from the server: !kick {name}
+
+- Give a role: !giverole {name}
+
+- Take a role: !takerole {name}
+
+- Purge: !purge 10 deletes the last 10 messages in the channel, for example. The number is specified by the user.
 
 ### Contributing
 Contributions are welcome! Fork the repository, make changes, and submit a pull request.
