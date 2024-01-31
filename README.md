@@ -26,13 +26,13 @@ Blossom Bot is a Discord bot built using DSharpPlus and CommandsNext in C#. It p
 - .NET SDK 
 - Discord Bot Token
 
-### Installation
+## Installation
 1. Clone the repository: `git clone https://github.com/your-username/blossom-bot.git`
 2. Navigate to the project directory: `cd blossom-bot`
 3. Build the project: `dotnet build`
 4. Run the bot: `dotnet run`
 
-### Configuration
+## Configuration
 1. Create a `config.json` file in the root directory.
 2. Add your Discord Bot Token to the `token` field.
 json
@@ -41,7 +41,7 @@ json
   "prefix": "!"
 }
 
-### Command Examples
+## Command Examples
 
 - Greet users: !greet, greets targeted user.(placeholder for future on join command)
 
@@ -62,7 +62,7 @@ json
 
 - Some fun auto replies: If you say "hello" for example, the bot will reply to you saying "Hello there!".
 
-### Moderation Commands
+## Moderation Commands
 
 ### ** Replace {name} with the username of the person you want to use the action on. **
 
@@ -79,7 +79,7 @@ json
 
 - Purge: !purge 10 deletes the last 10 messages in the channel, for example. The number is specified by the user.
 
-### Contributing
+## Contributing
 Contributions are welcome! Fork the repository, make changes, and submit a pull request.
 
 
