@@ -51,4 +51,18 @@ public class WizardBlossomCommands : BaseCommandModule
         // Announce the completion of the potion
         await ctx.RespondAsync($"🧪✨ The cat wizard brews a {potionName}! It sparkles with magical energy. Drink at your own whiskerilicious risk!");
     }
+
+    [Command("summonfamiliar")]
+    [Description("Summon a magical cat familiar to aid you.")]
+    public async Task SummonFamiliarCommand(CommandContext ctx)
+    {
+        // Simulate the summoning process (you can replace this with your own logic)
+        await ctx.RespondAsync("🔮✨ Conjuring magical energies...");
+
+        // Simulate a delay to create suspense during the summoning
+        await Task.Delay(3000);
+
+        // Announce the appearance of the familiar
+        await ctx.RespondAsync("🐱✨ A magical cat familiar appears by your side. Meowgical!");
+    }
 }
