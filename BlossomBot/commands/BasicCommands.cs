@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using BlossomBot.commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
@@ -166,5 +167,35 @@ namespace BlossomBot
 
             await ctx.Channel.SendMessageAsync($"Check out the bot's documentation here: {documentationUrl}");
         }
+
+        [Command("help")]
+        public async Task Help(CommandContext ctx)
+        {
+            var prefix = "!"; // Change this to your bot's prefix
+
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = "Command List",
+                Description = $"Here are the available commands. Use `{prefix}command` to execute a command:",
+                Color = DiscordColor.Blue,
+            };
+
+            var commands = ctx.CommandsNext.RegisteredCommands.Values
+                .Where(c => !c.IsHidden && !IsModCommand(c))
+                .OrderBy(c => c.Name);
+
+            foreach (var command in commands)
+            {
+                embed.AddField($"{prefix}{command.Name}", command.Description ?? "No description available.", inline: false);
+            }
+
+            await ctx.RespondAsync(embed: embed);
+        }
+
+        private bool IsModCommand(Command command)
+        {
+            return command.CustomAttributes.Any(attr => attr.GetType() == typeof(ModCommandAttribute));
+        }
+
     }
 }

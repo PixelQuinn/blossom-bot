@@ -10,11 +10,14 @@ using DSharpPlus.Entities;
 
 namespace BlossomBot.commands
 {
+    [AttributeUsage(AttributeTargets.Method)]
+    public class ModCommandAttribute : Attribute { }
     public class ModCommands : BaseCommandModule
     {
         [Command("purge")]
         [Description("Deletes a specified number of messages in the channel.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageMessages)]
+        [ModCommand]
         public async Task PurgeCommand(CommandContext ctx, int numberOfMessagesToDelete)
         {
             // Ensure the bot has the necessary permissions to manage messages
