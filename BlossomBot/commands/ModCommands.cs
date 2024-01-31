@@ -40,6 +40,7 @@ namespace BlossomBot.commands
         [Command("kick")]
         [Description("Kicks a user from the server.")]
         [RequirePermissions(DSharpPlus.Permissions.KickMembers)]
+        [ModCommand]
         public async Task KickCommand(CommandContext ctx, DiscordMember member, string reason = "No reason provided.")
         {
             // Ensure the bot has the necessary permissions to kick members
@@ -59,6 +60,7 @@ namespace BlossomBot.commands
         [Command("ban")]
         [Description("Bans a user from the server.")]
         [RequirePermissions(DSharpPlus.Permissions.BanMembers)]
+        [ModCommand]
         public async Task BanCommand(CommandContext ctx, DiscordMember member, string reason = "No reason provided.")
         {
             // Ensure the bot has the necessary permissions to ban members
@@ -78,6 +80,7 @@ namespace BlossomBot.commands
         [Command("giverole")]
         [Description("Gives a role to a user.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageRoles)]
+        [ModCommand]
         public async Task GiveRoleCommand(CommandContext ctx, DiscordMember member, DiscordRole role)
         {
             // Ensure the bot has the necessary permissions to manage roles
@@ -97,6 +100,7 @@ namespace BlossomBot.commands
         [Command("takerole")]
         [Description("Removes a role from a user.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageRoles)]
+        [ModCommand]
         public async Task TakeRoleCommand(CommandContext ctx, DiscordMember member, DiscordRole role)
         {
             // Ensure the bot has the necessary permissions to manage roles
