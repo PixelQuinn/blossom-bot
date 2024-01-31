@@ -74,8 +74,8 @@ namespace BlossomBot
             // Regist the commands in the ModCommands Class
             Commands.RegisterCommands<ModCommands>();
 
-            // Register the 8-ball
-            Commands.RegisterCommands<EightBallCommands>();
+            // Register blossom's wizard powers
+            Commands.RegisterCommands<WizardBlossomCommands>();
 
             // Register the commands defined in the ReminderCommands class
             Commands.RegisterCommands<ReminderCommands>();
