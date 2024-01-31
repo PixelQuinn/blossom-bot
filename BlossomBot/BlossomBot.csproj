@@ -176,8 +176,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="commands\EightBall.cs" />
     <Compile Include="commands\ModCommands.cs" />
     <Compile Include="commands\PollCommand.cs" />
+    <Compile Include="commands\RegisterCommands.cs" />
     <Compile Include="commands\ReminderCommand.cs" />
     <Compile Include="config\JSONReader.cs" />
     <Compile Include="DSharpPlus\InteractionResponseBuilder.cs" />
