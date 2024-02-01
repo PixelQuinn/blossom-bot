@@ -87,47 +87,60 @@ public class SpellbookCommands : BaseCommandModule
         new Spell { Name = "Fury of the Nine Lives", Description = "Channel the cumulative power of nine lives into a devastating magical onslaught. All creatures in a 40-foot radius must make a Dexterity saving throw or suffer 10d10 force damage, and their movement speed is halved for 1 minute. On a successful save, they take half damage and are not affected by reduced movement speed.", Level = 99 }
     };
 
-    string[] catchphrases = { "Mrowl! I am the master of magic!", "Hiss! Tremble before my arcane might!" };
+    string[] catchphrases = { "Behold the mystic might of Blossom! With a flick of the paw and a hiss in the air, a level one spell I declare: {SpellName}! Tremble before my feline enchantments!" };
     string[] castingPhrases = { "Abracadabra!", "Meowgicus!", "Purrformus!" };
 
     [Command("spellbook")]
     [Description("Consult the cat wizard's spellbook for arcane knowledge.")]
     public async Task SpellbookCommand(CommandContext ctx, [RemainingText] string target = null)
     {
-        // Delete the command message
-        await ctx.Message.DeleteAsync();
-
         Random random = new Random();
+
+        // If a specific spell is specified, show its information
+        if (!string.IsNullOrEmpty(target))
+        {
+            // Find the specified spell
+            Spell specifiedSpell = spells.Find(spell => spell.Name.ToLower() == target.ToLower());
+
+            if (specifiedSpell != null)
+            {
+                // Display detailed information about the specified spell
+                string spellInfoMessage = $"**Spell Information:**\n" +
+                    $"Name: {specifiedSpell.Name}\n" +
+                    $"Level: {specifiedSpell.Level}\n" +
+                    $"Description: {specifiedSpell.Description}";
+
+                await ctx.RespondAsync(spellInfoMessage);
+                return;
+            }
+            else
+            {
+                // If the specified spell is not found, inform the user
+                await ctx.RespondAsync($"Sorry, the spell '{target}' was not found in the spellbook.");
+                return;
+            }
+        }
 
         // Pick a random spell
         Spell randomSpell = spells[random.Next(spells.Count)];
 
-        // Pick a random catchphrase
+        // Pick a random catchphrase with the spell name integrated
         string randomCatchphrase = catchphrases[random.Next(catchphrases.Length)];
+        randomCatchphrase = randomCatchphrase.Replace("{SpellName}", randomSpell.Name);
 
-        // Pick a random casting phrase
+        // Pick a random casting phrase with the spell name integrated
         string randomCastingPhrase = castingPhrases[random.Next(castingPhrases.Length)];
+        randomCastingPhrase = randomCastingPhrase.Replace("{SpellName}", randomSpell.Name);
 
-        // Construct the message with catchphrase
-        string message = $"*Evil Cat Wizard Catchphrase:* {randomCatchphrase}";
+        // Construct the message with catchphrase and casting phrase
+        string message = $"*Evil Cat Wizard Catchphrase:* {randomCatchphrase}\n" +
+                         $"*Casting Phrase:* {randomCastingPhrase}";
 
-        // Send the catchphrase
-        var catchphraseMessage = await ctx.RespondAsync(message);
-
-        // Pause for 2 seconds
-        await Task.Delay(2000);
-
-        // Construct the message with casting phrase
-        message = $"*Casting Phrase:* {randomCastingPhrase}";
-
-        // Edit the catchphrase message to include casting phrase
-        await catchphraseMessage.ModifyAsync(message);
-
-        // Pause for 2 seconds
-        await Task.Delay(2000);
+        // Send the final message
+        await ctx.RespondAsync(message);
 
         // Construct the final spell casting message
-        message = $"**Blossom casts {randomSpell.Name}**";
+        message = $"**Blossom casts {randomSpell.Name}!** Tremble before my feline enchantments!";
 
         // Include target information if specified
         if (!string.IsNullOrEmpty(target))
@@ -139,7 +152,7 @@ public class SpellbookCommands : BaseCommandModule
         await ctx.RespondAsync(message);
     }
 
-    [Command("spellinfo")]
+[Command("spellinfo")]
     [Description("Get detailed information about a specific spell.")]
     public async Task SpellInfoCommand(CommandContext ctx, [RemainingText] string spellName)
     {
