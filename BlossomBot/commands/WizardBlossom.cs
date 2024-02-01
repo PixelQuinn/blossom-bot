@@ -89,11 +89,11 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Furry Friends",  Description = "Summon a swarm of playful spectral cats to distract and harass enemies in the area. Creatures within the swarm's space must succeed on a Dexterity saving throw or take 1d6 slashing damage.", Level = 1},
 
         // Level 2 Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = "Telepawtation", Description = "Teleports the caster using kitty magic to a location they can see.",  Level = 2 },
+        new Spell { Name = "Hissilient Image", Description = "Creates an illusory image of a hissing cat to distract and confuse enemies.", Level = 2 },
+        new Spell { Name = "Clawmorph", Description = "Transform into a cat for a short duration, gaining increased agility and stealth. You can move through spaces as narrow as 1 inch wide without squeezing, and you have advantage on Dexterity (Stealth) checks.", Level = 2 },
+        new Spell { Name = "Paws of Enfeeblement", Description = "Channel the weakness of a cat's touch to sap the strength of a creature within range. The target must succeed on a Constitution saving throw or have its Strength score reduced by 1d6 for the spell's duration.", Level = 2 },
+        new Spell { Name = "Dopplepurr", Description = "Create an illusory duplicate of yourself that appears indistinguishable from you. The duplicate can move and mimic your actions, providing advantage on Dexterity saving throws until it is dispelled or takes damage.", Level = 2 },
 
         // Level 3 Spells
         new Spell { Name = , Description = , Level =  },
