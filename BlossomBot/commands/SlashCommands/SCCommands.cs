@@ -31,7 +31,7 @@ namespace BlossomBot.commands.SlashCommands
             var searchRequest = await listRequest.ExecuteAsync();
             var results = searchRequest.Items;
 
-            if (results == null || results.Any())
+            if (results == null || !results.Any())
             {
                 await ctx.EditResponseAsync(new DSharpPlus.Entities.DiscordWebhookBuilder().WithContent("No results found."));
                 return;

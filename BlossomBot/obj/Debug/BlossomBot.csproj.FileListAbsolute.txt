@@ -47,10 +47,8 @@ C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.cspr
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.exe
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\obj\Debug\BlossomBot.pdb
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Auth.dll
-C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Auth.PlatformServices.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Core.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.dll
-C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.PlatformServices.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Translate.v2.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\System.CodeDom.dll
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.pdb
@@ -62,3 +60,12 @@ C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Cor
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Translate.v2.pdb
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.Translate.v2.xml
 C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\System.CodeDom.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.CloudSearch.v1.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.CustomSearchAPI.v1.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.SearchConsole.v1.dll
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.CloudSearch.v1.pdb
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.CloudSearch.v1.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.CustomSearchAPI.v1.pdb
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.CustomSearchAPI.v1.xml
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.SearchConsole.v1.pdb
+C:\Users\Zehir\Documents\GitHub\blossom-bot\BlossomBot\bin\Debug\Google.Apis.SearchConsole.v1.xml

@@ -3411,6 +3411,35 @@
             format: "yyyy-MM-dd'T'HH:mm:sssssssss'Z'". For example: 2020-05-13T16:00:00.045123456Z.
             </summary>
         </member>
+        <member name="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IsStale">
+            <summary>
+            Returns true if the token represented by this token response should be refreshed.
+            Note that this may be true for valid tokens, in which case a pre-emptive refresh is adviced
+            even if the current token may be used while it continues to be valid.
+            </summary>
+            <remarks>
+            See <see cref="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.MayBeUsed(Google.Apis.Util.IClock)"/> for information on when a token is considered valid.
+            A valid token is considered stale if it's close to expiring, but not so much as to be unusable.
+            </remarks>
+        </member>
+        <member name="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.RefreshWindowStartUtc">
+            <summary>
+            The start of the refresh window for this token, if known. Otherwise, null.
+            </summary>
+            <remarks>
+            At the start of token refresh window, the token is still usable, but efforts should
+            be made to obtain a fresher one.
+            </remarks>
+        </member>
+        <member name="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.ExpiryWindowStartUtc">
+            <summary>
+            The start of the expiry window for this token, if known. Otherwise, null.
+            </summary>
+            <remarks>
+            A token that's within its expiry window, may still be usable, but doing so
+            may run into clock skew related issues.
+            </remarks>
+        </member>
         <member name="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IsExpired(Google.Apis.Util.IClock)">
             <summary>
             Returns true if the token is expired or it's going to expire soon.
@@ -3419,13 +3448,31 @@
             or <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IdToken"/> set then it's considered expired.
             If <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.ExpiresInSeconds"/> is null, the token is also considered expired. </remarks>
         </member>
-        <member name="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IsEffectivelyExpired(Google.Apis.Util.IClock)">
+        <member name="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.ShouldBeRefreshed(Google.Apis.Util.IClock)">
             <summary>
-            Returns true if the token is expired or it's so close to expiring that it shouldn't be used.
+            Returns true if the token represented by this token response should be refreshed.
+            Note that this may be true for valid tokens, in which case a pre-emptive refresh is adviced
+            even if the current token may be used while it continues to be valid.
             </summary>
-            <remarks>If a token response doesn't have at least one of <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.AccessToken"/>
-            or <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IdToken"/> set then it's considered expired.
-            If <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.ExpiresInSeconds"/> is null, the token is also considered expired. </remarks>
+            <remarks>
+            See <see cref="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.MayBeUsed(Google.Apis.Util.IClock)"/> for information on when a token is considered valid.
+            A valid token is considered stale if it's close to expiring, but not so much as to be unusable.
+            </remarks>
+        </member>
+        <member name="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.MayBeUsed(Google.Apis.Util.IClock)">
+            <summary>
+            Returns true if the token represented by this token response is valid, that is, it may be used
+            for authentication and authorizations purposes.
+            </summary>
+            <remarks>
+            A token is considered valid if all of the following are true:
+            <list type="bullet">
+            <item>At least one of <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.AccessToken"/> and <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IdToken"/> is not null.</item>
+            <item><see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.ExpiresInSeconds"/> is not null.</item>
+            <item>The token has not expired and will not expire in the very near future. That is if
+            <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.IssuedUtc"/> plus <see cref="P:Google.Apis.Auth.OAuth2.Responses.TokenResponse.ExpiresInSeconds"/> is in the not so near future.</item>
+            </list>
+            </remarks>
         </member>
         <member name="M:Google.Apis.Auth.OAuth2.Responses.TokenResponse.FromHttpResponseAsync(System.Net.Http.HttpResponseMessage,Google.Apis.Util.IClock,Google.Apis.Logging.ILogger)">
             <summary>

@@ -1,0 +1,1120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.SearchConsole.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchConsoleService">
+            <summary>The SearchConsole Service.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchConsoleService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchConsoleService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchConsoleService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Search Console API.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleService.Scope.Webmasters">
+            <summary>View and manage Search Console data for your verified sites</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleService.Scope.WebmastersReadonly">
+            <summary>View Search Console data for your verified sites</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchConsoleService.ScopeConstants">
+            <summary>Available OAuth 2.0 scope constants for use with the Google Search Console API.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleService.ScopeConstants.Webmasters">
+            <summary>View and manage Search Console data for your verified sites</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleService.ScopeConstants.WebmastersReadonly">
+            <summary>View Search Console data for your verified sites</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.Searchanalytics">
+            <summary>Gets the Searchanalytics resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.Sitemaps">
+            <summary>Gets the Sitemaps resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.Sites">
+            <summary>Gets the Sites resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.UrlInspection">
+            <summary>Gets the UrlInspection resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleService.UrlTestingTools">
+            <summary>Gets the UrlTestingTools resource.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1">
+            <summary>A base abstract class for SearchConsole requests.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new SearchConsoleBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.Xgafv">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.XgafvEnum">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.XgafvEnum.Value1">
+            <summary>v1 error format</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.XgafvEnum.Value2">
+            <summary>v2 error format</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.AccessToken">
+            <summary>OAuth access token.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.Alt">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.AltEnum">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.AltEnum.Media">
+            <summary>Media download with context-dependent Content-Type</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.AltEnum.Proto">
+            <summary>Responses with Content-Type of application/x-protobuf</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.Callback">
+            <summary>JSONP</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.Key">
+            <summary>
+            API key. Your API key identifies your project and provides you with API access, quota, and reports. Required
+            unless you provide an OAuth 2.0 token.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.QuotaUser">
+            <summary>
+            Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a
+            user, but should not exceed 40 characters.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.UploadType">
+            <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.UploadProtocol">
+            <summary>Upload protocol for media (e.g. "raw", "multipart").</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchConsoleBaseServiceRequest`1.InitParameters">
+            <summary>Initializes SearchConsole parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchanalyticsResource">
+            <summary>The "searchanalytics" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SearchanalyticsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchanalyticsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchanalyticsResource.Query(Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest,System.String)">
+            <summary>
+            Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row
+            keys that you define. You must define a date range of one or more days. When date is one of the group by
+            values, any days without data are omitted from the result list. If you need to know which days have data,
+            issue a broad date range query grouped by date for any metric, and see which day rows are returned.
+            </summary>
+            <param name="body">The body of the request.</param>
+            <param name="siteUrl">The site's URL, including protocol. For example: `http://www.example.com/`.</param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest">
+            <summary>
+            Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row
+            keys that you define. You must define a date range of one or more days. When date is one of the group by
+            values, any days without data are omitted from the result list. If you need to know which days have data,
+            issue a broad date range query grouped by date for any metric, and see which day rows are returned.
+            </summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest,System.String)">
+            <summary>Constructs a new Query request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.SiteUrl">
+            <summary>The site's URL, including protocol. For example: `http://www.example.com/`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SearchanalyticsResource.QueryRequest.InitParameters">
+            <summary>Initializes Query parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitemapsResource">
+            <summary>The "sitemaps" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SitemapsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.Delete(System.String,System.String)">
+            <summary>
+            Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or the URLs that
+            were previously crawled in the deleted sitemap.
+            </summary>
+            <param name="siteUrl">The site's URL, including protocol. For example: `http://www.example.com/`.</param>
+            <param name="feedpath">
+            The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+            </param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest">
+            <summary>
+            Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or the URLs that
+            were previously crawled in the deleted sitemap.
+            </summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.SiteUrl">
+            <summary>The site's URL, including protocol. For example: `http://www.example.com/`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.Feedpath">
+            <summary>The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.Get(System.String,System.String)">
+            <summary>Retrieves information about a specific sitemap.</summary>
+            <param name="siteUrl">The site's URL, including protocol. For example: `http://www.example.com/`.</param>
+            <param name="feedpath">
+            The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+            </param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest">
+            <summary>Retrieves information about a specific sitemap.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.SiteUrl">
+            <summary>The site's URL, including protocol. For example: `http://www.example.com/`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.Feedpath">
+            <summary>The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.List(System.String)">
+            <summary>
+             Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included in the
+            sitemap index file (if `sitemapIndex` is specified in the request).
+            </summary>
+            <param name="siteUrl">The site's URL, including protocol. For example: `http://www.example.com/`.</param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest">
+            <summary>
+             Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included in the
+            sitemap index file (if `sitemapIndex` is specified in the request).
+            </summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.SiteUrl">
+            <summary>The site's URL, including protocol. For example: `http://www.example.com/`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.SitemapIndex">
+            <summary>
+             A URL of a site's sitemap index. For example: `http://www.example.com/sitemapindex.xml`.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.Submit(System.String,System.String)">
+            <summary>Submits a sitemap for a site.</summary>
+            <param name="siteUrl">The site's URL, including protocol. For example: `http://www.example.com/`.</param>
+            <param name="feedpath">
+            The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+            </param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest">
+            <summary>Submits a sitemap for a site.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Submit request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.SiteUrl">
+            <summary>The site's URL, including protocol. For example: `http://www.example.com/`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.Feedpath">
+            <summary>The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitemapsResource.SubmitRequest.InitParameters">
+            <summary>Initializes Submit parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitesResource">
+            <summary>The "sites" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.SitesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.Add(System.String)">
+            <summary> Adds a site to the set of the user's sites in Search Console.</summary>
+            <param name="siteUrl">The URL of the site to add.</param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitesResource.AddRequest">
+            <summary> Adds a site to the set of the user's sites in Search Console.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.AddRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Add request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.AddRequest.SiteUrl">
+            <summary>The URL of the site to add.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.AddRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.AddRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.AddRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.AddRequest.InitParameters">
+            <summary>Initializes Add parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.Delete(System.String)">
+            <summary> Removes a site from the set of the user's Search Console sites.</summary>
+            <param name="siteUrl">
+            The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+            `sc-domain:example.com`.
+            </param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest">
+            <summary> Removes a site from the set of the user's Search Console sites.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest.SiteUrl">
+            <summary>
+            The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+            `sc-domain:example.com`.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.Get(System.String)">
+            <summary> Retrieves information about specific site.</summary>
+            <param name="siteUrl">
+            The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+            `sc-domain:example.com`.
+            </param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitesResource.GetRequest">
+            <summary> Retrieves information about specific site.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.GetRequest.SiteUrl">
+            <summary>
+            The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+            `sc-domain:example.com`.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.List">
+            <summary> Lists the user's Search Console sites.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.SitesResource.ListRequest">
+            <summary> Lists the user's Search Console sites.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.SitesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.SitesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.UrlInspectionResource">
+            <summary>The "urlInspection" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.UrlInspectionResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlInspectionResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlInspectionResource.Index">
+            <summary>Gets the Index resource.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource">
+            <summary>The "index" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.Inspect(Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest)">
+            <summary>Index inspection.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest">
+            <summary>Index inspection.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest)">
+            <summary>Constructs a new Inspect request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlInspectionResource.IndexResource.InspectRequest.InitParameters">
+            <summary>Initializes Inspect parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.UrlTestingToolsResource">
+            <summary>The "urlTestingTools" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTest">
+            <summary>Gets the MobileFriendlyTest resource.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource">
+            <summary>The "mobileFriendlyTest" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.Run(Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestRequest)">
+            <summary>Runs Mobile-Friendly Test for a given URL.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest">
+            <summary>Runs Mobile-Friendly Test for a given URL.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestRequest)">
+            <summary>Constructs a new Run request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SearchConsole.v1.UrlTestingToolsResource.MobileFriendlyTestResource.RunRequest.InitParameters">
+            <summary>Initializes Run parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult">
+            <summary>
+            AMP inspection result of the live page or the current information from Google's index, depending on whether you
+            requested a live inspection or not.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.AmpIndexStatusVerdict">
+            <summary>Index status of the AMP URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.AmpUrl">
+            <summary>
+            URL of the AMP that was inspected. If the submitted URL is a desktop page that refers to an AMP version, the
+            AMP version will be inspected.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.IndexingState">
+            <summary>Whether or not the page blocks indexing through a noindex rule.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.Issues">
+            <summary>A list of zero or more AMP issues found for the inspected URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.LastCrawlTimeRaw">
+            <summary>
+            Last time this AMP version was crawled by Google. Absent if the URL was never crawled successfully.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.LastCrawlTime">
+            <summary><seealso cref="T:System.Object"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.LastCrawlTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.LastCrawlTimeDateTimeOffset">
+            <summary><seealso cref="T:System.DateTimeOffset"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.LastCrawlTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.PageFetchState">
+            <summary>Whether or not Google could fetch the AMP.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.RobotsTxtState">
+            <summary>Whether or not the page is blocked to Google by a robots.txt rule.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.Verdict">
+            <summary>
+            The status of the most severe error on the page. If a page has both warnings and errors, the page status is
+            error. Error status means the page cannot be shown in Search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpInspectionResult.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.AmpIssue">
+            <summary>AMP issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpIssue.IssueMessage">
+            <summary>Brief description of this issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpIssue.Severity">
+            <summary>Severity of this issue: WARNING or ERROR.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.AmpIssue.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.ApiDataRow.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.ApiDimensionFilter">
+            <summary>
+            A filter test to be applied to each row in the data set, where a match can return the row. Filters are string
+            comparisons, and values and dimension names are not case-sensitive. Individual filters are either AND'ed or
+            OR'ed within their parent filter group, according to the group's group type. You do not need to group by a
+            specified dimension to filter against it.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.ApiDimensionFilter.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.ApiDimensionFilterGroup">
+            <summary>
+            A set of dimension value filters to test against each row. Only rows that pass all filter groups will be
+            returned. All results within a filter group are either AND'ed or OR'ed together, depending on the group type
+            selected. All filter groups are AND'ed together.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.ApiDimensionFilterGroup.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.BlockedResource">
+            <summary>Blocked resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.BlockedResource.Url">
+            <summary>URL of the blocked resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.BlockedResource.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.DetectedItems">
+            <summary>Rich Results items grouped by type.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.DetectedItems.Items">
+            <summary>List of Rich Results items.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.DetectedItems.RichResultType">
+            <summary>Rich Results type</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.DetectedItems.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.Image">
+            <summary>Describe image data.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.Image.Data">
+            <summary>
+            Image data in format determined by the mime type. Currently, the format will always be "image/png", but this
+            might change in the future.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.Image.MimeType">
+            <summary>The mime-type of the image data.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.Image.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult">
+            <summary>
+            Results of index status inspection for either the live page or the version in Google's index, depending on
+            whether you requested a live inspection or not. For more information, see the [Index coverage report
+            documentation](https://support.google.com/webmasters/answer/7440203).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.CoverageState">
+            <summary>
+            Could Google find and index the page. More details about page indexing appear in 'indexing_state'.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.CrawledAs">
+            <summary>Primary crawler that was used by Google to crawl your site.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.GoogleCanonical">
+            <summary>
+            The URL of the page that Google selected as canonical. If the page was not indexed, this field is absent.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.IndexingState">
+            <summary>Whether or not the page blocks indexing through a noindex rule.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.LastCrawlTimeRaw">
+            <summary>
+            Last time this URL was crawled by Google using the [primary
+            crawler](https://support.google.com/webmasters/answer/7440203#primary_crawler). Absent if the URL was never
+            crawled successfully.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.LastCrawlTime">
+            <summary><seealso cref="T:System.Object"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.LastCrawlTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.LastCrawlTimeDateTimeOffset">
+            <summary><seealso cref="T:System.DateTimeOffset"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.LastCrawlTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.PageFetchState">
+            <summary>
+            Whether or not Google could retrieve the page from your server. Equivalent to ["page
+            fetch"](https://support.google.com/webmasters/answer/9012289#index_coverage) in the URL inspection report.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.ReferringUrls">
+            <summary>URLs that link to the inspected URL, directly and indirectly.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.RobotsTxtState">
+            <summary>Whether or not the page is blocked to Google by a robots.txt rule.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.Sitemap">
+            <summary>
+            Any sitemaps that this URL was listed in, as known by Google. Not guaranteed to be an exhaustive list,
+            especially if Google did not discover this URL through a sitemap. Absent if no sitemaps were found.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.UserCanonical">
+            <summary>
+            The URL that your page or site [declares as
+            canonical](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls?#define-canonical).
+            If you did not declare a canonical URL, this field is absent.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.Verdict">
+            <summary>
+            High level verdict about whether the URL *is* indexed (indexed status), or *can be* indexed (live
+            inspection).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.IndexStatusInspectionResult.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest">
+            <summary>Index inspection request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest.InspectionUrl">
+            <summary>Required. URL to inspect. Must be under the property specified in "site_url".</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest.LanguageCode">
+            <summary>
+            Optional. An [IETF BCP-47](https://en.wikipedia.org/wiki/IETF_language_tag) language code representing the
+            requested language for translated issue messages, e.g. "en-US", "or "de-CH". Default value is "en-US".
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest.SiteUrl">
+            <summary>
+            Required. The URL of the property as defined in Search Console. **Examples:** `http://www.example.com/` for
+            a URL-prefix property, or `sc-domain:example.com` for a Domain property.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexResponse">
+            <summary>Index-Status inspection response.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexResponse.InspectionResult">
+            <summary>URL inspection results.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.InspectUrlIndexResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.Item">
+            <summary>A specific rich result found on the page.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.Item.Issues">
+            <summary>A list of zero or more rich result issues found for this instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.Item.Name">
+            <summary>The user-provided name of this item.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.Item.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.MobileFriendlyIssue">
+            <summary>Mobile-friendly issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileFriendlyIssue.Rule">
+            <summary>Rule violated.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileFriendlyIssue.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.MobileUsabilityInspectionResult">
+            <summary>Mobile-usability inspection results.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityInspectionResult.Issues">
+            <summary>A list of zero or more mobile-usability issues detected for this URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityInspectionResult.Verdict">
+            <summary>High-level mobile-usability inspection result for this URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityInspectionResult.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.MobileUsabilityIssue">
+            <summary>Mobile-usability issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityIssue.IssueType">
+            <summary>Mobile-usability issue type.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityIssue.Message">
+            <summary>Additional information regarding the issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityIssue.Severity">
+            <summary>Not returned; reserved for future use.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.MobileUsabilityIssue.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.ResourceIssue">
+            <summary>Information about a resource with issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.ResourceIssue.BlockedResource">
+            <summary>Describes a blocked resource issue.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.ResourceIssue.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.RichResultsInspectionResult">
+            <summary>Rich-Results inspection result, including any rich results found at this URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RichResultsInspectionResult.DetectedItems">
+            <summary>
+            A list of zero or more rich results detected on this page. Rich results that cannot even be parsed due to
+            syntactic issues will not be listed here.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RichResultsInspectionResult.Verdict">
+            <summary>High-level rich results inspection result for this URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RichResultsInspectionResult.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.RichResultsIssue">
+            <summary>Severity and status of a single issue affecting a single rich result instance on a page.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RichResultsIssue.IssueMessage">
+            <summary>Rich Results issue type.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RichResultsIssue.Severity">
+            <summary>
+            Severity of this issue: WARNING, or ERROR. Items with an issue of status ERROR cannot appear with rich
+            result features in Google Search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RichResultsIssue.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestRequest">
+            <summary>Mobile-friendly test request.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestRequest.RequestScreenshot">
+            <summary>Whether or not screenshot is requested. Default is false.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestRequest.Url">
+            <summary>URL for inspection.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse">
+            <summary>Mobile-friendly test response, including mobile-friendly issues and resource issues.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse.MobileFriendliness">
+            <summary>Test verdict, whether the page is mobile friendly or not.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse.MobileFriendlyIssues">
+            <summary>List of mobile-usability issues.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse.ResourceIssues">
+            <summary>Information about embedded resources issues.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse.Screenshot">
+            <summary>Screenshot of the requested URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse.TestStatus">
+            <summary>Final state of the test, can be either complete or an error.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.RunMobileFriendlyTestResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.AggregationType">
+            <summary>
+            [Optional; Default is \"auto\"] How data is aggregated. If aggregated by property, all data for the same
+            property is aggregated; if aggregated by page, all data is aggregated by canonical URI. If you filter or
+            group by page, choose AUTO; otherwise you can aggregate either by property or by page, depending on how you
+            want your data calculated; see the help documentation to learn how data is calculated differently by site
+            versus by page. **Note:** If you group or filter by page, you cannot aggregate by property. If you specify
+            any value other than AUTO, the aggregation type in the result will match the requested type, or if you
+            request an invalid type, you will get an error. The API will never change your aggregation type if the
+            requested type is invalid.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.DataState">
+            <summary>
+            The data state to be fetched, can be full or all, the latter including full and partial data.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.DimensionFilterGroups">
+            <summary>
+            [Optional] Zero or more filters to apply to the dimension grouping values; for example, 'query contains
+            \"buy\"' to see only data where the query string contains the substring \"buy\" (not case-sensitive). You
+            can filter by a dimension without grouping by it.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.Dimensions">
+            <summary>
+            [Optional] Zero or more dimensions to group results by. Dimensions are the group-by values in the Search
+            Analytics page. Dimensions are combined to create a unique row key for each row. Results are grouped in the
+            order that you supply these dimensions.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.EndDate">
+            <summary>
+            [Required] End date of the requested date range, in YYYY-MM-DD format, in PST (UTC - 8:00). Must be greater
+            than or equal to the start date. This value is included in the range.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.RowLimit">
+            <summary>
+            [Optional; Default is 1000] The maximum number of rows to return. Must be a number from 1 to 25,000
+            (inclusive).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.SearchType">
+            <summary>[Optional; Default is \"web\"] The search type to filter for.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.StartDate">
+            <summary>
+             [Required] Start date of the requested date range, in YYYY-MM-DD format, in PST time (UTC - 8:00). Must be
+            less than or equal to the end date. This value is included in the range.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.StartRow">
+            <summary>
+            [Optional; Default is 0] Zero-based index of the first row in the response. Must be a non-negative number.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.Type">
+            <summary>
+            Optional. [Optional; Default is \"web\"] Type of report: search type, or either Discover or Gnews.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryResponse">
+            <summary>
+            A list of rows, one per result, grouped by key. Metrics in each row are aggregated for all data grouped by that
+            key either by page or property, as specified by the aggregation type parameter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryResponse.ResponseAggregationType">
+            <summary>How the results were aggregated.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryResponse.Rows">
+            <summary>A list of rows grouped by the key values in the order given in the query.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SearchAnalyticsQueryResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.SitemapsListResponse">
+            <summary>List of sitemaps.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SitemapsListResponse.Sitemap">
+            <summary>
+            Contains detailed information about a specific URL submitted as a
+            [sitemap](https://support.google.com/webmasters/answer/156184).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SitemapsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.SitesListResponse">
+            <summary>List of sites with access level information.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SitesListResponse.SiteEntry">
+            <summary>
+            Contains permission level information about a Search Console site. For more information, see [Permissions in
+            Search Console](https://support.google.com/webmasters/answer/2451999).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.SitesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.TestStatus">
+            <summary>Final state of the test, including error details if necessary.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.TestStatus.Details">
+            <summary>Error details if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.TestStatus.Status">
+            <summary>Status of the test.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.TestStatus.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult">
+            <summary>URL inspection result, including all inspection results.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult.AmpResult">
+            <summary>Result of the AMP analysis. Absent if the page is not an AMP page.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult.IndexStatusResult">
+            <summary>Result of the index status analysis.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult.InspectionResultLink">
+            <summary>Link to Search Console URL inspection.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult.MobileUsabilityResult">
+            <summary>Result of the Mobile usability analysis.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult.RichResultsResult">
+            <summary>Result of the Rich Results analysis. Absent if there are no rich results found.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.UrlInspectionResult.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.WmxSite">
+            <summary>
+            Contains permission level information about a Search Console site. For more information, see [Permissions in
+            Search Console](https://support.google.com/webmasters/answer/2451999).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSite.PermissionLevel">
+            <summary>The user's permission level for the site.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSite.SiteUrl">
+            <summary>The URL of the site.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSite.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.WmxSitemap">
+            <summary>
+            Contains detailed information about a specific URL submitted as a
+            [sitemap](https://support.google.com/webmasters/answer/156184).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.Contents">
+            <summary>The various content types in the sitemap.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.Errors">
+            <summary>
+            Number of errors in the sitemap. These are issues with the sitemap itself that need to be fixed before it
+            can be processed correctly.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.IsPending">
+            <summary>If true, the sitemap has not been processed.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.IsSitemapsIndex">
+            <summary>If true, the sitemap is a collection of sitemaps.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastDownloadedRaw">
+            <summary>
+            Date &amp;amp; time in which this sitemap was last downloaded. Date format is in RFC 3339 format
+            (yyyy-mm-dd).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastDownloaded">
+            <summary><seealso cref="T:System.Object"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastDownloadedRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastDownloadedDateTimeOffset">
+            <summary>
+            <seealso cref="T:System.DateTimeOffset"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastDownloadedRaw"/>.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastSubmittedRaw">
+            <summary>
+            Date &amp;amp; time in which this sitemap was submitted. Date format is in RFC 3339 format (yyyy-mm-dd).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastSubmitted">
+            <summary><seealso cref="T:System.Object"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastSubmittedRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastSubmittedDateTimeOffset">
+            <summary><seealso cref="T:System.DateTimeOffset"/> representation of <see cref="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.LastSubmittedRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.Path">
+            <summary>The url of the sitemap.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.Type">
+            <summary>The type of the sitemap. For example: `rssFeed`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.Warnings">
+            <summary>
+            Number of warnings for the sitemap. These are generally non-critical issues with URLs in the sitemaps.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemap.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SearchConsole.v1.Data.WmxSitemapContent">
+            <summary>Information about the various content types in the sitemap.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemapContent.Indexed">
+            <summary>*Deprecated; do not use.*</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemapContent.Submitted">
+            <summary>The number of URLs in the sitemap (of the content type).</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemapContent.Type">
+            <summary>The specific type of content in this sitemap. For example: `web`.</summary>
+        </member>
+        <member name="P:Google.Apis.SearchConsole.v1.Data.WmxSitemapContent.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>
