@@ -81,8 +81,75 @@ public class WizardBlossomCommands : BaseCommandModule
 
         List<Spell> spells = new List<Spell>
     {
-        new Spell { Name = "Fireball", Description = "A fiery explosion", Level = 3 },
-        // Add more spells here
+        // Level 1 Spells
+        new Spell { Name = "Purrtection", Description = "Surround yourself with a soothing purr, granting advantage on Charisma saving throws and making you irresistible to feline creatures.", Level = 1 },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 2 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 3 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 4 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 5 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 6 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 7 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 8 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Level 9 Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+
+        // Big bad boss Spells
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level =  }
     };
 
     string[] catchphrases = { "Mrowl! I am the master of magic!", "Hiss! Tremble before my arcane might!" };
