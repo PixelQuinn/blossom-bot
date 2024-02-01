@@ -131,18 +131,18 @@ public class WizardBlossomCommands : BaseCommandModule
         AddSpellToSpellbook(embed, "Ethereal Catnap", "Extend the benefits of a short rest to all creatures within a 30-foot radius, regardless of the usual restrictions. This magical rest lasts for 10 minutes and allows creatures to regain hit points and abilities as if they had completed a short rest.", "Level 6");
 
         // Seventh level spells
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, "Cat-tastrophic Annihilation", "Unleash a wave of magical energy that sweeps over a large area, causing all creatures in its radius to make a Dexterity saving throw. On a failed save, they take 8d10 force damage and are knocked prone. On a successful save, they take half damage and are not knocked prone.", "Level 7");
+        AddSpellToSpellbook(embed, "Seventh Life", "Grant a target the ultimate blessing of multiple lives. The target gains an additional three lives, and when reduced to 0 hit points, they are instantly resurrected with their full maximum hit points. This effect can only occur three times during the spell's duration.", "Level 7");
+        AddSpellToSpellbook(embed, "Ethereal Catwalk Mastery", "Enhance the Ethereal Catwalk spell, allowing it to be cast at a higher level. Allies on the catwalk gain additional benefits, such as increased movement speed, advantage on attack rolls, and immunity to difficult terrain.", "Level 7");
+        AddSpellToSpellbook(embed, "Purrfect Illusionist", "Become the master illusionist, creating incredibly realistic and complex illusions of feline creatures. These illusions can interact with the environment and creatures, causing genuine reactions. The illusions can deal damage, distract enemies, or perform other actions within the limits of illusion magic.", "Level 7");
+        AddSpellToSpellbook(embed, "Cataclysmic Transformation", "Transform into a massive, powerful feline form, gaining increased strength, durability, and magical abilities. In this form, you have advantage on all saving throws, resistance to damage, and your attacks deal additional damage. The transformation lasts for 1 minute.", "Level 7");
 
         // Eighth level spells
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
-        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, "Ethereal Catmastery", "Become a master of the ethereal realm, gaining the ability to phase through objects and move effortlessly through the battlefield. Attacks pass harmlessly through you, and you can move through other creatures and obstacles without impediment for the spell's duration.", "Level 8");
+        AddSpellToSpellbook(embed, "Purrvasive Invisibility", "Grant yourself or a target creature invisibility for the spell's duration. Unlike regular invisibility, this spell also conceals the sounds of movement, making the invisible creature nearly impossible to detect by sight or sound.", "Level 8");
+        AddSpellToSpellbook(embed, "Cat-astrophic Reckoning", "Summon a massive spectral cat that prowls the battlefield, striking fear into the hearts of your enemies. The spectral cat attacks and intimidates creatures within its reach, causing them to make Wisdom saving throws or be frightened for the spell's duration.", "Level 8");
+        AddSpellToSpellbook(embed, "Feline Foresight", "Enhance your senses to feline levels, gaining advantage on all Wisdom-based checks, as well as a supernatural awareness of danger. You can't be surprised, and attacks against you have disadvantage for the spell's duration.", "Level 8");
+        AddSpellToSpellbook(embed, "Temporal Catnap", "Create a temporal bubble in which time flows differently. Allies within the bubble can take a short rest that lasts only 1 minute but provides all the benefits of a long rest. The temporal bubble lasts for 1 hour.", "Level 8");
 
         // Ninth level spells!!!
         AddSpellToSpellbook(embed, );
