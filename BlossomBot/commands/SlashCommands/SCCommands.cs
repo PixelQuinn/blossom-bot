@@ -3,6 +3,7 @@ using DSharpPlus.SlashCommands;
 using Google.Apis.CustomSearchAPI.v1;
 using Google.Apis.Services;
 using System.Linq;
+using OpenAI_API;
 using System.Threading.Tasks;
 
 namespace BlossomBot.commands.SlashCommands
@@ -45,6 +46,30 @@ namespace BlossomBot.commands.SlashCommands
                 Color = DiscordColor.Azure
             };
             await ctx.EditResponseAsync(new DiscordWebhookBuilder().AddEmbed(embed));
+        }
+
+        [SlashCommand("chat-gpt", "Ask ChatGpt a question")]
+        public async Task ChatGPT(InteractionContext ctx, [Option("query", "What you want to ask ChatGPT")] string query)
+        {
+            await ctx.DeferAsync();
+
+            var api = new OpenAIAPI("API key here");
+
+            var chat = api.Chat.CreateConversation();
+            chat.AppendSystemMessage("Type in a query");
+
+            chat.AppendUserInput(query);
+
+            string response = await chat.GetResponseFromChatbotAsync();
+
+            var outputEmbed = new DiscordEmbedBuilder()
+            {
+                Title = "Results to: " + query,
+                Description = response,
+                Color = DiscordColor.Green
+            };
+
+            await ctx.EditResponseAsync(new DiscordWebhookBuilder().AddEmbed(outputEmbed));
         }
     }
 }
