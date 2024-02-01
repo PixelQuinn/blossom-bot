@@ -110,46 +110,46 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Spectral Catwalk", Description = "Conjure a shimmering catwalk in the air. Allies can use their movement to walk along the catwalk without touching the ground, avoiding difficult terrain and gaining advantage on Dexterity (Stealth) checks while on the catwalk.", Level = 4 },
 
         // Level 5 Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = "Feline Familiar Swarm", Description = "Summon a swarm of spectral familiars in the form of various feline creatures. These familiars act as independent entities, each making attacks and providing assistance to the caster or their allies. The swarm disperses after 1 minute.", Level = 5 },
+        new Spell { Name = "Cat's Grace", Description = "Channel the agility and grace of a cat, granting yourself or a willing creature you touch advantage on Dexterity saving throws and the ability to move across difficult terrain without taking damage or penalties for the duration.", Level = 5 },
+        new Spell { Name = "Purrpetual Motion", Description = "Transform into an ethereal cat, granting yourself the ability to move through other creatures and objects as if they were difficult terrain. You can move through solid objects, and your attacks pass through armor and shields.", Level = 5 },
+        new Spell { Name = "Whiskerstorm", Description = "Summon a magical storm of whiskers that swirls around a target area. Creatures within the storm must succeed on a Strength saving throw or be restrained for the spell's duration. A restrained creature can make a Strength saving throw at the end of each of its turns, ending the effect on a success.", Level = 5 },
+        new Spell { Name = "Ninth Life", Description =  "Grant a target the blessing of multiple lives. If the target is reduced to 0 hit points within the spell's duration, they are instantly resurrected with half of their maximum hit points. This effect can only occur once during the spell's duration.", Level = 5 },
 
         // Level 6 Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level = 6 },
+        new Spell { Name = , Description = , Level = 6 },
+        new Spell { Name = , Description = , Level = 6 },
+        new Spell { Name = , Description = , Level = 6 },
+        new Spell { Name = , Description = , Level = 6 },
 
         // Level 7 Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level = 7 },
+        new Spell { Name = , Description = , Level = 7 },
+        new Spell { Name = , Description = , Level = 7 },
+        new Spell { Name = , Description = , Level = 7 },
+        new Spell { Name = , Description = , Level = 7 },
 
         // Level 8 Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level = 8 },
+        new Spell { Name = , Description = , Level = 8 },
+        new Spell { Name = , Description = , Level = 8 },
+        new Spell { Name = , Description = , Level = 8 },
+        new Spell { Name = , Description = , Level = 8 },
 
         // Level 9 Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = , Description = , Level = 9 },
+        new Spell { Name = , Description = , Level = 9 },
+        new Spell { Name = , Description = , Level = 9 },
+        new Spell { Name = , Description = , Level = 9 },
+        new Spell { Name = , Description = , Level = 9 },
 
         // Big bad boss Spells
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  }
+        new Spell { Name = , Description = , Level = 99 },
+        new Spell { Name = , Description = , Level = 99 },
+        new Spell { Name = , Description = , Level = 99 },
+        new Spell { Name = , Description = , Level = 99 },
+        new Spell { Name = , Description = , Level = 99 }
     };
 
     string[] catchphrases = { "Mrowl! I am the master of magic!", "Hiss! Tremble before my arcane might!" };
