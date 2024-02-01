@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Security.Policy;
 using System.Threading.Tasks;
@@ -71,5 +72,70 @@ public class WizardBlossomCommands : BaseCommandModule
         await ctx.RespondAsync("🐱✨ A magical cat familiar appears by your side. Meowgical!");
     }
 
-    
+    public class Spell
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Level { get; set; }
+    }
+
+        List<Spell> spells = new List<Spell>
+    {
+        new Spell { Name = "Fireball", Description = "A fiery explosion", Level = 3 },
+        // Add more spells here
+    };
+
+    string[] catchphrases = { "Mrowl! I am the master of magic!", "Hiss! Tremble before my arcane might!" };
+    string[] castingPhrases = { "Abracadabra!", "Meowgicus!", "Purrformus!" };
+
+    [Command("spellbook")]
+    [Description("Consult the cat wizard's spellbook for arcane knowledge.")]
+    public async Task SpellbookCommand(CommandContext ctx, [RemainingText] string target = null)
+    {
+        // Delete the command message
+        await ctx.Message.DeleteAsync();
+
+        Random random = new Random();
+
+        // Pick a random spell
+        Spell randomSpell = spells[random.Next(spells.Count)];
+
+        // Pick a random catchphrase
+        string randomCatchphrase = catchphrases[random.Next(catchphrases.Length)];
+
+        // Pick a random casting phrase
+        string randomCastingPhrase = castingPhrases[random.Next(castingPhrases.Length)];
+
+        // Construct the message with catchphrase
+        string message = $"*Evil Cat Wizard Catchphrase:* {randomCatchphrase}";
+
+        // Send the catchphrase
+        var catchphraseMessage = await ctx.RespondAsync(message);
+
+        // Pause for 2 seconds
+        await Task.Delay(2000);
+
+        // Construct the message with casting phrase
+        message = $"*Casting Phrase:* {randomCastingPhrase}";
+
+        // Edit the catchphrase message to include casting phrase
+        await catchphraseMessage.ModifyAsync(message);
+
+        // Pause for 2 seconds
+        await Task.Delay(2000);
+
+        // Construct the final spell casting message
+        message = $"**Blossom casts {randomSpell.Name}**";
+
+        // Include target information if specified
+        if (!string.IsNullOrEmpty(target))
+        {
+            message += $" @ {target}";
+        }
+
+        // Send the final spell casting message
+        await ctx.RespondAsync(message);
+    }
+
+
 }
