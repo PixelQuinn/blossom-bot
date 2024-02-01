@@ -1,0 +1,1829 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.CustomSearchAPI.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService">
+            <summary>The CustomSearchAPI Service.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIService.Cse">
+            <summary>Gets the Cse resource.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1">
+            <summary>A base abstract class for CustomSearchAPI requests.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new CustomSearchAPIBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.Xgafv">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.XgafvEnum">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.XgafvEnum.Value1">
+            <summary>v1 error format</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.XgafvEnum.Value2">
+            <summary>v2 error format</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.AccessToken">
+            <summary>OAuth access token.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.Alt">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.AltEnum">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.AltEnum.Media">
+            <summary>Media download with context-dependent Content-Type</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.AltEnum.Proto">
+            <summary>Responses with Content-Type of application/x-protobuf</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.Callback">
+            <summary>JSONP</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.Key">
+            <summary>
+            API key. Your API key identifies your project and provides you with API access, quota, and reports. Required
+            unless you provide an OAuth 2.0 token.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.QuotaUser">
+            <summary>
+            Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a
+            user, but should not exceed 40 characters.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.UploadType">
+            <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.UploadProtocol">
+            <summary>Upload protocol for media (e.g. "raw", "multipart").</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CustomSearchAPIBaseServiceRequest`1.InitParameters">
+            <summary>Initializes CustomSearchAPI parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource">
+            <summary>The "cse" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.Siterestrict">
+            <summary>Gets the Siterestrict resource.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource">
+            <summary>The "siterestrict" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.List">
+            <summary>
+            Returns metadata about the search performed, metadata about the engine used for the search, and the
+            search results. Uses a small set of url patterns.
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest">
+            <summary>
+            Returns metadata about the search performed, metadata about the engine used for the search, and the
+            search results. Uses a small set of url patterns.
+            </summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.C2coff">
+            <summary>
+            Enables or disables [Simplified and Traditional Chinese
+            Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch). The
+            default value for this parameter is 0 (zero), meaning that the feature is enabled. Supported values
+            are: * `1`: Disabled * `0`: Enabled (default)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Cr">
+            <summary>
+            Restricts search results to documents originating in a particular country. You may use [Boolean
+            operators](https://developers.google.com/custom-search/docs/json_api_reference#booleanOperators) in
+            the cr parameter's value. Google Search determines the country of a document by analyzing: * the
+            top-level domain (TLD) of the document's URL * the geographic location of the Web server's IP
+            address See the [Country Parameter
+            Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections) page
+            for a list of valid values for this parameter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Cx">
+            <summary>The Programmable Search Engine ID to use for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.DateRestrict">
+            <summary>
+            Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+            from the specified number of past days. * `w[number]`: requests results from the specified number of
+            past weeks. * `m[number]`: requests results from the specified number of past months. * `y[number]`:
+            requests results from the specified number of past years.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ExactTerms">
+            <summary>Identifies a phrase that all documents in the search results must contain.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ExcludeTerms">
+            <summary>
+            Identifies a word or phrase that should not appear in any documents in the search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.FileType">
+            <summary>
+            Restricts results to files of a specified extension. A list of file types indexable by Google can be
+            found in Search Console [Help Center](https://support.google.com/webmasters/answer/35287).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Filter">
+            <summary>
+            Controls turning on or off the duplicate content filter. * See [Automatic
+            Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering)
+            for more information about Google's search results filters. Note that host crowding filtering
+            applies only to multi-site searches. * By default, Google applies filtering to all search results to
+            improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+            filter. * `1`: Turns on duplicate content filter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Gl">
+            <summary>
+            Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl` parameter
+            boosts search results whose country of origin matches the parameter value. See the [Country
+            Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) page for a
+            list of valid values. * Specifying a `gl` parameter value should lead to more relevant results. This
+            is particularly true for international customers and, even more specifically, for customers in
+            English- speaking countries other than the United States.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Googlehost">
+            <summary>
+            **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for example,
+            google.com, google.de, or google.fr) to use to perform the search.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.HighRange">
+            <summary>
+            Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Hl">
+            <summary>
+            Sets the user interface language. * Explicitly setting this parameter improves the performance and
+            the quality of your search results. * See the [Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#wsInterfaceLanguages)
+            section of [Internationalizing Queries and Results
+            Presentation](https://developers.google.com/custom-search/docs/json_api_reference#wsInternationalizing)
+            for more information, and [Supported Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
+            for a list of supported languages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Hq">
+            <summary>
+            Appends the specified query terms to the query, as if they were combined with a logical AND
+            operator.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorType">
+            <summary>
+            Returns black and white, grayscale, transparent, or color images. Acceptable values are: * `"color"`
+            * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorTypeEnum">
+            <summary>
+            Returns black and white, grayscale, transparent, or color images. Acceptable values are: * `"color"`
+            * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorTypeEnum.ImgColorTypeUndefined">
+            <summary>No image color type specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorTypeEnum.Mono">
+            <summary>Black and white images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorTypeEnum.Gray">
+            <summary>Grayscale images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorTypeEnum.Color">
+            <summary>Color images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgColorTypeEnum.Trans">
+            <summary>Images with transparent background</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColor">
+            <summary>
+            Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` *
+            `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` *
+            `"white"` * `"yellow"`
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum">
+            <summary>
+            Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` *
+            `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` *
+            `"white"` * `"yellow"`
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.ImgDominantColorUndefined">
+            <summary>No dominant color specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Black">
+            <summary>Predominantly black images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Blue">
+            <summary>Predominantly blue images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Brown">
+            <summary>Predominantly brown images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Gray">
+            <summary>Predominantly gray images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Green">
+            <summary>Predominantly green images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Orange">
+            <summary>Predominantly orange images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Pink">
+            <summary>Predominantly pink images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Purple">
+            <summary>Predominantly purple images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Red">
+            <summary>Predominantly red images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Teal">
+            <summary>Predominantly teal images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.White">
+            <summary>Predominantly white images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgDominantColorEnum.Yellow">
+            <summary>Predominantly yellow images only.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSize">
+            <summary>
+            Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+            `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum">
+            <summary>
+            Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+            `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.ImgSizeUndefined">
+            <summary>No image size specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.HUGE">
+            <summary>Only the largest possible images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.ICON">
+            <summary>Only very small icon-sized images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.LARGE">
+            <summary>Only large images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.MEDIUM">
+            <summary>Only medium images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.SMALL">
+            <summary>Only small images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.XLARGE">
+            <summary>Only very large images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgSizeEnum.XXLARGE">
+            <summary>Only extremely large images.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgType">
+            <summary>
+            Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"`
+            * `"photo"` * `"animated"`
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum">
+            <summary>
+            Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"`
+            * `"photo"` * `"animated"`
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.ImgTypeUndefined">
+            <summary>No image type specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.Clipart">
+            <summary>Clipart-style images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.Face">
+            <summary>Images of faces only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.Lineart">
+            <summary>Line art images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.Stock">
+            <summary>Stock images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.Photo">
+            <summary>Photo images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.ImgTypeEnum.Animated">
+            <summary>Animated images only.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.LinkSite">
+            <summary>Specifies that all search results should contain a link to a particular URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.LowRange">
+            <summary>
+            Specifies the starting value for a search range. Use `lowRange` and `highRange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Lr">
+            <summary>
+            Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`). Acceptable
+            values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`: Catalan * `"lang_cs"`:
+            Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`: Greek * `"lang_en"`: English *
+            `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`: Finnish * `"lang_fr"`: French *
+            `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic *
+            `"lang_it"`: Italian * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean *
+            `"lang_lt"`: Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+            `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian *
+            `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+            `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese (Traditional)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Num">
+            <summary>
+            Number of search results to return. * Valid values are integers between 1 and 10, inclusive.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.OrTerms">
+            <summary>
+            Provides additional search terms to check for in a document, where each document in the search
+            results must contain at least one of the additional search terms.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Q">
+            <summary>Query</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.RelatedSite">
+            <summary>Deprecated.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Rights">
+            <summary>
+            Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+            `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See [typical
+            combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Safe">
+            <summary>
+            Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+            Disables SafeSearch filtering. (default)
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SafeEnum">
+            <summary>
+            Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+            Disables SafeSearch filtering. (default)
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SafeEnum.SafeUndefined">
+            <summary>SafeSearch mode unspecified. (Falls back to engine's configuration.)</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SafeEnum.Active">
+            <summary>Turn SafeSearch on.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SafeEnum.High">
+            <summary>Deprecated, equivalent to "active".</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SafeEnum.Medium">
+            <summary>Deprecated, equivalent to "active".</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SafeEnum.Off">
+            <summary>Turn SafeSearch off.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SearchType">
+            <summary>
+            Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable
+            values are: * `"image"`: custom image search.
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SearchTypeEnum">
+            <summary>
+            Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable
+            values are: * `"image"`: custom image search.
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SearchTypeEnum.SearchTypeUndefined">
+            <summary>Search type unspecified (defaults to web search).</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SearchTypeEnum.Image">
+            <summary>Image search.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SiteSearch">
+            <summary>
+            Specifies a given site which should always be included or excluded from results (see
+            `siteSearchFilter` parameter, below).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SiteSearchFilter">
+            <summary>
+            Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
+            Acceptable values are: * `"e"`: exclude * `"i"`: include
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SiteSearchFilterEnum">
+            <summary>
+            Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
+            Acceptable values are: * `"e"`: exclude * `"i"`: include
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SiteSearchFilterEnum.SiteSearchFilterUndefined">
+            <summary>Filter mode unspecified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SiteSearchFilterEnum.E">
+            <summary>Exclude results from the listed sites.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.SiteSearchFilterEnum.I">
+            <summary>Include only results from the listed sites.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Sort">
+            <summary>
+            The sort expression to apply to the results. The sort parameter specifies that the results be sorted
+            according to the specified expression i.e. sort by date. [Example:
+            sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.Start">
+            <summary>
+            The index of the first result to return. The default number of results per page is 10, so
+            `&amp;amp;start=11` would start at the top of the second page of results. **Note**: The JSON API
+            will never return more than 100 results, even if more than 100 documents match the query, so setting
+            the sum of `start + num` to a number greater than 100 will produce an error. Also note that the
+            maximum value for `num` is 10.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.SiterestrictResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.List">
+            <summary>
+            Returns metadata about the search performed, metadata about the engine used for the search, and the search
+            results.
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest">
+            <summary>
+            Returns metadata about the search performed, metadata about the engine used for the search, and the search
+            results.
+            </summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.C2coff">
+            <summary>
+            Enables or disables [Simplified and Traditional Chinese
+            Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch). The default
+            value for this parameter is 0 (zero), meaning that the feature is enabled. Supported values are: * `1`:
+            Disabled * `0`: Enabled (default)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Cr">
+            <summary>
+            Restricts search results to documents originating in a particular country. You may use [Boolean
+            operators](https://developers.google.com/custom-search/docs/json_api_reference#booleanOperators) in the
+            cr parameter's value. Google Search determines the country of a document by analyzing: * the top-level
+            domain (TLD) of the document's URL * the geographic location of the Web server's IP address See the
+            [Country Parameter
+            Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections) page for
+            a list of valid values for this parameter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Cx">
+            <summary>The Programmable Search Engine ID to use for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.DateRestrict">
+            <summary>
+            Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results from
+            the specified number of past days. * `w[number]`: requests results from the specified number of past
+            weeks. * `m[number]`: requests results from the specified number of past months. * `y[number]`: requests
+            results from the specified number of past years.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ExactTerms">
+            <summary>Identifies a phrase that all documents in the search results must contain.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ExcludeTerms">
+            <summary>
+            Identifies a word or phrase that should not appear in any documents in the search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.FileType">
+            <summary>
+            Restricts results to files of a specified extension. A list of file types indexable by Google can be
+            found in Search Console [Help Center](https://support.google.com/webmasters/answer/35287).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Filter">
+            <summary>
+            Controls turning on or off the duplicate content filter. * See [Automatic
+            Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering) for
+            more information about Google's search results filters. Note that host crowding filtering applies only
+            to multi-site searches. * By default, Google applies filtering to all search results to improve the
+            quality of those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`: Turns
+            on duplicate content filter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Gl">
+            <summary>
+            Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl` parameter
+            boosts search results whose country of origin matches the parameter value. See the [Country
+            Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) page for a list
+            of valid values. * Specifying a `gl` parameter value should lead to more relevant results. This is
+            particularly true for international customers and, even more specifically, for customers in English-
+            speaking countries other than the United States.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Googlehost">
+            <summary>
+            **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for example,
+            google.com, google.de, or google.fr) to use to perform the search.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.HighRange">
+            <summary>
+            Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append an inclusive
+            search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Hl">
+            <summary>
+            Sets the user interface language. * Explicitly setting this parameter improves the performance and the
+            quality of your search results. * See the [Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#wsInterfaceLanguages)
+            section of [Internationalizing Queries and Results
+            Presentation](https://developers.google.com/custom-search/docs/json_api_reference#wsInternationalizing)
+            for more information, and [Supported Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages) for a
+            list of supported languages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Hq">
+            <summary>
+            Appends the specified query terms to the query, as if they were combined with a logical AND operator.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorType">
+            <summary>
+            Returns black and white, grayscale, transparent, or color images. Acceptable values are: * `"color"` *
+            `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorTypeEnum">
+            <summary>
+            Returns black and white, grayscale, transparent, or color images. Acceptable values are: * `"color"` *
+            `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorTypeEnum.ImgColorTypeUndefined">
+            <summary>No image color type specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorTypeEnum.Mono">
+            <summary>Black and white images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorTypeEnum.Gray">
+            <summary>Grayscale images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorTypeEnum.Color">
+            <summary>Color images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgColorTypeEnum.Trans">
+            <summary>Images with transparent background</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColor">
+            <summary>
+            Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` * `"brown"` *
+            `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` * `"white"` * `"yellow"`
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum">
+            <summary>
+            Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` * `"brown"` *
+            `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` * `"white"` * `"yellow"`
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.ImgDominantColorUndefined">
+            <summary>No dominant color specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Black">
+            <summary>Predominantly black images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Blue">
+            <summary>Predominantly blue images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Brown">
+            <summary>Predominantly brown images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Gray">
+            <summary>Predominantly gray images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Green">
+            <summary>Predominantly green images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Orange">
+            <summary>Predominantly orange images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Pink">
+            <summary>Predominantly pink images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Purple">
+            <summary>Predominantly purple images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Red">
+            <summary>Predominantly red images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Teal">
+            <summary>Predominantly teal images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.White">
+            <summary>Predominantly white images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgDominantColorEnum.Yellow">
+            <summary>Predominantly yellow images only.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSize">
+            <summary>
+            Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+            `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum">
+            <summary>
+            Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+            `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.ImgSizeUndefined">
+            <summary>No image size specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.HUGE">
+            <summary>Only the largest possible images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.ICON">
+            <summary>Only very small icon-sized images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.LARGE">
+            <summary>Only large images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.MEDIUM">
+            <summary>Only medium images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.SMALL">
+            <summary>Only small images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.XLARGE">
+            <summary>Only very large images.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgSizeEnum.XXLARGE">
+            <summary>Only extremely large images.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgType">
+            <summary>
+            Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"` *
+            `"photo"` * `"animated"`
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum">
+            <summary>
+            Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"` *
+            `"photo"` * `"animated"`
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.ImgTypeUndefined">
+            <summary>No image type specified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.Clipart">
+            <summary>Clipart-style images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.Face">
+            <summary>Images of faces only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.Lineart">
+            <summary>Line art images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.Stock">
+            <summary>Stock images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.Photo">
+            <summary>Photo images only.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.ImgTypeEnum.Animated">
+            <summary>Animated images only.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.LinkSite">
+            <summary>Specifies that all search results should contain a link to a particular URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.LowRange">
+            <summary>
+            Specifies the starting value for a search range. Use `lowRange` and `highRange` to append an inclusive
+            search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Lr">
+            <summary>
+            Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`). Acceptable
+            values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`: Catalan * `"lang_cs"`: Czech *
+            `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`: Greek * `"lang_en"`: English * `"lang_es"`:
+            Spanish * `"lang_et"`: Estonian * `"lang_fi"`: Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian *
+            `"lang_hu"`: Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian *
+            `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`: Lithuanian *
+            `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian * `"lang_pl"`: Polish * `"lang_pt"`:
+            Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian * `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian
+            * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese
+            (Simplified) * `"lang_zh-TW"`: Chinese (Traditional)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Num">
+            <summary>
+            Number of search results to return. * Valid values are integers between 1 and 10, inclusive.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.OrTerms">
+            <summary>
+            Provides additional search terms to check for in a document, where each document in the search results
+            must contain at least one of the additional search terms.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Q">
+            <summary>Query</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.RelatedSite">
+            <summary>Deprecated.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Rights">
+            <summary>
+            Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+            `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See [typical
+            combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Safe">
+            <summary>
+            Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+            Disables SafeSearch filtering. (default)
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SafeEnum">
+            <summary>
+            Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+            Disables SafeSearch filtering. (default)
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SafeEnum.SafeUndefined">
+            <summary>SafeSearch mode unspecified. (Falls back to engine's configuration.)</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SafeEnum.Active">
+            <summary>Turn SafeSearch on.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SafeEnum.High">
+            <summary>Deprecated, equivalent to "active".</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SafeEnum.Medium">
+            <summary>Deprecated, equivalent to "active".</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SafeEnum.Off">
+            <summary>Turn SafeSearch off.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SearchType">
+            <summary>
+            Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable values
+            are: * `"image"`: custom image search.
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SearchTypeEnum">
+            <summary>
+            Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable values
+            are: * `"image"`: custom image search.
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SearchTypeEnum.SearchTypeUndefined">
+            <summary>Search type unspecified (defaults to web search).</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SearchTypeEnum.Image">
+            <summary>Image search.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SiteSearch">
+            <summary>
+            Specifies a given site which should always be included or excluded from results (see `siteSearchFilter`
+            parameter, below).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SiteSearchFilter">
+            <summary>
+            Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
+            Acceptable values are: * `"e"`: exclude * `"i"`: include
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SiteSearchFilterEnum">
+            <summary>
+            Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
+            Acceptable values are: * `"e"`: exclude * `"i"`: include
+            </summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SiteSearchFilterEnum.SiteSearchFilterUndefined">
+            <summary>Filter mode unspecified.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SiteSearchFilterEnum.E">
+            <summary>Exclude results from the listed sites.</summary>
+        </member>
+        <member name="F:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.SiteSearchFilterEnum.I">
+            <summary>Include only results from the listed sites.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Sort">
+            <summary>
+            The sort expression to apply to the results. The sort parameter specifies that the results be sorted
+            according to the specified expression i.e. sort by date. [Example:
+            sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.Start">
+            <summary>
+            The index of the first result to return. The default number of results per page is 10, so
+            `&amp;amp;start=11` would start at the top of the second page of results. **Note**: The JSON API will
+            never return more than 100 results, even if more than 100 documents match the query, so setting the sum
+            of `start + num` to a number greater than 100 will produce an error. Also note that the maximum value
+            for `num` is 10.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CustomSearchAPI.v1.CseResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Promotion">
+            <summary>Promotion result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.BodyLines">
+            <summary>An array of block objects for this promotion.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.DisplayLink">
+            <summary>An abridged version of this search's result URL, e.g. www.example.com.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.HtmlTitle">
+            <summary>The title of the promotion, in HTML.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.Image">
+            <summary>Image belonging to a promotion.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.Link">
+            <summary>The URL of the promotion.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.Title">
+            <summary>The title of the promotion.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Promotion.BodyLinesData">
+            <summary>An array of block objects for this promotion.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.BodyLinesData.HtmlTitle">
+            <summary>The block object's text in HTML, if it has text.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.BodyLinesData.Link">
+            <summary>The anchor text of the block object's link, if it has a link.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.BodyLinesData.Title">
+            <summary>The block object's text, if it has text.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.BodyLinesData.Url">
+            <summary>The URL of the block object's link, if it has one.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Promotion.ImageData">
+            <summary>Image belonging to a promotion.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.ImageData.Height">
+            <summary>Image height in pixels.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.ImageData.Source">
+            <summary>URL of the image for this promotion link.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Promotion.ImageData.Width">
+            <summary>Image width in pixels.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Result">
+            <summary>A custom search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.CacheId">
+            <summary>Indicates the ID of Google's cached version of the search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.DisplayLink">
+            <summary>An abridged version of this search result’s URL, e.g. www.example.com.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.FileFormat">
+            <summary>The file format of the search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.FormattedUrl">
+            <summary>The URL displayed after the snippet for each search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.HtmlFormattedUrl">
+            <summary>The HTML-formatted URL displayed after the snippet for each search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.HtmlSnippet">
+            <summary>The snippet of the search result, in HTML.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.HtmlTitle">
+            <summary>The title of the search result, in HTML.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Image">
+            <summary>Image belonging to a custom search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Kind">
+            <summary>
+            A unique identifier for the type of current object. For this API, it is `customsearch#result.`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Labels">
+            <summary>Encapsulates all information about refinement labels.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Link">
+            <summary>The full URL to which the search result is pointing, e.g. http://www.example.com/foo/bar.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Mime">
+            <summary>The MIME type of the search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Pagemap">
+            <summary>
+            Contains [PageMap](https://developers.google.com/custom-search/docs/structured_data#pagemaps) information
+            for this search result.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Snippet">
+            <summary>The snippet of the search result, in plain text.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.Title">
+            <summary>The title of the search result, in plain text.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData">
+            <summary>Image belonging to a custom search result.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.ByteSize">
+            <summary>The size of the image, in bytes.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.ContextLink">
+            <summary>A URL pointing to the webpage hosting the image.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.Height">
+            <summary>The height of the image, in pixels.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.ThumbnailHeight">
+            <summary>The height of the thumbnail image, in pixels.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.ThumbnailLink">
+            <summary>A URL to the thumbnail image.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.ThumbnailWidth">
+            <summary>The width of the thumbnail image, in pixels.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.ImageData.Width">
+            <summary>The width of the image, in pixels.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Result.LabelsData">
+            <summary>Encapsulates all information about refinement labels.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.LabelsData.DisplayName">
+            <summary>
+            The display name of a refinement label. This is the name you should display in your user interface.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.LabelsData.LabelWithOp">
+            <summary>Refinement label and the associated refinement operation.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Result.LabelsData.Name">
+            <summary>
+            The name of a refinement label, which you can use to refine searches. Don't display this in your user
+            interface; instead, use displayName.
+            </summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search">
+            <summary>Response to a custom search request.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Context">
+            <summary>
+            Metadata and refinements associated with the given search engine, including: * The name of the search engine
+            that was used for the query. * A set of [facet
+            objects](https://developers.google.com/custom-search/docs/refinements#create) (refinements) you can use for
+            refining a search.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Items">
+            <summary>The current set of custom search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Kind">
+            <summary>
+            Unique identifier for the type of current object. For this API, it is customsearch#search.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Promotions">
+            <summary>
+            The set of [promotions](https://developers.google.com/custom-search/docs/promotions). Present only if the
+            custom search engine's configuration files define any promotions for the given query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Queries">
+            <summary>Query metadata for the previous, current, and next pages of results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SearchInformation">
+            <summary>Metadata about a search operation.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Spelling">
+            <summary>Spell correction information for a query.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.Url">
+            <summary>OpenSearch template and URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData">
+            <summary>Query metadata for the previous, current, and next pages of results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPage">
+            <summary>Metadata representing the next page of results, if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPage">
+            <summary>Metadata representing the previous page of results, if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.Request">
+            <summary>Metadata representing the current request.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData">
+            <summary>Metadata representing the next page of results, if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Count">
+            <summary>Number of search results returned in this set.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Cr">
+            <summary>
+            Restricts search results to documents originating in a particular country. You may use [Boolean
+            operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) in
+            the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing the
+            following: * The top-level domain (TLD) of the document's URL. * The geographic location of the web
+            server's IP address. See [Country (cr) Parameter
+            Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections) for
+            a list of valid values for this parameter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Cx">
+            <summary>
+            The identifier of an engine created using the Programmable Search Engine [Control
+            Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in the
+            OpenSearch spec. This parameter is **required**.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.DateRestrict">
+            <summary>
+            Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+            from the specified number of past days. * `w[number]`: requests results from the specified number of
+            past weeks. * `m[number]`: requests results from the specified number of past months. * `y[number]`:
+            requests results from the specified number of past years.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.DisableCnTwTranslation">
+            <summary>
+            Enables or disables the [Simplified and Traditional Chinese
+            Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch) feature.
+            Supported values are: * `0`: enabled (default) * `1`: disabled
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.ExactTerms">
+            <summary>Identifies a phrase that all documents in the search results must contain.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.ExcludeTerms">
+            <summary>
+            Identifies a word or phrase that should not appear in any documents in the search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.FileType">
+            <summary>
+            Restricts results to files of a specified extension. Filetypes supported by Google include: * Adobe
+            Portable Document Format (`pdf`) * Adobe PostScript (`ps`) * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`,
+            `wk4`, `wk5`, `wki`, `wks`, `wku`) * Lotus WordPro (`lwp`) * Macwrite (`mw`) * Microsoft Excel
+            (`xls`) * Microsoft PowerPoint (`ppt`) * Microsoft Word (`doc`) * Microsoft Works (`wks`, `wps`,
+            `wdb`) * Microsoft Write (`wri`) * Rich Text Format (`rtf`) * Shockwave Flash (`swf`) * Text (`ans`,
+            `txt`). Additional filetypes may be added in the future. An up-to-date list can always be found in
+            Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Filter">
+            <summary>
+            Activates or deactivates the automatic filtering of Google search results. See [Automatic
+            Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering)
+            for more information about Google's search results filters. Valid values for this parameter are: *
+            `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all search
+            results to improve the quality of those results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Gl">
+            <summary>
+            Boosts search results whose country of origin matches the parameter value. See [Country
+            Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a list
+            of valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
+            relevance of results. This is particularly true for international customers and, even more
+            specifically, for customers in English-speaking countries other than the United States.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.GoogleHost">
+            <summary>
+            Specifies the Google domain (for example, google.com, google.de, or google.fr) to which the search
+            should be limited.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.HighRange">
+            <summary>
+            Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Hl">
+            <summary>
+            Specifies the interface language (host language) of your user interface. Explicitly setting this
+            parameter improves the performance and the quality of your search results. See the [Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#wsInterfaceLanguages)
+            section of [Internationalizing Queries and Results
+            Presentation](https://developers.google.com/custom-search/docs/json_api_reference#wsInternationalizing)
+            for more information, and [Supported Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
+            for a list of supported languages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Hq">
+            <summary>
+            Appends the specified query terms to the query, as if they were combined with a logical `AND`
+            operator.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.ImgColorType">
+            <summary>
+            Restricts results to images of a specified color type. Supported values are: * `mono` (black and
+            white) * `gray` (grayscale) * `color` (color)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.ImgDominantColor">
+            <summary>
+            Restricts results to images with a specific dominant color. Supported values are: * `red` * `orange`
+            * `yellow` * `green` * `teal` * `blue` * `purple` * `pink` * `white` * `gray` * `black` * `brown`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.ImgSize">
+            <summary>
+            Restricts results to images of a specified size. Supported values are: * `icon` (small) * `small |
+            medium | large | xlarge` (medium) * `xxlarge` (large) * `huge` (extra-large)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.ImgType">
+            <summary>
+            Restricts results to images of a specified type. Supported values are: * `clipart` (Clip art) *
+            `face` (Face) * `lineart` (Line drawing) * `photo` (Photo) * `animated` (Animated) * `stock` (Stock)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.InputEncoding">
+            <summary>The character encoding supported for search requests.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Language">
+            <summary>The language of the search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.LinkSite">
+            <summary>Specifies that all results should contain a link to a specific URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.LowRange">
+            <summary>
+            Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.OrTerms">
+            <summary>
+            Provides additional search terms to check for in a document, where each document in the search
+            results must contain at least one of the additional search terms. You can also use the [Boolean
+            OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query term
+            for this type of query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.OutputEncoding">
+            <summary>The character encoding supported for search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.RelatedSite">
+            <summary>
+            Specifies that all search results should be pages that are related to the specified URL. The
+            parameter value should be a URL.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Rights">
+            <summary>
+            Filters based on licensing. Supported values include: * `cc_publicdomain` * `cc_attribute` *
+            `cc_sharealike` * `cc_noncommercial` * `cc_nonderived`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Safe">
+            <summary>
+            Specifies the [SafeSearch
+            level](https://developers.google.com/custom-search/docs/json_api_reference#safeSearchLevels) used
+            for filtering out adult results. This is a custom property not defined in the OpenSearch spec. Valid
+            parameter values are: * `"off"`: Disable SafeSearch * `"active"`: Enable SafeSearch
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.SearchTerms">
+            <summary>The search terms entered by the user.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.SearchType">
+            <summary>
+            Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.SiteSearch">
+            <summary>Restricts results to URLs from a specified site.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.SiteSearchFilter">
+            <summary>
+            Specifies whether to include or exclude results from the site named in the `sitesearch` parameter.
+            Supported values are: * `i`: include content from site * `e`: exclude content from site
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Sort">
+            <summary>
+            Specifies that results should be sorted according to the specified expression. For example, sort by
+            date.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.StartIndex">
+            <summary>
+            The index of the current set of search results into the total set of results, where the index of the
+            first result is 1.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.StartPage">
+            <summary>
+            The page number of this set of results, where the page length is set by the `count` property.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.Title">
+            <summary>A description of the query.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.NextPageData.TotalResults">
+            <summary>Estimated number of total search results. May not be accurate.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData">
+            <summary>Metadata representing the previous page of results, if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Count">
+            <summary>Number of search results returned in this set.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Cr">
+            <summary>
+            Restricts search results to documents originating in a particular country. You may use [Boolean
+            operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) in
+            the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing the
+            following: * The top-level domain (TLD) of the document's URL. * The geographic location of the web
+            server's IP address. See [Country (cr) Parameter
+            Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections) for
+            a list of valid values for this parameter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Cx">
+            <summary>
+            The identifier of an engine created using the Programmable Search Engine [Control
+            Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in the
+            OpenSearch spec. This parameter is **required**.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.DateRestrict">
+            <summary>
+            Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+            from the specified number of past days. * `w[number]`: requests results from the specified number of
+            past weeks. * `m[number]`: requests results from the specified number of past months. * `y[number]`:
+            requests results from the specified number of past years.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.DisableCnTwTranslation">
+            <summary>
+            Enables or disables the [Simplified and Traditional Chinese
+            Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch) feature.
+            Supported values are: * `0`: enabled (default) * `1`: disabled
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.ExactTerms">
+            <summary>Identifies a phrase that all documents in the search results must contain.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.ExcludeTerms">
+            <summary>
+            Identifies a word or phrase that should not appear in any documents in the search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.FileType">
+            <summary>
+            Restricts results to files of a specified extension. Filetypes supported by Google include: * Adobe
+            Portable Document Format (`pdf`) * Adobe PostScript (`ps`) * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`,
+            `wk4`, `wk5`, `wki`, `wks`, `wku`) * Lotus WordPro (`lwp`) * Macwrite (`mw`) * Microsoft Excel
+            (`xls`) * Microsoft PowerPoint (`ppt`) * Microsoft Word (`doc`) * Microsoft Works (`wks`, `wps`,
+            `wdb`) * Microsoft Write (`wri`) * Rich Text Format (`rtf`) * Shockwave Flash (`swf`) * Text (`ans`,
+            `txt`). Additional filetypes may be added in the future. An up-to-date list can always be found in
+            Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Filter">
+            <summary>
+            Activates or deactivates the automatic filtering of Google search results. See [Automatic
+            Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering)
+            for more information about Google's search results filters. Valid values for this parameter are: *
+            `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all search
+            results to improve the quality of those results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Gl">
+            <summary>
+            Boosts search results whose country of origin matches the parameter value. See [Country
+            Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a list
+            of valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
+            relevance of results. This is particularly true for international customers and, even more
+            specifically, for customers in English-speaking countries other than the United States.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.GoogleHost">
+            <summary>
+            Specifies the Google domain (for example, google.com, google.de, or google.fr) to which the search
+            should be limited.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.HighRange">
+            <summary>
+            Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Hl">
+            <summary>
+            Specifies the interface language (host language) of your user interface. Explicitly setting this
+            parameter improves the performance and the quality of your search results. See the [Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#wsInterfaceLanguages)
+            section of [Internationalizing Queries and Results
+            Presentation](https://developers.google.com/custom-search/docs/json_api_reference#wsInternationalizing)
+            for more information, and [Supported Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
+            for a list of supported languages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Hq">
+            <summary>
+            Appends the specified query terms to the query, as if they were combined with a logical `AND`
+            operator.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.ImgColorType">
+            <summary>
+            Restricts results to images of a specified color type. Supported values are: * `mono` (black and
+            white) * `gray` (grayscale) * `color` (color)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.ImgDominantColor">
+            <summary>
+            Restricts results to images with a specific dominant color. Supported values are: * `red` * `orange`
+            * `yellow` * `green` * `teal` * `blue` * `purple` * `pink` * `white` * `gray` * `black` * `brown`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.ImgSize">
+            <summary>
+            Restricts results to images of a specified size. Supported values are: * `icon` (small) * `small |
+            medium | large | xlarge` (medium) * `xxlarge` (large) * `huge` (extra-large)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.ImgType">
+            <summary>
+            Restricts results to images of a specified type. Supported values are: * `clipart` (Clip art) *
+            `face` (Face) * `lineart` (Line drawing) * `photo` (Photo) * `animated` (Animated) * `stock` (Stock)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.InputEncoding">
+            <summary>The character encoding supported for search requests.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Language">
+            <summary>The language of the search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.LinkSite">
+            <summary>Specifies that all results should contain a link to a specific URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.LowRange">
+            <summary>
+            Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.OrTerms">
+            <summary>
+            Provides additional search terms to check for in a document, where each document in the search
+            results must contain at least one of the additional search terms. You can also use the [Boolean
+            OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query term
+            for this type of query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.OutputEncoding">
+            <summary>The character encoding supported for search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.RelatedSite">
+            <summary>
+            Specifies that all search results should be pages that are related to the specified URL. The
+            parameter value should be a URL.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Rights">
+            <summary>
+            Filters based on licensing. Supported values include: * `cc_publicdomain` * `cc_attribute` *
+            `cc_sharealike` * `cc_noncommercial` * `cc_nonderived`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Safe">
+            <summary>
+            Specifies the [SafeSearch
+            level](https://developers.google.com/custom-search/docs/json_api_reference#safeSearchLevels) used
+            for filtering out adult results. This is a custom property not defined in the OpenSearch spec. Valid
+            parameter values are: * `"off"`: Disable SafeSearch * `"active"`: Enable SafeSearch
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.SearchTerms">
+            <summary>The search terms entered by the user.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.SearchType">
+            <summary>
+            Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.SiteSearch">
+            <summary>Restricts results to URLs from a specified site.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.SiteSearchFilter">
+            <summary>
+            Specifies whether to include or exclude results from the site named in the `sitesearch` parameter.
+            Supported values are: * `i`: include content from site * `e`: exclude content from site
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Sort">
+            <summary>
+            Specifies that results should be sorted according to the specified expression. For example, sort by
+            date.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.StartIndex">
+            <summary>
+            The index of the current set of search results into the total set of results, where the index of the
+            first result is 1.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.StartPage">
+            <summary>
+            The page number of this set of results, where the page length is set by the `count` property.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.Title">
+            <summary>A description of the query.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.PreviousPageData.TotalResults">
+            <summary>Estimated number of total search results. May not be accurate.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData">
+            <summary>Metadata representing the current request.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Count">
+            <summary>Number of search results returned in this set.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Cr">
+            <summary>
+            Restricts search results to documents originating in a particular country. You may use [Boolean
+            operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) in
+            the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing the
+            following: * The top-level domain (TLD) of the document's URL. * The geographic location of the web
+            server's IP address. See [Country (cr) Parameter
+            Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections) for
+            a list of valid values for this parameter.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Cx">
+            <summary>
+            The identifier of an engine created using the Programmable Search Engine [Control
+            Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in the
+            OpenSearch spec. This parameter is **required**.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.DateRestrict">
+            <summary>
+            Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+            from the specified number of past days. * `w[number]`: requests results from the specified number of
+            past weeks. * `m[number]`: requests results from the specified number of past months. * `y[number]`:
+            requests results from the specified number of past years.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.DisableCnTwTranslation">
+            <summary>
+            Enables or disables the [Simplified and Traditional Chinese
+            Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch) feature.
+            Supported values are: * `0`: enabled (default) * `1`: disabled
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.ExactTerms">
+            <summary>Identifies a phrase that all documents in the search results must contain.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.ExcludeTerms">
+            <summary>
+            Identifies a word or phrase that should not appear in any documents in the search results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.FileType">
+            <summary>
+            Restricts results to files of a specified extension. Filetypes supported by Google include: * Adobe
+            Portable Document Format (`pdf`) * Adobe PostScript (`ps`) * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`,
+            `wk4`, `wk5`, `wki`, `wks`, `wku`) * Lotus WordPro (`lwp`) * Macwrite (`mw`) * Microsoft Excel
+            (`xls`) * Microsoft PowerPoint (`ppt`) * Microsoft Word (`doc`) * Microsoft Works (`wks`, `wps`,
+            `wdb`) * Microsoft Write (`wri`) * Rich Text Format (`rtf`) * Shockwave Flash (`swf`) * Text (`ans`,
+            `txt`). Additional filetypes may be added in the future. An up-to-date list can always be found in
+            Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Filter">
+            <summary>
+            Activates or deactivates the automatic filtering of Google search results. See [Automatic
+            Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering)
+            for more information about Google's search results filters. Valid values for this parameter are: *
+            `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all search
+            results to improve the quality of those results.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Gl">
+            <summary>
+            Boosts search results whose country of origin matches the parameter value. See [Country
+            Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a list
+            of valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
+            relevance of results. This is particularly true for international customers and, even more
+            specifically, for customers in English-speaking countries other than the United States.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.GoogleHost">
+            <summary>
+            Specifies the Google domain (for example, google.com, google.de, or google.fr) to which the search
+            should be limited.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.HighRange">
+            <summary>
+            Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Hl">
+            <summary>
+            Specifies the interface language (host language) of your user interface. Explicitly setting this
+            parameter improves the performance and the quality of your search results. See the [Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#wsInterfaceLanguages)
+            section of [Internationalizing Queries and Results
+            Presentation](https://developers.google.com/custom-search/docs/json_api_reference#wsInternationalizing)
+            for more information, and [Supported Interface
+            Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
+            for a list of supported languages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Hq">
+            <summary>
+            Appends the specified query terms to the query, as if they were combined with a logical `AND`
+            operator.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.ImgColorType">
+            <summary>
+            Restricts results to images of a specified color type. Supported values are: * `mono` (black and
+            white) * `gray` (grayscale) * `color` (color)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.ImgDominantColor">
+            <summary>
+            Restricts results to images with a specific dominant color. Supported values are: * `red` * `orange`
+            * `yellow` * `green` * `teal` * `blue` * `purple` * `pink` * `white` * `gray` * `black` * `brown`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.ImgSize">
+            <summary>
+            Restricts results to images of a specified size. Supported values are: * `icon` (small) * `small |
+            medium | large | xlarge` (medium) * `xxlarge` (large) * `huge` (extra-large)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.ImgType">
+            <summary>
+            Restricts results to images of a specified type. Supported values are: * `clipart` (Clip art) *
+            `face` (Face) * `lineart` (Line drawing) * `photo` (Photo) * `animated` (Animated) * `stock` (Stock)
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.InputEncoding">
+            <summary>The character encoding supported for search requests.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Language">
+            <summary>The language of the search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.LinkSite">
+            <summary>Specifies that all results should contain a link to a specific URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.LowRange">
+            <summary>
+            Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to append an
+            inclusive search range of `lowRange...highRange` to the query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.OrTerms">
+            <summary>
+            Provides additional search terms to check for in a document, where each document in the search
+            results must contain at least one of the additional search terms. You can also use the [Boolean
+            OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query term
+            for this type of query.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.OutputEncoding">
+            <summary>The character encoding supported for search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.RelatedSite">
+            <summary>
+            Specifies that all search results should be pages that are related to the specified URL. The
+            parameter value should be a URL.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Rights">
+            <summary>
+            Filters based on licensing. Supported values include: * `cc_publicdomain` * `cc_attribute` *
+            `cc_sharealike` * `cc_noncommercial` * `cc_nonderived`
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Safe">
+            <summary>
+            Specifies the [SafeSearch
+            level](https://developers.google.com/custom-search/docs/json_api_reference#safeSearchLevels) used
+            for filtering out adult results. This is a custom property not defined in the OpenSearch spec. Valid
+            parameter values are: * `"off"`: Disable SafeSearch * `"active"`: Enable SafeSearch
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.SearchTerms">
+            <summary>The search terms entered by the user.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.SearchType">
+            <summary>
+            Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.SiteSearch">
+            <summary>Restricts results to URLs from a specified site.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.SiteSearchFilter">
+            <summary>
+            Specifies whether to include or exclude results from the site named in the `sitesearch` parameter.
+            Supported values are: * `i`: include content from site * `e`: exclude content from site
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Sort">
+            <summary>
+            Specifies that results should be sorted according to the specified expression. For example, sort by
+            date.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.StartIndex">
+            <summary>
+            The index of the current set of search results into the total set of results, where the index of the
+            first result is 1.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.StartPage">
+            <summary>
+            The page number of this set of results, where the page length is set by the `count` property.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.Title">
+            <summary>A description of the query.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.QueriesData.RequestData.TotalResults">
+            <summary>Estimated number of total search results. May not be accurate.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.SearchInformationData">
+            <summary>Metadata about a search operation.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SearchInformationData.FormattedSearchTime">
+            <summary>
+            The time taken for the server to return search results, formatted according to locale style.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SearchInformationData.FormattedTotalResults">
+            <summary>The total number of search results, formatted according to locale style.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SearchInformationData.SearchTime">
+            <summary>The time taken for the server to return search results.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SearchInformationData.TotalResults">
+            <summary>The total number of search results returned by the query.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.SpellingData">
+            <summary>Spell correction information for a query.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SpellingData.CorrectedQuery">
+            <summary>The corrected query.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.SpellingData.HtmlCorrectedQuery">
+            <summary>The corrected query, formatted in HTML.</summary>
+        </member>
+        <member name="T:Google.Apis.CustomSearchAPI.v1.Data.Search.UrlData">
+            <summary>OpenSearch template and URL.</summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.UrlData.Template">
+            <summary>
+            The actual [OpenSearch
+            template](http://www.opensearch.org/specifications/opensearch/1.1#opensearch_url_template_syntax) for
+            this API.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.CustomSearchAPI.v1.Data.Search.UrlData.Type">
+            <summary>The MIME type of the OpenSearch URL template for the Custom Search JSON API.</summary>
+        </member>
+    </members>
+</doc>
