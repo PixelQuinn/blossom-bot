@@ -139,5 +139,27 @@ public class SpellbookCommands : BaseCommandModule
         await ctx.RespondAsync(message);
     }
 
+    [Command("spellinfo")]
+    [Description("Get detailed information about a specific spell.")]
+    public async Task SpellInfoCommand(CommandContext ctx, [RemainingText] string spellName)
+    {
+        // Find the specified spell
+        Spell specifiedSpell = spells.Find(spell => spell.Name.ToLower() == spellName.ToLower());
 
+        if (specifiedSpell != null)
+        {
+            // Display detailed information about the specified spell
+            string spellInfoMessage = $"**Spell Information:**\n" +
+                $"Name: {specifiedSpell.Name}\n" +
+                $"Level: {specifiedSpell.Level}\n" +
+                $"Description: {specifiedSpell.Description}";
+
+            await ctx.RespondAsync(spellInfoMessage);
+        }
+        else
+        {
+            // If the specified spell is not found, inform the user
+            await ctx.RespondAsync($"Sorry, the spell '{spellName}' was not found in the spellbook.");
+        }
+    }
 }
