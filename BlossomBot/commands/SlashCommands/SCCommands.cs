@@ -1,4 +1,5 @@
-﻿using DSharpPlus.SlashCommands;
+﻿using DSharpPlus.Entities;
+using DSharpPlus.SlashCommands;
 using Google.Apis.CustomSearchAPI.v1;
 using Google.Apis.Services;
 using System.Linq;
@@ -36,7 +37,14 @@ namespace BlossomBot.commands.SlashCommands
                 return;
             }
 
-
+            var firstResult = results.First();
+            var embed = new DiscordEmbedBuilder()
+            {
+                Title = "Results for Search: " + search,
+                ImageUrl = firstResult.Link,
+                Color = DiscordColor.Azure
+            };
+            await ctx.EditResponseAsync(new DiscordWebhookBuilder().AddEmbed(embed));
         }
     }
 }
