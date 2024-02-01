@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Security.Policy;
-using System.Threading.Tasks;
-using DSharpPlus;
-using DSharpPlus.CommandsNext;
+﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSharpPlus.Entities;
-using Google.Apis.Discovery;
-using static System.Net.Mime.MediaTypeNames;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public class SpellbookCommands : BaseCommandModule
 {

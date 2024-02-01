@@ -4,8 +4,6 @@ using BlossomBot.config;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Interactivity.Extensions;
-using DSharpPlus.SlashCommands;
-using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 // Define the namespace for your bot
