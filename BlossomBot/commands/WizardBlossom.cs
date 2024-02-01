@@ -131,11 +131,11 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Cataclysmic Transformation", Description = "Transform into a massive, powerful feline form, gaining increased strength, durability, and magical abilities. In this form, you have advantage on all saving throws, resistance to damage, and your attacks deal additional damage. The transformation lasts for 1 minute.", Level = 7 },
 
         // Level 8 Spells
-        new Spell { Name = , Description = , Level = 8 },
-        new Spell { Name = , Description = , Level = 8 },
-        new Spell { Name = , Description = , Level = 8 },
-        new Spell { Name = , Description = , Level = 8 },
-        new Spell { Name = , Description = , Level = 8 },
+        new Spell { Name = "Ethereal Catmastery", Description = "Become a master of the ethereal realm, gaining the ability to phase through objects and move effortlessly through the battlefield. Attacks pass harmlessly through you, and you can move through other creatures and obstacles without impediment for the spell's duration.", Level = 8 },
+        new Spell { Name = "Purrvasive Invisibility", Description = "Grant yourself or a target creature invisibility for the spell's duration. Unlike regular invisibility, this spell also conceals the sounds of movement, making the invisible creature nearly impossible to detect by sight or sound.", Level = 8 },
+        new Spell { Name = "Cat-astrophic Reckoning", Description = "Grant yourself or a target creature invisibility for the spell's duration. Unlike regular invisibility, this spell also conceals the sounds of movement, making the invisible creature nearly impossible to detect by sight or sound.", Level = 8 },
+        new Spell { Name = "Feline Foresight", Description = "Enhance your senses to feline levels, gaining advantage on all Wisdom-based checks, as well as a supernatural awareness of danger. You can't be surprised, and attacks against you have disadvantage for the spell's duration.", Level = 8 },
+        new Spell { Name = "Temporal Catnap", Description = "Create a temporal bubble in which time flows differently. Allies within the bubble can take a short rest that lasts only 1 minute but provides all the benefits of a long rest. The temporal bubble lasts for 1 hour.", Level = 8 },
 
         // Level 9 Spells
         new Spell { Name = , Description = , Level = 9 },
