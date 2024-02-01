@@ -138,11 +138,11 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Temporal Catnap", Description = "Create a temporal bubble in which time flows differently. Allies within the bubble can take a short rest that lasts only 1 minute but provides all the benefits of a long rest. The temporal bubble lasts for 1 hour.", Level = 8 },
 
         // Level 9 Spells
-        new Spell { Name = , Description = , Level = 9 },
-        new Spell { Name = , Description = , Level = 9 },
-        new Spell { Name = , Description = , Level = 9 },
-        new Spell { Name = , Description = , Level = 9 },
-        new Spell { Name = , Description = , Level = 9 },
+        new Spell { Name = "Purrfect Ascendance", Description = "Ascend to a higher plane of existence, becoming an ethereal feline entity. In this form, you gain immunity to all damage, the ability to move through any barriers, and the power to manipulate reality within the limits of the spell's duration.", Level = 9 },
+        new Spell { Name = "Cataclysmic Catastrophe", Description = "Unleash the ultimate magical cataclysm, summoning a storm of destructive cat energy that envelops the entire battlefield. All creatures in the area must make a Constitution saving throw or suffer 10d10 force damage and be petrified. On a successful save, they take half damage and are not petrified.", Level = 9 },
+        new Spell { Name = "Eternal Catnap", Description = "Create a pocket dimension where time stands still. Allies within the dimension can take a short rest that lasts for 1 hour but provides all the benefits of a long rest. The pocket dimension remains in existence for 8 hours, allowing multiple groups to benefit from its effects.", Level = 9 },
+        new Spell { Name = "Ninth Life's Blessing", Description = "Grant a target creature the blessing of an additional nine lives, making them virtually immortal. If the target is reduced to 0 hit points, they are instantly resurrected with full hit points, and this effect can occur up to nine times during the spell's duration.", Level = 9 },
+        new Spell { Name = "Ultimate Cat-astrophe", Description = "Invoke the ultimate cat-astrophe upon your enemies. All creatures in a massive area must make a Wisdom saving throw or be overwhelmed by a flood of magical cat energy, suffering various debilitating effects. The specifics of the effects are left to the whims of the feline magic, making each casting unique.", Level = 9 },
 
         // Big bad boss Spells
         new Spell { Name = , Description = , Level = 99 },
