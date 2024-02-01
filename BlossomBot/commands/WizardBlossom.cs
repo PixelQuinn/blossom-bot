@@ -83,10 +83,10 @@ public class WizardBlossomCommands : BaseCommandModule
     {
         // Level 1 Spells
         new Spell { Name = "Purrtection", Description = "Surround yourself with a soothing purr, granting advantage on Charisma saving throws and making you irresistible to feline creatures.", Level = 1 },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
-        new Spell { Name = , Description = , Level =  },
+        new Spell { Name = "Catnip Bolt",  Description = "Hurl a magical bolt infused with the essence of catnip at a target, dealing 1d8 psychic damage. On a failed Wisdom saving throw, the target is distracted and has disadvantage on its next attack roll.", Level = 1 },
+        new Spell { Name = "Mage Paw",  Description = "Transform the touched object into a small, harmless cat statue. While in this form, the object retains its properties but gains an adorable feline appearance.", Level = 1},
+        new Spell { Name = "Landing on All Fours", Description = "When a creature falls, gently guide them to the ground as if they always land on their feet. The fall becomes slow and controlled, preventing fall damage.", Level = 1},
+        new Spell { Name = "Furry Friends",  Description = "Summon a swarm of playful spectral cats to distract and harass enemies in the area. Creatures within the swarm's space must succeed on a Dexterity saving throw or take 1d6 slashing damage.", Level = 1},
 
         // Level 2 Spells
         new Spell { Name = , Description = , Level =  },
