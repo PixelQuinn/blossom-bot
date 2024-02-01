@@ -87,7 +87,6 @@ public class SpellbookCommands : BaseCommandModule
         new Spell { Name = "Fury of the Nine Lives", Description = "Channel the cumulative power of nine lives into a devastating magical onslaught. All creatures in a 40-foot radius must make a Dexterity saving throw or suffer 10d10 force damage, and their movement speed is halved for 1 minute. On a successful save, they take half damage and are not affected by reduced movement speed.", Level = 99 }
     };
 
-    string[] catchphrases = { "Behold the mystic might of Blossom! With a flick of the paw and a hiss in the air, a level one spell I declare: {SpellName}! Tremble before my feline enchantments!" };
     string[] castingPhrases = { "Abracadabra!", "Meowgicus!", "Purrformus!" };
 
     [Command("spellbook")]
@@ -124,17 +123,66 @@ public class SpellbookCommands : BaseCommandModule
         // Pick a random spell
         Spell randomSpell = spells[random.Next(spells.Count)];
 
-        // Pick a random catchphrase with the spell name integrated
-        string randomCatchphrase = catchphrases[random.Next(catchphrases.Length)];
-        randomCatchphrase = randomCatchphrase.Replace("{SpellName}", randomSpell.Name);
+        // Check the spell level and pick the appropriate catchphrase
+        string randomCatchphrase = "";
+        if (randomSpell.Level == 1)
+        {
+            randomCatchphrase = $"Behold the mystic might of Blossom! With a flick of the paw and a hiss in the air, a level one spell I declare: {randomSpell.Name}! Tremble before my feline enchantments!";
+        }
+        else if (randomSpell.Level == 2)
+        {
+            randomCatchphrase = "Feel the arcane energies surge through my whiskers and claws! I, Blossom the Malevolent, delve into deeper realms. " +
+                                $"Level two magic, unravel and unveil: {randomSpell.Name}! Witness the intensified power of my sorcerous prowess!";
+        }
+        else if (randomSpell.Level == 3)
+        {
+            randomCatchphrase = "As the moonlight dances upon my fur, I, Blossom the Enchanting, elevate my conjuring prowess. Behold the crescendo of magic as I invoke the third tier of spells. " +
+                $"Brace yourselves, for the arcane currents converge in the manifestation of {randomSpell.Name}! Tremble before the might of my mystical prowess!";
+        }
+        else if (randomSpell.Level == 4)
+        {
+            randomCatchphrase = $"Beyond the realms of the mundane, where shadows intertwine with the ethereal, I, Blossom the Arcane, transcend to the fourth echelon of magical mastery. In the cosmic ballet of energies, " +
+                $"I unveil the ancient incantation, invoking the power of {randomSpell.Name}! Witness the unfurling of arcane mastery as my sorcery reaches new heights!";
+        }
+        else if (randomSpell.Level == 5)
+        {
+            randomCatchphrase = $"In the tapestry of arcane wonders, where the very fabric of reality shivers, I, Blossom the Maleficent, command the cosmic forces at level five. The incantations weave through realms unknown, culminating in the manifestation of {randomSpell.Name}! " +
+                $"Bow before the majesty of my sorcerous dominion, for the arcane dances in harmonious chaos!";
+        }
+        else if (randomSpell.Level == 6)
+        {
+            randomCatchphrase = $"As the astral currents converge in celestial alignment, I, Blossom the Vortex Conjurer, ascend to the apex of mystical prowess with the unveiling of the sixth tier. The very essence of magic bends to my will, and behold as {randomSpell.Name} materializes from the astral symphony! " +
+                $"Tremble, mortals, for you stand witness to the zenith of my enchanting might!";
+        }
+        else if(randomSpell.Level == 7)
+        {
+            randomCatchphrase = $"In the ethereal crucible of magical transcendence, I, Blossom the Archmage, wield the seventh tier with unfathomable mastery. Behold the convergence of arcane constellations as I channel the essence of {randomSpell.Name}! " +
+                "The cosmos quivers, and before you unfolds the sublime spectacle of my otherworldly dominion. Prepare to be ensnared in the tapestry of my seventh-level sorcery!";
+        }
+        else if(randomSpell.Level == 8)
+        {
+            randomCatchphrase = @"In the arcane crucible of the eighth tier, where reality itself is but a tapestry of possibilities, I, Blossom the Astral Enchantress, unleash the cosmic tempest with the invocation of {randomSpell.Name}! Behold, as the very boundaries of magic blur, and the ethereal dance of enchantment unfolds. 
+                Witness the sublime power of my eighth-level sorcery, a symphony of cosmic forces converging at my beck and call!";
+        }
+        else if (randomSpell.Level == 9)
+        {
+            randomCatchphrase = $"As I stand upon the precipice of the arcane abyss, I, Blossom the Cosmic Sorcerer, beckon the incomprehensible might of the ninth tier. The very fabric of reality trembles before my command, and with an utterance beyond mortal understanding, I summon the unparalleled forces of {randomSpell.Name}! " +
+                $"Gaze upon the cosmic majesty unfurling, for in this moment, I am the weaver of destinies, the harbinger of the arcane apotheosis!";
+        }
+        else if (randomSpell.Level == 99)
+        {
+            randomCatchphrase = $"In the annals of arcane ascendancy, where the cosmos quivers in awe, I, Blossom the Supreme Archmage, transcend mortal limitations, invoking the apocalyptic might of my level 99 spells. From the abyssal depths of magical mastery emerges {randomSpell.Name}! Behold, as reality itself wavers before my unparalleled sorcery, and the very fabric of existence bends to the whims of my cosmic command. " +
+                $"Tremble, for you are now in the presence of the ultimate arcane sovereign, Blossom, the Supreme Sorceress!";
+        }
 
         // Pick a random casting phrase with the spell name integrated
-        string randomCastingPhrase = castingPhrases[random.Next(castingPhrases.Length)];
-        randomCastingPhrase = randomCastingPhrase.Replace("{SpellName}", randomSpell.Name);
+        string randomCastingPhrase = castingPhrases[random.Next(castingPhrases.Length)].Replace("{SpellName}", randomSpell.Name);
 
         // Construct the message with catchphrase and casting phrase
-        string message = $"*Evil Cat Wizard Catchphrase:* {randomCatchphrase}\n" +
-                         $"*Casting Phrase:* {randomCastingPhrase}";
+        string message = !string.IsNullOrEmpty(randomCatchphrase)
+            ? $"{randomCatchphrase}\n"
+            : "";
+        message += $"{randomCastingPhrase}";
 
         // Send the final message
         await ctx.RespondAsync(message);
@@ -152,7 +200,8 @@ public class SpellbookCommands : BaseCommandModule
         await ctx.RespondAsync(message);
     }
 
-[Command("spellinfo")]
+
+    [Command("spellinfo")]
     [Description("Get detailed information about a specific spell.")]
     public async Task SpellInfoCommand(CommandContext ctx, [RemainingText] string spellName)
     {
