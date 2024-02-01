@@ -124,11 +124,11 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Ethereal Catnap", Description = "Extend the benefits of a short rest to all creatures within a 30-foot radius, regardless of the usual restrictions. This magical rest lasts for 10 minutes and allows creatures to regain hit points and abilities as if they had completed a short rest.", Level = 6 },
 
         // Level 7 Spells
-        new Spell { Name = , Description = , Level = 7 },
-        new Spell { Name = , Description = , Level = 7 },
-        new Spell { Name = , Description = , Level = 7 },
-        new Spell { Name = , Description = , Level = 7 },
-        new Spell { Name = , Description = , Level = 7 },
+        new Spell { Name = "Cat-tastrophic Annihilation", Description = "Unleash a wave of magical energy that sweeps over a large area, causing all creatures in its radius to make a Dexterity saving throw. On a failed save, they take 8d10 force damage and are knocked prone. On a successful save, they take half damage and are not knocked prone.", Level = 7 },
+        new Spell { Name = "Seventh Life", Description = "Grant a target the ultimate blessing of multiple lives. The target gains an additional three lives, and when reduced to 0 hit points, they are instantly resurrected with their full maximum hit points. This effect can only occur three times during the spell's duration.", Level = 7 },
+        new Spell { Name = "Ethereal Catwalk Mastery", Description = "Enhance the Ethereal Catwalk spell, allowing it to be cast at a higher level. Allies on the catwalk gain additional benefits, such as increased movement speed, advantage on attack rolls, and immunity to difficult terrain.", Level = 7 },
+        new Spell { Name = "Purrfect Illusionist", Description = "Become the master illusionist, creating incredibly realistic and complex illusions of feline creatures. These illusions can interact with the environment and creatures, causing genuine reactions. The illusions can deal damage, distract enemies, or perform other actions within the limits of illusion magic.", Level = 7 },
+        new Spell { Name = "Cataclysmic Transformation", Description = "Transform into a massive, powerful feline form, gaining increased strength, durability, and magical abilities. In this form, you have advantage on all saving throws, resistance to damage, and your attacks deal additional damage. The transformation lasts for 1 minute.", Level = 7 },
 
         // Level 8 Spells
         new Spell { Name = , Description = , Level = 8 },
