@@ -77,6 +77,9 @@ namespace BlossomBot
             // Register blossom's wizard powers
             Commands.RegisterCommands<WizardBlossomCommands>();
 
+            // Register blossom's spellbook
+            Commands.RegisterCommands<SpellbookCommands>();
+
             // Register the commands defined in the ReminderCommands class
             Commands.RegisterCommands<ReminderCommands>();
 
