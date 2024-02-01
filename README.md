@@ -63,6 +63,17 @@ json
 
 - Some fun auto replies: If you say "hello" for example, the bot will reply to you saying "Hello there!".
 
+### Wizard Commands
+
+- The powerful spellbook: !spellbook will have Blossom-bot cast a random cat themed dnd spell with custom catchphrases and cast phrases depending on the spell level.
+
+- You can look up all the info on any of the spells with !spellinfo.
+
+- Brew some potions with !brewpotion, this will pick random ingredients from blossoms inventory and brew a potion for you.
+
+- Summon some friends with !summonfamiliar.
+
+
 ## Moderation Commands
 
 ### ** Replace {name} with the username of the person you want to use the action on. **
