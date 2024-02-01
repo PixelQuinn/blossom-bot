@@ -1,9 +1,11 @@
 ﻿// Import necessary libraries
 using BlossomBot.commands;
+using BlossomBot.commands.SlashCommands;
 using BlossomBot.config;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Interactivity.Extensions;
+using DSharpPlus.SlashCommands;
 using System.Threading.Tasks;
 
 // Define the namespace for your bot
@@ -84,6 +86,10 @@ namespace BlossomBot
 
             // Register the commands defined in the PollCommands class
             Commands.RegisterCommands<PollCommands>();
+
+            // Slash command register
+            var slashCommandsConfiguration = Client.UseSlashCommands();
+            slashCommandsConfiguration.RegisterCommands<SCCommands>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
