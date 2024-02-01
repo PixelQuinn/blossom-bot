@@ -117,11 +117,11 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Ninth Life", Description =  "Grant a target the blessing of multiple lives. If the target is reduced to 0 hit points within the spell's duration, they are instantly resurrected with half of their maximum hit points. This effect can only occur once during the spell's duration.", Level = 5 },
 
         // Level 6 Spells
-        new Spell { Name = , Description = , Level = 6 },
-        new Spell { Name = , Description = , Level = 6 },
-        new Spell { Name = , Description = , Level = 6 },
-        new Spell { Name = , Description = , Level = 6 },
-        new Spell { Name = , Description = , Level = 6 },
+        new Spell { Name = "Purrmanence", Description = "Grant a willing creature or yourself immunity to death and aging for the spell's duration. The recipient gains nine lives, allowing them to cheat death multiple times. Each time they would be reduced to 0 hit points, they instead regain hit points equal to half their maximum.", Level = 6 },
+        new Spell { Name = "Cat-tastrophic Teleportation", Description = "Teleport to any location you can see, leaving behind a magical explosion of catnip. Creatures within the area must succeed on a Constitution saving throw or be charmed for 1 minute. Charmed creatures can repeat the saving throw at the end of each of their turns, ending the effect on a success.", Level = 6 },
+        new Spell { Name = "Mystic Paw-rtal", Description = "Create a portal to a pocket dimension filled with catnip and cozy resting spots. Allies can use the portal to enter the pocket dimension and spend up to 1 hour resting, regaining hit points and spell slots as if they had completed a long rest.", Level = 6 },
+        new Spell { Name = "Feline Frenzy", Description = "Summon a horde of spectral feline creatures to swarm over your enemies. Creatures in the area must succeed on a Wisdom saving throw or become frightened for the spell's duration. Frightened creatures can repeat the saving throw at the end of each of their turns, ending the effect on a success.", Level = 6 },
+        new Spell { Name = "Ethereal Catnap", Description = "Extend the benefits of a short rest to all creatures within a 30-foot radius, regardless of the usual restrictions. This magical rest lasts for 10 minutes and allows creatures to regain hit points and abilities as if they had completed a short rest.", Level = 6 },
 
         // Level 7 Spells
         new Spell { Name = , Description = , Level = 7 },
