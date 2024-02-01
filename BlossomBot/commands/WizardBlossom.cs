@@ -145,11 +145,11 @@ public class WizardBlossomCommands : BaseCommandModule
         new Spell { Name = "Ultimate Cat-astrophe", Description = "Invoke the ultimate cat-astrophe upon your enemies. All creatures in a massive area must make a Wisdom saving throw or be overwhelmed by a flood of magical cat energy, suffering various debilitating effects. The specifics of the effects are left to the whims of the feline magic, making each casting unique.", Level = 9 },
 
         // Big bad boss Spells
-        new Spell { Name = , Description = , Level = 99 },
-        new Spell { Name = , Description = , Level = 99 },
-        new Spell { Name = , Description = , Level = 99 },
-        new Spell { Name = , Description = , Level = 99 },
-        new Spell { Name = , Description = , Level = 99 }
+        new Spell { Name = "Feline Sovereignty", Description = "Unleash the true power of the Cat Lord, establishing dominion over the battlefield. All creatures within 60 feet must make a Wisdom saving throw or fall under your control for 1 minute. Charmed creatures see you as the ultimate authority, obeying your every command without question.", Level = 99 },
+        new Spell { Name = "Purrpetual Nightfall", Description = "Summon the eternal night with a powerful feline incantation. Darkness envelopes the battlefield, and all sources of light are extinguished. Only those with darkvision or other means of seeing in darkness can perceive anything within this magical nightfall.", Level = 99 },
+        new Spell { Name = "Cataclysmic Roar", Description = "Release a deafening roar that reverberates through the very fabric of reality. All creatures within a 30-foot cone must make a Constitution saving throw or suffer 12d8 thunder damage and be stunned for 1 minute. On a successful save, they take half damage and are not stunned.", Level = 99 },
+        new Spell { Name = "Necro-purr-mancer's Grasp", Description = "Summon the spectral hands of the Cat Lord to reach into the ethereal realm and grasp the life force of a target creature. The target must succeed on a Constitution saving throw or take 15d6 necrotic damage. On a successful save, they take half damage.", Level = 99 },
+        new Spell { Name = "Fury of the Nine Lives", Description = "Channel the cumulative power of nine lives into a devastating magical onslaught. All creatures in a 40-foot radius must make a Dexterity saving throw or suffer 10d10 force damage, and their movement speed is halved for 1 minute. On a successful save, they take half damage and are not affected by reduced movement speed.", Level = 99 }
     };
 
     string[] catchphrases = { "Mrowl! I am the master of magic!", "Hiss! Tremble before my arcane might!" };
