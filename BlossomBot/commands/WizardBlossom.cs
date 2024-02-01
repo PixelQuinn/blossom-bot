@@ -94,31 +94,62 @@ public class WizardBlossomCommands : BaseCommandModule
         AddSpellToSpellbook(embed, "Feather Fall (Landing on All Fours)", "When a creature falls, gently guide them to the ground as if they always land on their feet. The fall becomes slow and controlled, preventing fall damage.", "Level 1");
         AddSpellToSpellbook(embed, "Furry Friends", "Summon a swarm of playful spectral cats to distract and harass enemies in the area. Creatures within the swarm's space must succeed on a Dexterity saving throw or take 1d6 slashing damage.", "Level 1");
         AddSpellToSpellbook(embed, "Catnap", "Allows the caster and their allies to take a short rest in the blink of an eye.", "Level 3");
+        
         // Level 2 spells
         AddSpellToSpellbook(embed, "Telepawtation", "Teleports the caster using kitty magic to a location they can see.", "Level 2");
         AddSpellToSpellbook(embed, "Hissilient Image", "Creates an illusory image of a hissing cat to distract and confuse enemies.", "Level 2");
         AddSpellToSpellbook(embed, "Clawmorph", "Transform into a cat for a short duration, gaining increased agility and stealth. You can move through spaces as narrow as 1 inch wide without squeezing, and you have advantage on Dexterity (Stealth) checks.", "Level 2");
         AddSpellToSpellbook(embed, "Paws of Enfeeblement", "Channel the weakness of a cat's touch to sap the strength of a creature within range. The target must succeed on a Constitution saving throw or have its Strength score reduced by 1d6 for the spell's duration.", "Level 2");
         AddSpellToSpellbook(embed, "Dopplepurr", "Create an illusory duplicate of yourself that appears indistinguishable from you. The duplicate can move and mimic your actions, providing advantage on Dexterity saving throws until it is dispelled or takes damage.", "Level 2");
+        
         // Level 3 spells
         AddSpellToSpellbook(embed, "Whiskerwind Shield", "Summons a protective shield made of magical whiskers that deflects attacks.", "Level 3");
         AddSpellToSpellbook(embed, "Catnap", "Allows the caster and their allies to take a short rest in the blink of an eye.", "Level 3");
         AddSpellToSpellbook(embed, "Blinking Catwalk", "Instantly teleport to an unoccupied space you can see within range, leaving behind an illusory image of a cat that confuses and distracts enemies. This teleportation does not provoke opportunity attacks.", "Level 3");
         AddSpellToSpellbook(embed, "Necro-purr-mancy", "Raise a fallen feline ally as a spectral guardian. The cat companion has its own initiative and can make attacks, providing assistance to its allies. If it is reduced to 0 hit points, it vanishes, returning to the afterlife.", "Level 3");
         AddSpellToSpellbook(embed, "Purralysis Ray", "Unleash a beam of purr energy at a target within range. On a hit, the target must succeed on a Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.", "Level 3");
+        
         // Fourth level spells
         AddSpellToSpellbook(embed, "Dimensional Catnapping", "Open a temporary portal to a cozy cat dimension. Allies within the area can use their reaction to step into the portal and take a short rest, gaining the benefits without spending any time.", "Level 4");
         AddSpellToSpellbook(embed, "Cat - astrophic Wave", "Unleash a wave of magical energy in a cone, causing all creatures in its area to make a Dexterity saving throw.On a failed save, they take 6d6 force damage and are knocked prone.On a successful save, they take half damage and are not knocked prone.", "Level 4");
         AddSpellToSpellbook(embed, "Purrifying Flames", "Ignite a target with magical flames that purify and heal. The target regains hit points equal to 4d8 + your spellcasting ability modifier, and any curses or diseases affecting the target are lifted.", "Level 4");
         AddSpellToSpellbook(embed, "Phantom Litter Box", "Create an illusory litter box in an area. Enemies who enter the area must make a Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.", "Level 4");
         AddSpellToSpellbook(embed, "Spectral Catwalk", "Conjure a shimmering catwalk in the air. Allies can use their movement to walk along the catwalk without touching the ground, avoiding difficult terrain and gaining advantage on Dexterity (Stealth) checks while on the catwalk.", "Level 4");
+        
         // Fifth level spells
         AddSpellToSpellbook(embed, "Feline Familiar Swarm", "Summon a swarm of spectral familiars in the form of various feline creatures. These familiars act as independent entities, each making attacks and providing assistance to the caster or their allies. The swarm disperses after 1 minute.", "Level 5");
         AddSpellToSpellbook(embed, "Cat's Grace", "Channel the agility and grace of a cat, granting yourself or a willing creature you touch advantage on Dexterity saving throws and the ability to move across difficult terrain without taking damage or penalties for the duration.", "Level 5");
         AddSpellToSpellbook(embed, "Purrpetual Motion", "Transform into an ethereal cat, granting yourself the ability to move through other creatures and objects as if they were difficult terrain. You can move through solid objects, and your attacks pass through armor and shields.", "Level 5");
         AddSpellToSpellbook(embed, "Whiskerstorm", "Summon a magical storm of whiskers that swirls around a target area. Creatures within the storm must succeed on a Strength saving throw or be restrained for the spell's duration. A restrained creature can make a Strength saving throw at the end of each of its turns, ending the effect on a success.", "Level 5");
-        AddSpellToSpellbook(embed, "Ninth Life", "Grant a target the blessing of multiple lives. If the target is reduced to 0 hit points within the spell's duration, they are instantly resurrected with half of their maximum hit points. This effect can only occur once during the spell's duration.", "Level 5");\
+        AddSpellToSpellbook(embed, "Ninth Life", "Grant a target the blessing of multiple lives. If the target is reduced to 0 hit points within the spell's duration, they are instantly resurrected with half of their maximum hit points. This effect can only occur once during the spell's duration.", "Level 5");
+        
+        // Sixth level spells
+        AddSpellToSpellbook(embed, "Purrmanence", "Grant a willing creature or yourself immunity to death and aging for the spell's duration. The recipient gains nine lives, allowing them to cheat death multiple times. Each time they would be reduced to 0 hit points, they instead regain hit points equal to half their maximum.", "Level 6");
+        AddSpellToSpellbook(embed, "Cat-tastrophic Teleportation", "Teleport to any location you can see, leaving behind a magical explosion of catnip. Creatures within the area must succeed on a Constitution saving throw or be charmed for 1 minute. Charmed creatures can repeat the saving throw at the end of each of their turns, ending the effect on a success.", "Level 6");
+        AddSpellToSpellbook(embed, "Mystic Paw-rtal", "Create a portal to a pocket dimension filled with catnip and cozy resting spots. Allies can use the portal to enter the pocket dimension and spend up to 1 hour resting, regaining hit points and spell slots as if they had completed a long rest.", "Level 6");
+        AddSpellToSpellbook(embed, "Feline Frenzy", "Summon a horde of spectral feline creatures to swarm over your enemies. Creatures in the area must succeed on a Wisdom saving throw or become frightened for the spell's duration. Frightened creatures can repeat the saving throw at the end of each of their turns, ending the effect on a success.", "Level 6");
+        AddSpellToSpellbook(embed, "Ethereal Catnap", "Extend the benefits of a short rest to all creatures within a 30-foot radius, regardless of the usual restrictions. This magical rest lasts for 10 minutes and allows creatures to regain hit points and abilities as if they had completed a short rest.", "Level 6");
 
+        // Seventh level spells
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+
+        // Eighth level spells
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+
+        // Ninth level spells!!!
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
+        AddSpellToSpellbook(embed, );
         // Sending the spellbook as an embed
         await ctx.RespondAsync(embed: embed);
     }
