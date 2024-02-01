@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Reflection.Emit;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using Google.Apis.Discovery;
+using static System.Net.Mime.MediaTypeNames;
 
 public class WizardBlossomCommands : BaseCommandModule
 {
@@ -103,6 +107,11 @@ public class WizardBlossomCommands : BaseCommandModule
         AddSpellToSpellbook(embed, "Necro-purr-mancy", "Raise a fallen feline ally as a spectral guardian. The cat companion has its own initiative and can make attacks, providing assistance to its allies. If it is reduced to 0 hit points, it vanishes, returning to the afterlife.", "Level 3");
         AddSpellToSpellbook(embed, "Purralysis Ray", "Unleash a beam of purr energy at a target within range. On a hit, the target must succeed on a Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.", "Level 3");
         // Fourth level spells
+        AddSpellToSpellbook(embed, "Dimensional Catnapping", "Open a temporary portal to a cozy cat dimension. Allies within the area can use their reaction to step into the portal and take a short rest, gaining the benefits without spending any time.", "Level 4");
+        AddSpellToSpellbook(embed, "Cat - astrophic Wave", "Unleash a wave of magical energy in a cone, causing all creatures in its area to make a Dexterity saving throw.On a failed save, they take 6d6 force damage and are knocked prone.On a successful save, they take half damage and are not knocked prone.", "Level 4");
+        AddSpellToSpellbook(embed, "Purrifying Flames", "Ignite a target with magical flames that purify and heal. The target regains hit points equal to 4d8 + your spellcasting ability modifier, and any curses or diseases affecting the target are lifted.", "Level 4");
+        AddSpellToSpellbook(embed, "Phantom Litter Box", "Create an illusory litter box in an area. Enemies who enter the area must make a Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.", "Level 4");
+        AddSpellToSpellbook(embed, "Spectral Catwalk", "Conjure a shimmering catwalk in the air. Allies can use their movement to walk along the catwalk without touching the ground, avoiding difficult terrain and gaining advantage on Dexterity (Stealth) checks while on the catwalk.", "Level 4");
 
         // Sending the spellbook as an embed
         await ctx.RespondAsync(embed: embed);
