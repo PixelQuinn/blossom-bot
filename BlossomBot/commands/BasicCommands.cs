@@ -14,6 +14,7 @@ namespace BlossomBot
     public class BasicCommands : BaseCommandModule
     {
         [Command("greet")]
+        [Description("Say hello to Blossom-bot.")]
         public async Task GreetCommand(CommandContext ctx)
         {
             var embed = new DiscordEmbedBuilder
@@ -26,6 +27,7 @@ namespace BlossomBot
         }
 
         [Command("calculate")]
+        [Description("Enter an equation and do some math.")]
         public async Task CalculateCommand(CommandContext ctx, [RemainingText] string expression)
         {
             try
@@ -58,6 +60,7 @@ namespace BlossomBot
 
 
         [Command("roll")]
+        [Description("Roll some dice, roll20 style.")]
         public async Task RollCommand(CommandContext ctx, string input = "1d6")
         {
             // Parse input string to get number of dice, sides, and modifiers
@@ -169,6 +172,7 @@ namespace BlossomBot
         }
 
         [Command("help")]
+        [Description("The very command menu you are looking at.")]
         public async Task Help(CommandContext ctx)
         {
             var prefix = "!"; // Change this to your bot's prefix
