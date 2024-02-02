@@ -63,6 +63,14 @@ json
 
 - Some fun auto replies: If you say "hello" for example, the bot will reply to you saying "Hello there!".
 
+### Slash Commands
+
+- /image is a google image search embedded into the discord message. Example, /image cat would display a cat.
+
+- /chat-gpt is a command to where you can input the command followed by your prompt to get a chat-gpt response back.
+
+### ** These commands require registering your own api's **
+
 ### Wizard Commands
 
 - The powerful spellbook: !spellbook will have Blossom-bot cast a random cat themed dnd spell with custom catchphrases and cast phrases depending on the spell level.
