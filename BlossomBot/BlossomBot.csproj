@@ -212,6 +212,7 @@
   <ItemGroup>
     <Compile Include="commands\SlashCommands\SCCommands.cs" />
     <Compile Include="commands\WizardCommands\Spellbook.cs" />
+    <Compile Include="commands\WizardCommands\WizardBattle.cs" />
     <Compile Include="commands\WizardCommands\WizardBlossom.cs" />
     <Compile Include="commands\ModCommands.cs" />
     <Compile Include="commands\PollCommand.cs" />
