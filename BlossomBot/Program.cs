@@ -4,6 +4,7 @@ using BlossomBot.commands.SlashCommands;
 using BlossomBot.config;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.SlashCommands;
 using System.Threading.Tasks;
@@ -88,6 +89,9 @@ namespace BlossomBot
             // Register the commands defined in the PollCommands class
             Commands.RegisterCommands<PollCommands>();
 
+            // User joining server handler
+            Client.GuildMemberAdded += UserJoinedHandler;
+
             // Slash command register
             var slashCommandsConfiguration = Client.UseSlashCommands();
             slashCommandsConfiguration.RegisterCommands<SCCommands>();
@@ -130,7 +134,19 @@ namespace BlossomBot
             }
         }
 
+        private static async Task UserJoinedHandler(DiscordClient sender, DSharpPlus.EventArgs.GuildMemberAddEventArgs e)
+        {
+            var defaultChannel = e.Guild.GetDefaultChannel();
 
+            var welcomeEmbed = new DiscordEmbedBuilder()
+            {
+                Title = "Welcome to the server!",
+                Description = $"Welcome to The Frog Pond, {e.Member.Username}! We're glad to have you here. Take your coat off and sling some spells and don't forget to read the rules!",
+                Color = DiscordColor.Lilac
+            };
+
+            await defaultChannel.SendMessageAsync(embed: welcomeEmbed);
+        }
 
 
         // Event handler for the Ready event of the Discord client

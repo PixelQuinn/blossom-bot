@@ -36,6 +36,23 @@ public class WizardRPSCommands : BaseCommandModule
 
         // Display the results
         await ctx.RespondAsync($"You chose: {fullPlayerChoice}\nBot chose: {botChoice}\nResult: {result}");
+
+        // Perform catchphrases based on the result
+        if (result == "You win!")
+        {
+            await ctx.RespondAsync("You defeated BlossomBot! Victory is yours!");
+            await ctx.RespondAsync("Argh! You got lucky this time!");
+        }
+        else if (result == "Bot wins!")
+        {
+            await ctx.RespondAsync("BlossomBot emerges victorious! Beware my magical prowess!");
+            await ctx.RespondAsync("Hahaha! You stand no chance against my magical might!");
+        }
+        else
+        {
+            await ctx.RespondAsync("It's a tie! A magical stalemate.");
+            await ctx.RespondAsync("A tie? Interesting... let's see who wins next time!");
+        }
     }
 
     private string GetRPSResult(string playerChoice, string botChoice)
